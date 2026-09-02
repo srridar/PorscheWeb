@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+/* 
+base color -  #0A0A0A
+off - white - #F5F5F3
+signal -red - #D5001C
+steel gray -  #3C3C3C
+
+silver_crome - #C7C7C7
+
+
+ Car brands favor geometric, engineered-feeling sans-serifs — precise, confident, no decoration.
+
+ Heading - Neue Haas Grotesk or Inter (bold/semibold)
+ text    - Inter or Söhne at regular weight — highly readable at small sizes, works well on both dark and light backgrounds.
+ Numbers/specs (0-60 times, prices, specs)  -  a monospace or tabular-figure font like Roboto Mono
+
+ 
+UX principles specific to car sites
+
+Photography-first:  images should be full-bleed and large; UI chrome should recede. Don't let cards, shadows, or borders distract from the vehicle.
+Generous whitespace:  luxury = restraint. Cramped layouts feel cheap regardless of the car.
+Consistent motion language:  subtle fade/slide transitions between sections feel premium; avoid bouncy or playful easing — use smooth, slow ease-out curves (car brands favor deliberate, weighty motion).
+High contrast CTAs:  your one accent color should only appear on buttons/links, so users always know where to click.
+Dark mode as default, not toggle: most car brand sites are dark by default since it makes metallic/paint finishes read best; use light sections only for practical content (dealer locator, forms).
+
+
+*/
