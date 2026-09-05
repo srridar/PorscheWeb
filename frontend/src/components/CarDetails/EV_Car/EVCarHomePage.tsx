@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useParams } from "react-router-dom";
 
 import { Cayenne_Car } from "../../../data/Cayenne_Car_model/Cayenne";
@@ -6,7 +6,6 @@ import { Macan } from "../../../data/Macan_Car_model/Macan";
 import { Taycan } from "../../../data/Taycan_Car_model/Taycan";
 import EV_HeroSection from "./EV_HeroSection";
 import EVFeatures from "./EV_Car_Features/EVFeatures";
-import EV_CarPerformanceSection from "./EV_CarPerformanceSection";
 import EV_CarTechnicalSection from "./EV_CarTechnicalSection";
 
 interface EVCarHomeProps {
@@ -18,6 +17,10 @@ interface EVCarHomeProps {
 const EVCarHomePage = () => {
 
     const { modelId, variantId, carId } = useParams<EVCarHomeProps>();
+
+    console.log("Model ID:", modelId);
+    console.log("Variant ID:", variantId);
+    console.log("Car ID:", carId);
 
     const Cayenne_EV = Cayenne_Car.flatMap((model) =>
         model.variants.flatMap((variant) =>
@@ -52,8 +55,9 @@ const EVCarHomePage = () => {
         ...Macan_EV
     ];
 
+    console.log("All Electric Cars:", All_EV_Cars);
 
-    const carDetails = All_EV_Cars.find(
+    const car = All_EV_Cars.find(
         (car) =>
             car.modelId === modelId &&
             car.variantId === variantId &&
@@ -61,7 +65,7 @@ const EVCarHomePage = () => {
     );
 
 
-    if (!carDetails) {
+    if (!car) {
         return (
             <div className="min-h-screen bg-[#0A0A0A] text-white flex items-center justify-center">
                 <h1 className="text-2xl scale-y-75"> Car not found  </h1>
@@ -69,47 +73,15 @@ const EVCarHomePage = () => {
         );
     }
 
-
     return (
         <div className="min-h-screen bg-[#0A0A0A] text-white">
 
-            {/* ================= HERO ================= */}
-
-            <section>
-                <EV_HeroSection />
-            </section>
-
-            <section>
-                <EVFeatures />
-            </section>
-
-            <section>
-                <EV_CarPerformanceSection />
-            </section>
-
-            <section>
-                <EV_CarTechnicalSection />
-            </section>
-
-
-            {/* ================= HIGHLIGHTS ================= */}
-
-            <section>
-
-                <h2>
-                    Highlights
-                </h2>
-
-            </section>
-
-
-
-            <section>
-
-                <h2> Enquire About This Car  </h2>
-
-            </section>
-
+                <EV_HeroSection car={car} />
+          
+                <EVFeatures car={car}/>
+       
+                <EV_CarTechnicalSection technicalData={car?.technical_data}  />
+     
 
             <footer>
                 Porsche

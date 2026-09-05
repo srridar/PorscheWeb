@@ -12,7 +12,11 @@ export const car_911 = [
                         "modelId": "911",
                         "variantId": "carrera",
                         "name": "911 Carrera",
-                        "year": 2027,
+                        "hero": {
+                            "title": "The legend, perfected.",
+                            "description": "Iconic design, exhilarating performance, and everyday usability come together in the timeless 911 Carrera."
+                        },
+                        "year": 2026,
                         "price": {
                             "amount": 21129000,
                             "currency": "INR",
@@ -32,12 +36,14 @@ export const car_911 = [
                                 "rear": "/images/cars/911/911carrera/911-carrera-9.png",
                                 "side": "/images/cars/911/911carrera/911-side-view.png",
                             },
-
+                            "bootSpace": {
+                                "front": "/images/front-space.webp",
+                                "rear": "/images/back-space.webp",
+                            },
                             "lights": {
                                 "headlights": "/images/cars/911/911carrera/911-carrera-10.png",
                                 "taillights": "/images/cars/911/911carrera/tail-light.png",
-                                "frontIndicators": "/images/cars/911/911carrera/911-carrera-front-indi.png",
-                                "rearIndicators": "/images/cars/911/911carrera/911-carrera-rear-indi.png"
+                                "Indicators": "/images/cars/911/911carrera/911-carrera-front-indi.png",
                             },
 
                             "wheels": {
@@ -57,14 +63,13 @@ export const car_911 = [
                                 "/images/cars/911/911carrera/911-carrera-2.avif",
                                 "/images/cars/911/911carrera/911-carrera-7.avif",
                                 "/images/cars/911/911carrera/911-carrera-back.png",
-                                "/images/cars/911/911carrera/911-carrera.avif"
+                                "/images/cars/911/911carrera/911-carrera.avif",
+                                "/images/cars/911/911carrera/911-carrera-rear-indi.png",
+                                "/images/cars/911/911carrera/911-carrera-4.avif",
+                                "/images/cars/911/911carrera/911-carrera-8.avif",
                             ]
                         },
                         "technical_data": {
-                            "height": "1302mm",
-                            "length": "4542mm",
-                            "wheelbase": "2450mm",
-                            "width": "1852mm",
                             "power-unit": {
                                 "bore": {
                                     "value": 91.0,
@@ -96,127 +101,152 @@ export const car_911 = [
                                     "unit": "1/min"
                                 }
                             },
-                        },
-                        "performance": {
-                            "topSpeed": {
-                                "value": 294,
-                                "unit": "km/h"
-                            },
-                            "acceleration": {
-                                "zeroTo100": {
-                                    "standard": {
-                                        "value": 4.1,
-                                        "unit": "s",
-                                        "test": "0 - 100 km/h"
-                                    },
-                                    "sportChrono": {
-                                        "value": 3.9,
-                                        "unit": "s",
-                                        "test": "0 - 100 km/h with Sport Chrono Package"
-                                    }
+
+                            "performance": {
+                                
+                                "topSpeed": {
+                                    "value": 294,
+                                    "unit": "km/h"
                                 },
-                                "zeroTo160": {
-                                    "standard": {
-                                        "value": 9.2,
-                                        "unit": "s",
-                                        "test": "0 - 160 km/h"
+
+                                "acceleration": {
+                                    "zeroTo100": {
+                                        "standard": {
+                                            "value": 4.1,
+                                            "unit": "s",
+                                            "test": "0 - 100 km/h"
+                                        },
+                                        "sportChrono": {
+                                            "value": 3.9,
+                                            "unit": "s",
+                                            "test": "0 - 100 km/h with Sport Chrono Package"
+                                        }
                                     },
-                                    "sportChrono": {
-                                        "value": 8.9,
-                                        "unit": "s",
-                                        "test": "0 - 160 km/h with Sport Chrono Package"
-                                    }
-                                },
-                                "zeroTo200": {
-                                    "standard": {
-                                        "value": 14.4,
-                                        "unit": "s",
-                                        "test": "0 - 200 km/h"
+
+                                    "zeroTo160": {
+                                        "standard": {
+                                            "value": 9.2,
+                                            "unit": "s",
+                                            "test": "0 - 160 km/h"
+                                        },
+                                        "sportChrono": {
+                                            "value": 8.9,
+                                            "unit": "s",
+                                            "test": "0 - 160 km/h with Sport Chrono Package"
+                                        }
                                     },
-                                    "sportChrono": {
-                                        "value": 14.1,
-                                        "unit": "s",
-                                        "test": "0 - 200 km/h with Sport Chrono Package"
-                                    }
-                                },
-                                "inGear80To120": {
-                                    "standard": {
-                                        "value": 2.5,
-                                        "unit": "s",
-                                        "test": "80-120km/h (50-75 mph)"
+
+                                    "zeroTo200": {
+                                        "standard": {
+                                            "value": 14.4,
+                                            "unit": "s",
+                                            "test": "0 - 200 km/h"
+                                        },
+                                        "sportChrono": {
+                                            "value": 14.1,
+                                            "unit": "s",
+                                            "test": "0 - 200 km/h with Sport Chrono Package"
+                                        }
                                     },
-                                    "sportChrono": {
-                                        "value": 2.5,
-                                        "unit": "s",
-                                        "test": "80-120km/h (50-75 mph) with Sport Chrono Package"
+
+                                    "inGear80To120": {
+                                        "standard": {
+                                            "value": 2.5,
+                                            "unit": "s",
+                                            "test": "80-120km/h (50-75 mph)"
+                                        },
+                                        "sportChrono": {
+                                            "value": 2.5,
+                                            "unit": "s",
+                                            "test": "80-120km/h (50-75 mph) with Sport Chrono Package"
+                                        }
                                     }
                                 }
-                            }
-                        },
-                        "soundLevel": {
-                            "standard": "UN-R 51",
-                            "stationaryVehicleRpm": {
-                                "value": 3325,
-                                "unit": "1/min"
                             },
-                            "stationaryVehicle": {
-                                "value": 93,
-                                "unit": "dB(A)"
-                            },
-                            "passingVehicle": {
-                                "value": 71,
-                                "unit": "dB(A)"
-                            }
-                        },
-                        "terrainFeatures": {
-                            "approachAngle": {
-                                "pasm": {
-                                    "value": 9.9,
-                                    "unit": "°"
+
+                            "soundLevel": {
+                                "standard": "UN-R 51",
+                                "stationaryVehicleRpm": {
+                                    "value": 3325,
+                                    "unit": "1/min"
+                                },
+                                "stationaryVehicle": {
+                                    "value": 93,
+                                    "unit": "dB(A)"
+                                },
+                                "passingVehicle": {
+                                    "value": 71,
+                                    "unit": "dB(A)"
                                 }
                             },
-                            "breakoverAngle": {
-                                "pasm": {
-                                    "value": 12.7,
-                                    "unit": "°"
+
+                            "terrainFeatures": {
+                                "approachAngle": {
+                                    "pasm": {
+                                        "value": 9.9,
+                                        "unit": "°"
+                                    }
+                                },
+                                "maxGroundClearance": {
+                                    "pasm": {
+                                        "value": 122,
+                                        "unit": "mm"
+                                    }
+                                },
+
+                                "departureAngle": {
+                                    "pasm": {
+                                        "value": 14.3,
+                                        "unit": "°"
+                                    }
+                                },
+                            },
+
+                            "capacities": {
+                                "luggageCompartmentVolumeFront": {
+                                    "value": 135,
+                                    "unit": "l"
+                                },
+
+                                "openLuggageCompartmentVolumeBehindFrontSeats": {
+                                    "withRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 261,
+                                        "unit": "l"
+                                    },
+
+                                    "withoutRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 373,
+                                        "unit": "l"
+                                    }
                                 }
                             },
-                            "maxGroundClearance": {
-                                "pasm": {
-                                    "value": 122,
+
+                            "body": {
+                                "length": {
+                                    "value": 4542,
                                     "unit": "mm"
-                                }
-                            },
-                            "overhangFront": {
-                                "value": 1016,
-                                "unit": "mm"
-                            },
-                            "departureAngle": {
-                                "pasm": {
-                                    "value": 14.3,
-                                    "unit": "°"
-                                }
-                            },
-                            "overhangRear": {
-                                "value": 1076,
-                                "unit": "mm"
-                            }
-                        },
-                        "capacities": {
-                            "luggageCompartmentVolumeFront": {
-                                "value": 135,
-                                "unit": "l"
-                            },
-                            "openLuggageCompartmentVolumeBehindFrontSeats": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 261,
-                                    "unit": "l"
                                 },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 373,
-                                    "unit": "l"
+
+                                "width": {
+                                    "value": 1852,
+                                    "unit": "mm"
+                                },
+
+                                "height": {
+                                    "value": 1302,
+                                    "unit": "mm"
+                                },
+
+                                "wheelbase": {
+                                    "value": 2450,
+                                    "unit": "mm"
+                                },
+
+                                "turningCircle": {
+                                    "value": 10.9,
+                                    "unit": "m"
                                 }
                             }
                         }
@@ -225,7 +255,11 @@ export const car_911 = [
                         "carId": "911-carrera-4-gts",
                         "model": "911",
                         "name": "911 Carrera 4 GTS",
-                        "year": 2027,
+                        "hero": {
+                            "title": "Born for the road. Built for the thrill.",
+                            "description": "The 911 Carrera 4 GTS combines iconic 911 design with all-wheel-drive confidence and exhilarating performance—crafted for those who refuse to compromise."
+                        },
+                        "year": 2026,
                         "price": {
                             "amount": 28214000,
                             "currency": "INR",
@@ -239,7 +273,7 @@ export const car_911 = [
                             "transmission": "Automatic"
                         },
                         "images": {
-                            "hero": "/images/cars/911/911carrera4GTS/911_carrera_4gts_hero.png",
+                            "hero": "/images/cars/911/911carrera4GTS/gt4.png",
 
                             "exterior": {
                                 "front": "/images/cars/911/911carrera4GTS/911_carrera_4gts_front.png",
@@ -249,9 +283,13 @@ export const car_911 = [
 
                             "lights": {
                                 "headlights": "/images/cars/911/911carrera4GTS/911_carrera_4gts_head-light.png",
-                                "taillights": "/images/cars/911/911carrera4GTS/911_carrera_4gts_tail-light.png",
-                                "frontIndicators": "/images/cars/911/911carrera4GTS/911-4gts_front-indicator.png",
-                                "rearIndicators": "/images/cars/911/911carrera4GTS/911_carrera_4gts_rear-indi.png"
+                                "taillights": "/images/cars/911/911carrera4GTS/tail-light.png",
+                                "Indicators": "/images/cars/911/911carrera4GTS/911-4gts_front-indicator.png",
+
+                            },
+                            "bootSpace": {
+                                "front": "/images/front-space.webp",
+                                "rear": "/images/back-space.webp",
                             },
 
                             "wheels": {
@@ -267,16 +305,22 @@ export const car_911 = [
                                 "centerConsole": "/images/cars/911/911carrera4GTS/911-4gts-central-console.png",
                             },
                             "gallery": [
+                                "/images/cars/911/911carrera4GTS/g8.png",
                                 "/images/cars/911/911carrera4GTS/gt4.jpg",
                                 "/images/cars/911/911carrera4GTS/4gts.png",
                                 "/images/cars/911/911carrera4GTS/gt42.webp",
+                                "/images/cars/911/911carrera4GTS/side-view.png",
+                                "/images/cars/911/911carrera4GTS/911_4gts_rear-indicator.png",
+                                "/images/cars/911/911carrera4GTS/g1.png",
+                                "/images/cars/911/911carrera4GTS/g2.png",
+                                "/images/cars/911/911carrera4GTS/g3.png",
+                                "/images/cars/911/911carrera4GTS/g4.png",
+                                "/images/cars/911/911carrera4GTS/g5.png",
+                                "/images/cars/911/911carrera4GTS/g6.png",
+                                "/images/cars/911/911carrera4GTS/g7.png",
                             ]
                         },
                         "technical_data": {
-                            "height": "1,294 mm",
-                            "length": "4,553 mm",
-                            "wheelbase": "2,450 mm",
-                            "width": "1,852 mm",
                             "power-unit": {
                                 "bore": {
                                     "value": 97.0,
@@ -318,190 +362,136 @@ export const car_911 = [
                                     "unit": "1/min"
                                 }
                             },
-                        },
-                        "performance": {
-                            "topSpeed": {
-                                "value": 312,
-                                "unit": "km/h"
+                            "performance": {
+                                "topSpeed": {
+                                    "value": 312,
+                                    "unit": "km/h"
+                                },
+                                "acceleration": {
+                                    "zeroTo100": {
+                                        "standard": {
+                                            "value": 3.0,
+                                            "unit": "s",
+                                            "test": "0 - 100 km/h"
+                                        },
+                                    },
+                                    "zeroTo160": {
+                                        "standard": {
+                                            "value": 6.9,
+                                            "unit": "s",
+                                            "test": "0 - 160 km/h"
+                                        },
+                                    },
+                                    "zeroTo200": {
+                                        "standard": {
+                                            "value": 10.8,
+                                            "unit": "s",
+                                            "test": "0 - 200 km/h"
+                                        },
+                                        "sportChrono": {
+                                            "value": 10.7,
+                                            "unit": "s",
+                                            "test": "0 - 200 km/h with Sport Chrono Package"
+                                        }
+                                    },
+                                    "inGear80To120": {
+                                        "standard": {
+                                            "value": 2.0,
+                                            "unit": "s",
+                                            "test": "80-120km/h (50-75 mph)"
+                                        },
+                                    }
+                                }
                             },
-                            "acceleration": {
-                                "zeroTo100": {
-                                    "standard": {
-                                        "value": 3.0,
-                                        "unit": "s",
-                                        "test": "0 - 100 km/h"
-                                    },
+                            "soundLevel": {
+                                "standard": "UN-R 51",
+                                "stationaryVehicleRpm": {
+                                    "value": 3325,
+                                    "unit": "1/min"
                                 },
-                                "zeroTo160": {
-                                    "standard": {
-                                        "value": 6.9,
-                                        "unit": "s",
-                                        "test": "0 - 160 km/h"
-                                    },
+                                "stationaryVehicle": {
+                                    "value": 98,
+                                    "unit": "dB(A)"
                                 },
-                                "zeroTo200": {
-                                    "standard": {
-                                        "value": 10.8,
-                                        "unit": "s",
-                                        "test": "0 - 200 km/h"
-                                    },
-                                    "sportChrono": {
-                                        "value": 10.7,
-                                        "unit": "s",
-                                        "test": "0 - 200 km/h with Sport Chrono Package"
+                                "passingVehicle": {
+                                    "value": 71,
+                                    "unit": "dB(A)"
+                                }
+                            },
+                            "terrainFeatures": {
+                                "approachAngle": {
+                                    "pasm": {
+                                        "value": 9.4,
+                                        "unit": "°"
                                     }
                                 },
-                                "inGear80To120": {
-                                    "standard": {
-                                        "value": 2.0,
-                                        "unit": "s",
-                                        "test": "80-120km/h (50-75 mph)"
+                                "maxGroundClearance": {
+                                    "pasm": {
+                                        "value": 125,
+                                        "unit": "mm"
+                                    }
+                                },
+
+                                "departureAngle": {
+                                    "pasm": {
+                                        "value": 14.4,
+                                        "unit": "°"
+                                    }
+                                },
+                            },
+                            "capacities": {
+                                "luggageCompartmentVolumeFront": {
+                                    "value": 135,
+                                    "unit": "l"
+                                },
+                                "openLuggageCompartmentVolumeBehindFrontSeats": {
+                                    "withRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 261,
+                                        "unit": "l"
                                     },
-                                }
-                            }
-                        },
-                        "soundLevel": {
-                            "standard": "UN-R 51",
-                            "stationaryVehicleRpm": {
-                                "value": 3325,
-                                "unit": "1/min"
-                            },
-                            "stationaryVehicle": {
-                                "value": 98,
-                                "unit": "dB(A)"
-                            },
-                            "passingVehicle": {
-                                "value": 71,
-                                "unit": "dB(A)"
-                            }
-                        },
-                        "terrainFeatures": {
-                            "approachAngle": {
-                                "pasm": {
-                                    "value": 9.4,
-                                    "unit": "°"
+                                    "withoutRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 373,
+                                        "unit": "l"
+                                    }
                                 }
                             },
-                            "breakoverAngle": {
-                                "pasm": {
-                                    "value": 13.1,
-                                    "unit": "°"
-                                }
-                            },
-                            "maxGroundClearance": {
-                                "pasm": {
-                                    "value": 125,
-                                    "unit": "mm"
-                                }
-                            },
-                            "overhangFront": {
-                                "value": 1016,
-                                "unit": "mm"
-                            },
-                            "departureAngle": {
-                                "pasm": {
-                                    "value": 14.4,
-                                    "unit": "°"
-                                }
-                            },
-                            "overhangRear": {
-                                "value": 1087,
-                                "unit": "mm"
-                            }
-                        },
-                        "capacities": {
-                            "luggageCompartmentVolumeFront": {
-                                "value": 135,
-                                "unit": "l"
-                            },
-                            "openLuggageCompartmentVolumeBehindFrontSeats": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 261,
-                                    "unit": "l"
-                                },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 373,
-                                    "unit": "l"
-                                }
-                            }
-                        },
-                        "body": {
-                            "length": {
-                                "value": 4553,
-                                "unit": "mm"
-                            },
-                            "width": {
-                                "value": 1852,
-                                "unit": "mm"
-                            },
-                            "widthWithMirrors": {
-                                "value": 2033,
-                                "unit": "mm"
-                            },
-                            "widthWithMirrorsFolded": {
-                                "value": 1834,
-                                "unit": "mm"
-                            },
-                            "height": {
-                                "pasm": {
-                                    "value": 1306,
+                            "body": {
+                                "length": {
+                                    "value": 4553,
                                     "unit": "mm"
                                 },
-                                "pasmSportSuspension": {
+                                "width": {
+                                    "value": 1852,
+                                    "unit": "mm"
+                                },
+                                "height": {
                                     "value": 1294,
                                     "unit": "mm"
-                                }
-                            },
-                            "wheelbase": {
-                                "value": 2450,
-                                "unit": "mm"
-                            },
-                            "turningCircle": {
-                                "value": 10.9,
-                                "unit": "m"
-                            },
-                            "unladenWeight": {
-                                "din": {
-                                    "value": 1645,
-                                    "unit": "kg"
                                 },
-                                "eu": {
-                                    "value": 1720,
-                                    "unit": "kg"
-                                }
-                            },
-                            "maximumLoad": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 420,
-                                    "unit": "kg"
+                                "wheelbase": {
+                                    "value": 2450,
+                                    "unit": "mm"
                                 },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 320,
-                                    "unit": "kg"
-                                }
-                            },
-                            "permissibleGrossWeight": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 2065,
-                                    "unit": "kg"
+                                "turningCircle": {
+                                    "value": 10.9,
+                                    "unit": "m"
                                 },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 1965,
-                                    "unit": "kg"
-                                }
-                            },
-                            "maxPermissibleRoofLoad": {
-                                "system": "Porsche roof transport system",
-                                "value": 75,
-                                "unit": "kg"
+
+                                "maximumLoad": {
+                                    "withRearSeats": {
+                                        "value": 420,
+                                        "unit": "kg"
+                                    },
+                                    "withoutRearSeats": {
+                                        "value": 320,
+                                        "unit": "kg"
+                                    }
+                                },
+
                             }
-                        }
+                        },
 
                     },
                 ]
@@ -515,6 +505,10 @@ export const car_911 = [
                         "modelId": "911",
                         "variantId": "gt",
                         "name": "911 GT3",
+                        "hero": {
+                            "title": "Born for the track.",
+                            "description": "A pure expression of motorsport engineering, the 911 GT3 delivers razor-sharp handling, thrilling performance, and an unmistakable connection between driver and road."
+                        },
                         "year": 2027,
                         "status": "New",
                         "price": {
@@ -538,11 +532,15 @@ export const car_911 = [
                                 "side": "/images/cars/911/911GT3/911_GT_11.png",
                             },
 
+                            "bootSpace": {
+                                "front": "/images/front-space.webp",
+                                "rear": "/images/back-space.webp",
+                            },
+
                             "lights": {
                                 "headlights": "/images/cars/911/911GT3/911_GT_6.png",
                                 "taillights": "/images/cars/911/911GT3/911_GT_13.png",
-                                "frontIndicators": "/images/cars/911/911GT3/FrontIndicator.png",
-                                "rearIndicators": "/images/cars/911/911GT3/911_GT_14.png"
+                                "Indicators": "/images/cars/911/911GT3/FrontIndicator.png",
                             },
 
                             "wheels": {
@@ -605,177 +603,178 @@ export const car_911 = [
                                     "unit": "1/min"
                                 }
                             },
-                        },
-                        "performance": {
-                            "topSpeed": {
-                                "value": 311,
-                                "unit": "km/h"
-                            },
-                            "acceleration": {
-                                "zeroTo100": {
-                                    "standard": {
-                                        "value": 3.4,
-                                        "unit": "s",
-                                        "test": "0 - 100 km/h"
-                                    },
+                            "performance": {
+                                "topSpeed": {
+                                    "value": 311,
+                                    "unit": "km/h"
                                 },
-                                "zeroTo160": {
-                                    "standard": {
-                                        "value": 7.0,
-                                        "unit": "s",
-                                        "test": "0 - 160 km/h"
+                                "acceleration": {
+                                    "zeroTo100": {
+                                        "standard": {
+                                            "value": 3.4,
+                                            "unit": "s",
+                                            "test": "0 - 100 km/h"
+                                        },
                                     },
-                                },
-                                "zeroTo200": {
-                                    "standard": {
-                                        "value": 10.8,
-                                        "unit": "s",
-                                        "test": "0 - 200 km/h"
+                                    "zeroTo160": {
+                                        "standard": {
+                                            "value": 7.0,
+                                            "unit": "s",
+                                            "test": "0 - 160 km/h"
+                                        },
                                     },
-                                },
-                                "inGear80To120": {
-                                    "standard": {
-                                        "value": 1.9,
-                                        "unit": "s",
-                                        "test": "80-120km/h (50-75 mph)"
+                                    "zeroTo200": {
+                                        "standard": {
+                                            "value": 10.8,
+                                            "unit": "s",
+                                            "test": "0 - 200 km/h"
+                                        },
                                     },
-                                }
-                            }
-                        },
-                        "soundLevel": {
-                            "standard": "UN-R 51",
-                            "stationaryVehicleRpm": {
-                                "value": 3658,
-                                "unit": "1/min"
-                            },
-                            "stationaryVehicle": {
-                                "value": 96,
-                                "unit": "dB(A)"
-                            },
-                            "passingVehicle": {
-                                "value": 71,
-                                "unit": "dB(A)"
-                            }
-                        },
-                        "terrainFeatures": {
-                            "approachAngle": {
-                                "pasm": {
-                                    "value": 6.3,
-                                    "unit": "°"
+                                    "inGear80To120": {
+                                        "standard": {
+                                            "value": 1.9,
+                                            "unit": "s",
+                                            "test": "80-120km/h (50-75 mph)"
+                                        },
+                                    }
                                 }
                             },
-                            "breakoverAngle": {
-                                "pasm": {
-                                    "value": 10.6,
-                                    "unit": "°"
+                            "soundLevel": {
+                                "standard": "UN-R 51",
+                                "stationaryVehicleRpm": {
+                                    "value": 3658,
+                                    "unit": "1/min"
+                                },
+                                "stationaryVehicle": {
+                                    "value": 96,
+                                    "unit": "dB(A)"
+                                },
+                                "passingVehicle": {
+                                    "value": 71,
+                                    "unit": "dB(A)"
                                 }
                             },
-                            "maxGroundClearance": {
-                                "pasm": {
-                                    "value": 76,
+                            "terrainFeatures": {
+                                "approachAngle": {
+                                    "pasm": {
+                                        "value": 6.3,
+                                        "unit": "°"
+                                    }
+                                },
+                                "breakoverAngle": {
+                                    "pasm": {
+                                        "value": 10.6,
+                                        "unit": "°"
+                                    }
+                                },
+                                "maxGroundClearance": {
+                                    "pasm": {
+                                        "value": 76,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "overhangFront": {
+                                    "value": 1037,
+                                    "unit": "mm"
+                                },
+                                "departureAngle": {
+                                    "pasm": {
+                                        "value": 9.4,
+                                        "unit": "°"
+                                    }
+                                },
+                                "overhangRear": {
+                                    "value": 1076,
                                     "unit": "mm"
                                 }
                             },
-                            "overhangFront": {
-                                "value": 1037,
-                                "unit": "mm"
-                            },
-                            "departureAngle": {
-                                "pasm": {
-                                    "value": 9.4,
-                                    "unit": "°"
+                            "capacities": {
+                                "luggageCompartmentVolumeFront": {
+                                    "value": 135,
+                                    "unit": "l"
+                                },
+                                "openLuggageCompartmentVolumeBehindFrontSeats": {
+                                    "unit": "l",
+                                    "value": 373
                                 }
                             },
-                            "overhangRear": {
-                                "value": 1076,
-                                "unit": "mm"
-                            }
-                        },
-                        "capacities": {
-                            "luggageCompartmentVolumeFront": {
-                                "value": 135,
-                                "unit": "l"
-                            },
-                            "openLuggageCompartmentVolumeBehindFrontSeats": {
-                                "unit": "l",
-                                "value": 373
-                            }
-                        },
-                        "body": {
-                            "length": {
-                                "value": 4553,
-                                "unit": "mm"
-                            },
-                            "width": {
-                                "value": 1852,
-                                "unit": "mm"
-                            },
-                            "widthWithMirrors": {
-                                "value": 2033,
-                                "unit": "mm"
-                            },
-                            "widthWithMirrorsFolded": {
-                                "value": 1834,
-                                "unit": "mm"
-                            },
-                            "height": {
-                                "pasm": {
-                                    "value": 1306,
+                            "body": {
+                                "length": {
+                                    "value": 4553,
                                     "unit": "mm"
                                 },
-                                "pasmSportSuspension": {
-                                    "value": 1294,
+                                "width": {
+                                    "value": 1852,
                                     "unit": "mm"
-                                }
-                            },
-                            "wheelbase": {
-                                "value": 2450,
-                                "unit": "mm"
-                            },
-                            "turningCircle": {
-                                "value": 10.9,
-                                "unit": "m"
-                            },
-                            "unladenWeight": {
-                                "din": {
-                                    "value": 1645,
-                                    "unit": "kg"
                                 },
-                                "eu": {
-                                    "value": 1720,
-                                    "unit": "kg"
-                                }
-                            },
-                            "maximumLoad": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 420,
-                                    "unit": "kg"
+                                "widthWithMirrors": {
+                                    "value": 2033,
+                                    "unit": "mm"
                                 },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 320,
-                                    "unit": "kg"
-                                }
-                            },
-                            "permissibleGrossWeight": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 2065,
-                                    "unit": "kg"
+                                "widthWithMirrorsFolded": {
+                                    "value": 1834,
+                                    "unit": "mm"
                                 },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 1965,
+                                "height": {
+                                    "pasm": {
+                                        "value": 1306,
+                                        "unit": "mm"
+                                    },
+                                    "pasmSportSuspension": {
+                                        "value": 1294,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "wheelbase": {
+                                    "value": 2450,
+                                    "unit": "mm"
+                                },
+                                "turningCircle": {
+                                    "value": 10.9,
+                                    "unit": "m"
+                                },
+                                "unladenWeight": {
+                                    "din": {
+                                        "value": 1645,
+                                        "unit": "kg"
+                                    },
+                                    "eu": {
+                                        "value": 1720,
+                                        "unit": "kg"
+                                    }
+                                },
+                                "maximumLoad": {
+                                    "withRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 420,
+                                        "unit": "kg"
+                                    },
+                                    "withoutRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 320,
+                                        "unit": "kg"
+                                    }
+                                },
+                                "permissibleGrossWeight": {
+                                    "withRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 2065,
+                                        "unit": "kg"
+                                    },
+                                    "withoutRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 1965,
+                                        "unit": "kg"
+                                    }
+                                },
+                                "maxPermissibleRoofLoad": {
+                                    "system": "Porsche roof transport system",
+                                    "value": 75,
                                     "unit": "kg"
                                 }
-                            },
-                            "maxPermissibleRoofLoad": {
-                                "system": "Porsche roof transport system",
-                                "value": 75,
-                                "unit": "kg"
                             }
-                        }
+                        },
+
                     },
                 ]
             },
@@ -788,6 +787,10 @@ export const car_911 = [
                         "modelId": "911",
                         "variantId": "turbo",
                         "name": "911 Turbo S",
+                        "hero": {
+                            "title": "Power without compromise.",
+                            "description": "Extraordinary performance meets everyday refinement in the 911 Turbo S, combining breathtaking acceleration, iconic design, and confidence-inspiring all-wheel drive."
+                        },
                         "year": 2027,
                         "price": {
                             "amount": 38249000,
@@ -809,12 +812,15 @@ export const car_911 = [
                                 "rear": "/images/cars/911/911TurboS/911_Turbo_S_5.png",
                                 "side": "/images/cars/911/911TurboS/911_Turbo_S_2.png",
                             },
+                            "bootSpace": {
+                                "front": "/images/front-space.webp",
+                                "rear": "/images/back-space.webp",
+                            },
 
                             "lights": {
                                 "headlights": "/images/cars/911/911TurboS/911_Turbo_S_15.png",
                                 "taillights": "/images/cars/911/911TurboS/911_Turbo_S_13.png",
-                                "frontIndicators": "/images/cars/911/911TurboS/911_Turbo_S_12.png",
-                                "rearIndicators": "/images/cars/911/911TurboS/911_Turbo_S_8.png"
+                                "Indicators": "/images/cars/911/911TurboS/911_Turbo_S_12.png",
                             },
 
                             "wheels": {
@@ -885,201 +891,182 @@ export const car_911 = [
                                     "unit": "1/min"
                                 }
                             },
-                        },
-                        "performance": {
-                            "topSpeed": {
-                                "value": 322,
-                                "unit": "km/h"
-                            },
-                            "acceleration": {
-                                "zeroTo100": {
-                                    "standard": {
-                                        "value": 2.5,
-                                        "unit": "s",
-                                        "test": "0 - 100 km/h"
+                            "performance": {
+                                "topSpeed": {
+                                    "value": 322,
+                                    "unit": "km/h"
+                                },
+                                "acceleration": {
+                                    "zeroTo100": {
+                                        "standard": {
+                                            "value": 2.5,
+                                            "unit": "s",
+                                            "test": "0 - 100 km/h"
+                                        },
                                     },
-                                },
-                                "zeroTo160": {
-                                    "standard": {
-                                        "value": 5.5,
-                                        "unit": "s",
-                                        "test": "0 - 160 km/h"
+                                    "zeroTo160": {
+                                        "standard": {
+                                            "value": 5.5,
+                                            "unit": "s",
+                                            "test": "0 - 160 km/h"
+                                        },
                                     },
-                                },
-                                "zeroTo200": {
-                                    "standard": {
-                                        "value": 8.4,
-                                        "unit": "s",
-                                        "test": "0 - 200 km/h"
+                                    "zeroTo200": {
+                                        "standard": {
+                                            "value": 8.4,
+                                            "unit": "s",
+                                            "test": "0 - 200 km/h"
+                                        },
                                     },
+                                    "inGear80To120": {
+                                        "standard": {
+                                            "value": 1.5,
+                                            "unit": "s",
+                                            "test": "80-120km/h (50-75 mph)"
+                                        },
+                                    }
+                                }
+                            },
+                            "soundLevel": {
+                                "standard": "UN-R 51",
+                                "stationaryVehicleRpm": {
+                                    "value": 3325,
+                                    "unit": "1/min"
                                 },
-                                "inGear80To120": {
-                                    "standard": {
-                                        "value": 1.5,
-                                        "unit": "s",
-                                        "test": "80-120km/h (50-75 mph)"
+                                "stationaryVehicle": {
+                                    "value": 92,
+                                    "unit": "dB(A)"
+                                },
+                                "passingVehicle": {
+                                    "value": 70,
+                                    "unit": "dB(A)"
+                                }
+                            },
+                            "terrainFeatures": {
+                                "approachAngle": {
+                                    "pasm": {
+                                        "value": 8.2,
+                                        "unit": "°"
                                     },
-                                }
-                            }
-                        },
-                        "soundLevel": {
-                            "standard": "UN-R 51",
-                            "stationaryVehicleRpm": {
-                                "value": 3325,
-                                "unit": "1/min"
-                            },
-                            "stationaryVehicle": {
-                                "value": 92,
-                                "unit": "dB(A)"
-                            },
-                            "passingVehicle": {
-                                "value": 70,
-                                "unit": "dB(A)"
-                            }
-                        },
-                        "terrainFeatures": {
-                            "approachAngle": {
-                                "pasm": {
-                                    "value": 8.2,
-                                    "unit": "°"
+                                    "pasmSportSuspension": {
+                                        "value": 7.6,
+                                        "unit": "°"
+                                    }
                                 },
-                                "pasmSportSuspension": {
-                                    "value": 7.6,
-                                    "unit": "°"
-                                }
-                            },
-                            "breakoverAngle": {
-                                "pasm": {
-                                    "value": 13.0,
-                                    "unit": "°"
+                                "maxGroundClearance": {
+                                    "pasm": {
+                                        "value": 103,
+                                        "unit": "mm"
+                                    }
                                 },
-                                "passSportSuspension": {
-                                    "value": "12.0",
-                                    "unit": "°"
-                                }
-                            },
-                            "maxGroundClearance": {
-                                "pasm": {
-                                    "value": 103,
-                                    "unit": "mm"
-                                }
-                            },
-                            "overhangFront": {
-                                "value": 1016,
-                                "unit": "mm"
-                            },
-                            "departureAngle": {
-                                "pasm": {
-                                    "value": 13.9,
-                                    "unit": "°"
+                                "departureAngle": {
+                                    "pasm": {
+                                        "value": 13.9,
+                                        "unit": "°"
+                                    },
+                                    "pasmSportSuspension": {
+                                        "value": 13.3,
+                                        "unit": "°"
+                                    }
                                 },
-                                "pasmSportSuspension": {
-                                    "value": 13.3,
-                                    "unit": "°"
-                                }
                             },
-                            "overhangRear": {
-                                "value": 1085,
-                                "unit": "mm"
-                            }
-                        },
-                        "capacities": {
-                            "luggageCompartmentVolumeFront": {
-                                "value": 135,
-                                "unit": "l"
-                            },
-                            "openLuggageCompartmentVolumeBehindFrontSeats": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 261,
+                            "capacities": {
+                                "luggageCompartmentVolumeFront": {
+                                    "value": 135,
                                     "unit": "l"
                                 },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 373,
-                                    "unit": "l"
+                                "openLuggageCompartmentVolumeBehindFrontSeats": {
+                                    "withRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 261,
+                                        "unit": "l"
+                                    },
+                                    "withoutRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 373,
+                                        "unit": "l"
+                                    }
+                                }
+                            },
+                            "body": {
+                                "length": {
+                                    "value": 4553,
+                                    "unit": "mm"
+                                },
+                                "width": {
+                                    "value": 1852,
+                                    "unit": "mm"
+                                },
+                                "widthWithMirrors": {
+                                    "value": 2033,
+                                    "unit": "mm"
+                                },
+                                "widthWithMirrorsFolded": {
+                                    "value": 1834,
+                                    "unit": "mm"
+                                },
+                                "height": {
+                                    "pasm": {
+                                        "value": 1306,
+                                        "unit": "mm"
+                                    },
+                                    "pasmSportSuspension": {
+                                        "value": 1294,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "wheelbase": {
+                                    "value": 2450,
+                                    "unit": "mm"
+                                },
+                                "turningCircle": {
+                                    "value": 10.9,
+                                    "unit": "m"
+                                },
+                                "unladenWeight": {
+                                    "din": {
+                                        "value": 1645,
+                                        "unit": "kg"
+                                    },
+                                    "eu": {
+                                        "value": 1720,
+                                        "unit": "kg"
+                                    }
+                                },
+                                "maximumLoad": {
+                                    "withRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 420,
+                                        "unit": "kg"
+                                    },
+                                    "withoutRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 320,
+                                        "unit": "kg"
+                                    }
+                                },
+                                "permissibleGrossWeight": {
+                                    "withRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 2065,
+                                        "unit": "kg"
+                                    },
+                                    "withoutRearSeats": {
+                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
+                                        "value": 1965,
+                                        "unit": "kg"
+                                    }
+                                },
+                                "maxPermissibleRoofLoad": {
+                                    "system": "Porsche roof transport system",
+                                    "value": 75,
+                                    "unit": "kg"
                                 }
                             }
                         },
-                        "body": {
-                            "length": {
-                                "value": 4553,
-                                "unit": "mm"
-                            },
-                            "width": {
-                                "value": 1852,
-                                "unit": "mm"
-                            },
-                            "widthWithMirrors": {
-                                "value": 2033,
-                                "unit": "mm"
-                            },
-                            "widthWithMirrorsFolded": {
-                                "value": 1834,
-                                "unit": "mm"
-                            },
-                            "height": {
-                                "pasm": {
-                                    "value": 1306,
-                                    "unit": "mm"
-                                },
-                                "pasmSportSuspension": {
-                                    "value": 1294,
-                                    "unit": "mm"
-                                }
-                            },
-                            "wheelbase": {
-                                "value": 2450,
-                                "unit": "mm"
-                            },
-                            "turningCircle": {
-                                "value": 10.9,
-                                "unit": "m"
-                            },
-                            "unladenWeight": {
-                                "din": {
-                                    "value": 1645,
-                                    "unit": "kg"
-                                },
-                                "eu": {
-                                    "value": 1720,
-                                    "unit": "kg"
-                                }
-                            },
-                            "maximumLoad": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 420,
-                                    "unit": "kg"
-                                },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 320,
-                                    "unit": "kg"
-                                }
-                            },
-                            "permissibleGrossWeight": {
-                                "withRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 2065,
-                                    "unit": "kg"
-                                },
-                                "withoutRearSeats": {
-                                    "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                    "value": 1965,
-                                    "unit": "kg"
-                                }
-                            },
-                            "maxPermissibleRoofLoad": {
-                                "system": "Porsche roof transport system",
-                                "value": 75,
-                                "unit": "kg"
-                            }
-                        }
                     }
                 ]
             }
-
         ]
     },
 ]

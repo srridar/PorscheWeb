@@ -11,6 +11,10 @@ export const Cayenne_Car = [{
                     "modelId": "cayenne",
                     "variantId": "electric",
                     "name": "Cayenne Electric",
+                    "hero": {
+                        "title": "Luxury, electrified.",
+                        "description": "The Cayenne Electric combines exhilarating electric performance with spacious comfort, advanced technology, and the versatility of a true Porsche SUV."
+                    },
                     "year": 2026,
                     "fuelType": "Electric",
                     "driveType": "All-Wheel Drive",
@@ -30,12 +34,15 @@ export const Cayenne_Car = [{
                             "rear": "/images/cars/cayenne/cayenne_electric/",
                             "side": "/images/cars/cayenne/cayenne_electric/",
                         },
+                        "bootSpace": {
+                            "front": "/images/front-space.webp",
+                            "rear": "/images/back-space.webp",
+                        },
 
                         "lights": {
                             "headlights": "/images/cars/cayenne/cayenne_electric/",
                             "taillights": "/images/cars/cayenne/cayenne_electric/",
-                            "frontIndicators": "/images/cars/cayenne/cayenne_electric/",
-                            "rearIndicators": "/images/cars/cayenne/cayenne_electric/"
+                            "Indicators": "/images/cars/cayenne/cayenne_electric/",
                         },
 
                         "wheels": {
@@ -69,13 +76,66 @@ export const Cayenne_Car = [{
                             "value": 230,
                             "unit": "km/h"
                         }
-                    }
+                    },
+                    "battery": {
+                        "type": "High-voltage lithium-ion battery",
+                        "voltage": {
+                            "value": 800,
+                            "unit": "V"
+                        }
+                    },
+
+                    "charging": {
+                        "dc": {
+                            "connector": "CCS",
+                            "maximumPower": {
+                                "value": 390,
+                                "unit": "kW"
+                            },
+                            "chargeTime": {
+                                "fromPercent": 10,
+                                "toPercent": 80,
+                                "value": 16,
+                                "unit": "minutes"
+                            },
+                            "chargingConditions": {
+                                "voltage": ">850 V",
+                                "chargingStation": ">390 kW",
+                                "current": ">520 A",
+                                "batteryTemperature": "15 °C",
+                                "initialStateOfCharge": "9%"
+                            }
+                        },
+
+                        "ac": {
+                            "onboardCharger": {
+                                "power": 11,
+                                "unit": "kW"
+                            },
+                            "maximumOptionalPower": {
+                                "power": 22,
+                                "unit": "kW"
+                            }
+                        }
+                    },
+
+                    "range": {
+                        "min": 576,
+                        "max": 643,
+                        "unit": "km",
+                        "standard": "WLTP",
+                        "type": "combined model range"
+                    },
                 },
                 {
                     "carId": "cayenne-turbo-electric",
                     "modelId": "cayenne",
                     "variantId": "electric",
                     "name": "Cayenne Turbo Electric",
+                    "hero": {
+                        "title": "Electric power, unleashed.",
+                        "description": "The Cayenne Turbo Electric takes electric SUV performance to new heights with breathtaking power, dynamic handling, and unmistakable Porsche character."
+                    },
                     "year": 2026,
                     "fuelType": "Electric",
                     "driveType": "All-Wheel Drive",
@@ -99,8 +159,13 @@ export const Cayenne_Car = [{
                         "lights": {
                             "headlights": "/images/cars/cayenne/cayenne_turbo_electric/headlight.png",
                             "taillights": "/images/cars/cayenne/cayenne_turbo_electric/hero.png",
-                            "frontIndicators": "/images/cars/cayenne/cayenne_turbo_electric/frontindicator.png",
-                            "rearIndicators": "/images/cars/cayenne/cayenne_turbo_electric/rareIndicator.png"
+                            "Indicators": "/images/cars/cayenne/cayenne_turbo_electric/frontindicator.png",
+
+                        },
+
+                        "bootSpace": {
+                            "front": "/images/front-space.webp",
+                            "rear": "/images/back-space.webp",
                         },
 
                         "wheels": {
@@ -132,7 +197,56 @@ export const Cayenne_Car = [{
                             "value": 260,
                             "unit": "km/h"
                         }
-                    }
+                    },
+                    "battery": {
+                        "type": "High-voltage lithium-ion battery",
+                        "voltage": {
+                            "value": 800,
+                            "unit": "V"
+                        }
+                    },
+
+                    "charging": {
+                        "dc": {
+                            "connector": "CCS",
+                            "maximumPower": {
+                                "value": 390,
+                                "unit": "kW"
+                            },
+                            "chargeTime": {
+                                "fromPercent": 10,
+                                "toPercent": 80,
+                                "value": 16,
+                                "unit": "minutes"
+                            },
+                            "chargingConditions": {
+                                "voltage": ">850 V",
+                                "chargingStation": ">390 kW",
+                                "current": ">520 A",
+                                "batteryTemperature": "15 °C",
+                                "initialStateOfCharge": "9%"
+                            }
+                        },
+
+                        "ac": {
+                            "onboardCharger": {
+                                "power": 11,
+                                "unit": "kW"
+                            },
+                            "maximumOptionalPower": {
+                                "power": 22,
+                                "unit": "kW"
+                            }
+                        }
+                    },
+
+                    "range": {
+                        "min": 564,
+                        "max": 624,
+                        "unit": "km",
+                        "standard": "WLTP",
+                        "type": "combined model range"
+                    },
                 }
             ]
 
@@ -146,6 +260,10 @@ export const Cayenne_Car = [{
                     "modelId": "cayenne",
                     "variantId": "gasoline",
                     "name": "Cayenne",
+                    "hero": {
+                        "title": "Power meets versatility.",
+                        "description": "The Cayenne delivers signature Porsche performance with exceptional comfort, confident handling, and the everyday versatility of a luxury SUV."
+                    },
                     "year": 2027,
                     "fuelType": "Gasoline",
                     "driveType": "All-Wheel Drive",
@@ -165,12 +283,15 @@ export const Cayenne_Car = [{
                             "rear": "/images/cars/cayenne/cayenne/rearLight.png",
                             "side": "/images/cars/cayenne/cayenne/sideView2.png",
                         },
+                        "bootSpace": {
+                            "front": "/images/front-space.webp",
+                            "rear": "/images/back-space.webp",
+                        },
 
                         "lights": {
                             "headlights": "/images/cars/cayenne/cayenne/lights/headlight1.png",
                             "taillights": "/images/cars/cayenne/cayenne/lights/rearLight.png",
-                            "frontIndicators": "/images/cars/cayenne/cayenne/lights/front-indicator.png",
-                            "rearIndicators": "/images/cars/cayenne/cayenne/lights/rearIndicators.png"
+                            "Indicators": "/images/cars/cayenne/cayenne/lights/front-indicator.png",
                         },
 
                         "wheels": {
@@ -209,6 +330,10 @@ export const Cayenne_Car = [{
                     "modelId": "cayenne",
                     "variantId": "gasoline",
                     "name": "Cayenne Black Edition",
+                    "hero": {
+                        "title": "Dark. Distinctive. Cayenne.",
+                        "description": "The Cayenne Black Edition combines a distinctive dark design with Porsche performance, premium comfort, and the versatility of a luxury SUV."
+                    },
                     "year": 2027,
                     "fuelType": "Gasoline",
                     "driveType": "All-Wheel Drive",
@@ -228,12 +353,15 @@ export const Cayenne_Car = [{
                             "rear": "/images/cars/cayenne/cayenne_black_edition/rear.png",
                             "side": "/images/cars/cayenne/cayenne_black_edition/side.png",
                         },
+                        "bootSpace": {
+                            "front": "/images/front-space.webp",
+                            "rear": "/images/back-space.webp",
+                        },
 
                         "lights": {
                             "headlights": "/images/cars/cayenne/cayenne_black_edition/headlights.png",
                             "taillights": "/images/cars/cayenne/cayenne_black_edition/taillights.png",
-                            "frontIndicators": "/images/cars/cayenne/cayenne_black_edition/front_indicators.png",
-                            "rearIndicators": "/images/cars/cayenne/cayenne_black_edition/rear_indicators.png"
+                            "Indicators": "/images/cars/cayenne/cayenne_black_edition/front_indicators.png",
                         },
 
                         "wheels": {
@@ -272,6 +400,10 @@ export const Cayenne_Car = [{
                     "modelId": "cayenne",
                     "variantId": "gasoline",
                     "name": "Cayenne GTS",
+                    "hero": {
+                        "title": "Performance with attitude.",
+                        "description": "The Cayenne GTS brings a sharper sporting character to the Cayenne, combining exhilarating performance, agile handling, and unmistakable GTS style."
+                    },
                     "year": 2027,
                     "fuelType": "Gasoline",
                     "driveType": "All-Wheel Drive",
@@ -291,12 +423,15 @@ export const Cayenne_Car = [{
                             "rear": "/images/cars/cayenne/cayenne_gts/back-view.png",
                             "side": "/images/cars/cayenne/cayenne_gts/side.png",
                         },
+                        "bootSpace": {
+                            "front": "/images/front-space.webp",
+                            "rear": "/images/back-space.webp",
+                        },
 
                         "lights": {
                             "headlights": "/images/cars/cayenne/cayenne_gts/headlight.png",
-                            "taillights": "/images/cars/cayenne/cayenne_gts/tail-light.png", 
-                            "frontIndicators": "/images/cars/cayenne/cayenne_gts/front_indicator.png",
-                            "rearIndicators": "/images/cars/cayenne/cayenne_gts/rear_indicator.png"
+                            "taillights": "/images/cars/cayenne/cayenne_gts/tail-light.png",
+                            "Indicators": "/images/cars/cayenne/cayenne_gts/front_indicator.png",
                         },
 
                         "wheels": {
@@ -341,6 +476,10 @@ export const Cayenne_Car = [{
                     "modelId": "cayenne",
                     "variantId": "coupé",
                     "name": "Cayenne Coupé",
+                    "hero": {
+                        "title": "SUV versatility. Coupe attitude.",
+                        "description": "The Cayenne Coupé combines the versatility of an SUV with a striking coupe silhouette, dynamic performance, and unmistakable Porsche character."
+                    },
                     "year": 2027,
                     "fuelType": "Gasoline",
                     "driveType": "All-Wheel Drive",
@@ -360,12 +499,15 @@ export const Cayenne_Car = [{
                             "rear": "/images/cars/cayenne/Coupé/Cayenne Coupé/exterior/back.png",
                             "side": "/images/cars/cayenne/Coupé/Cayenne Coupé/exterior/side.png",
                         },
+                        "bootSpace": {
+                            "front": "/images/front-space.webp",
+                            "rear": "/images/back-space.webp",
+                        },
 
                         "lights": {
-                            "headlights": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/headlights.png", 
+                            "headlights": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/headlights.png",
                             "taillights": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/back-light.png",
-                            "frontIndicators": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/front_indicator.png",
-                            "rearIndicators": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/back_indicator.png"
+                            "Indicators": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/front_indicator.png",
                         },
 
                         "wheels": {
@@ -404,6 +546,10 @@ export const Cayenne_Car = [{
                     "modelId": "cayenne",
                     "variantId": "coupé",
                     "name": "Cayenne Coupé Black Edition",
+                    "hero": {
+                        "title": "Dark by design.",
+                        "description": "The Cayenne Coupé Black Edition pairs its distinctive coupe profile with exclusive dark accents, refined comfort, and signature Porsche performance."
+                    },
                     "year": 2027,
                     "fuelType": "Gasoline",
                     "driveType": "All-Wheel Drive",
@@ -423,17 +569,19 @@ export const Cayenne_Car = [{
                             "rear": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/exterior/back.png",
                             "side": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/exterior/side-view.png",
                         },
-
+                        "bootSpace": {
+                            "front": "/images/front-space.webp",
+                            "rear": "/images/back-space.webp",
+                        },
                         "lights": {
                             "headlights": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/headlight.png",
-                            "taillights": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/back-light.png", 
-                            "frontIndicators": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/front-indicator.png",
-                            "rearIndicators": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/back_indicators.png"
-                        },   
+                            "taillights": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/back-light.png",
+                            "Indicators": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/front-indicator.png",
+                        },
 
                         "wheels": {
                             "frontWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/wheels/front_wheel.png",
-                            "rearWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/wheels/rear_wheel.png", 
+                            "rearWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/wheels/rear_wheel.png",
                         },
 
                         "interior": {
@@ -467,6 +615,10 @@ export const Cayenne_Car = [{
                     "modelId": "cayenne",
                     "variantId": "coupé",
                     "name": "Cayenne GTS Coupé",
+                    "hero": {
+                        "title": "Sporting attitude, unleashed.",
+                        "description": "The Cayenne GTS Coupé brings sharper performance and unmistakable GTS character to a striking coupe silhouette, creating an SUV built for driving enthusiasts."
+                    },
                     "year": 2027,
                     "fuelType": "Gasoline",
                     "driveType": "All-Wheel Drive",
@@ -486,12 +638,15 @@ export const Cayenne_Car = [{
                             "rear": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/exterior/rear.png",
                             "side": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/exterior/side_view.png",
                         },
+                        "bootSpace": {
+                            "front": "/images/front-space.webp",
+                            "rear": "/images/back-space.webp",
+                        },
 
                         "lights": {
                             "headlights": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/Front_headLights.png",
                             "taillights": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/tail-light.png",  // 
-                            "frontIndicators": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/front_indicator.png",
-                            "rearIndicators": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/rear_indicator.png"
+                            "Indicators": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/front_indicator.png",
                         },
 
                         "wheels": {

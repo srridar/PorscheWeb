@@ -12,6 +12,10 @@ export const Macan = [
                         "modelId": "macan",
                         "variantId": "gasoline",
                         "name": "Macan",
+                        "hero": {
+                            "title": "Sporty by nature.",
+                            "description": "The Macan combines Porsche performance with everyday versatility, delivering agile handling, dynamic power, and the practicality of a luxury SUV."
+                        },
                         "year": 2026,
                         "fuelType": "Gasoline",
                         "driveType": "All-Wheel Drive",
@@ -32,11 +36,16 @@ export const Macan = [
                                 "side": "/images/cars/macan/macan/porsche-macan-gasoline.avif",
                             },
 
+                            "bootSpace": {
+                                "front": "/images/front-space.webp",
+                                "rear": "/images/back-space.webp",
+                            },
+
                             "lights": {
                                 "headlights": "/images/cars/macan/macan/porsche-macan-fi.png",
                                 "taillights": "/images/cars/macan/macan/porsche-macan-tl.png",
-                                "frontIndicators": "/images/cars/macan/macan/Fi.png",
-                                "rearIndicators": "/images/cars/macan/macan/Ri.png"
+                                "Indicators": "/images/cars/macan/macan/Fi.png",
+
                             },
 
                             "wheels": {
@@ -361,6 +370,10 @@ export const Macan = [
                         "modelId": "macan",
                         "variantId": "electric",
                         "name": "Macan Electric",
+                        "hero": {
+                            "title": "Electric. Effortlessly versatile.",
+                            "description": "The all-electric Macan brings together instant electric performance, distinctive Porsche design, and everyday SUV versatility."
+                        },
                         "year": 2026,
                         "fuelType": "Electric",
                         "driveType": "Rear-Wheel Drive",
@@ -381,11 +394,15 @@ export const Macan = [
                                 "side": "/images/cars/macan/macanElectric/macanElectric/macanElectric-3.png",
                             },
 
+                            "bootSpace": {
+                                "front": "/images/front-space.webp",
+                                "rear": "/images/back-space.webp",
+                            },
+
                             "lights": {
                                 "headlights": "/images/cars/macan/macanElectric/macanElectric/macanElectric-14.png",
                                 "taillights": "/images/cars/macan/macanElectric/macanElectric/macanElectric-15.png",
-                                "frontIndicators": "/images/cars/macan/macanElectric/macanElectric/macanElectric-16.png",
-                                "rearIndicators": "/images/cars/macan/macanElectric/macanElectric/macanElectric-17.png"
+                                "Indicators": "/images/cars/macan/macanElectric/macanElectric/macanElectric-16.png",
                             },
 
                             "wheels": {
@@ -416,13 +433,57 @@ export const Macan = [
                                 "value": 220,
                                 "unit": "km/h"
                             }
-                        }
+                        },
+                        "battery": {
+                            "type": "Lithium-ion high-performance battery",
+                            "grossCapacity": {
+                                "value": 100,
+                                "unit": "kWh"
+                            },
+                            "voltage": {
+                                "value": 800,
+                                "unit": "V"
+                            }
+                        },
+                        "charging": {
+                            "dc": {
+                                "connector": "CCS",
+                                "maximumPower": {
+                                    "value": 270,
+                                    "unit": "kW"
+                                },
+                                "chargeTime": {
+                                    "fromPercent": 10,
+                                    "toPercent": 80,
+                                    "value": 21,
+                                    "unit": "minutes"
+                                },
+                                "chargingConditions": {
+                                    "voltage": ">850 V",
+                                    "chargingStation": ">270 kW",
+                                    "batteryTemperature": "25 °C",
+                                    "initialStateOfCharge": "9%"
+                                }
+                            }
+                        },
+                        "range": {
+                            "min": 548,
+                            "max": 641,
+                            "unit": "km",
+                            "standard": "WLTP",
+                            "type": "combined model range",
+                            "preliminary": true
+                        },
                     },
                     {
                         "carId": "macan-4s-electric",
                         "modelId": "macan",
                         "variantId": "electric",
                         "name": "Macan 4S Electric",
+                        "hero": {
+                            "title": "Electric performance, elevated.",
+                            "description": "The Macan 4S combines exhilarating electric power with precise Porsche handling, delivering a thrilling drive without sacrificing everyday versatility."
+                        },
                         "year": 2027,
                         "fuelType": "Electric",
                         "driveType": "All-Wheel Drive",
@@ -441,11 +502,15 @@ export const Macan = [
                                 "rear": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png",
                                 "side": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_5.png",
                             },
+
+                            "bootSpace": {
+                                "front": "/images/front-space.webp",
+                                "rear": "/images/back-space.webp",
+                            },
                             "lights": {
                                 "headlights": "/images/cars/macan/macanElectric/macan4SElectric/HeadLight.png",
                                 "taillights": "/images/cars/macan/macanElectric/macan4SElectric/TailLight.png",
-                                "frontIndicators": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png",
-                                "rearIndicators": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png"
+                                "Indicators": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png",
                             },
                             "wheels": {
                                 "frontWheel": "/images/cars/macan/macanElectric/macan4SElectric/FrontWheel.png",
@@ -474,13 +539,59 @@ export const Macan = [
                                 "value": 240,
                                 "unit": "km/h"
                             }
-                        }
+                        },
+                        "battery": {
+                            "type": "Lithium-ion high-performance battery",
+                            "grossCapacity": {
+                                "value": 100,
+                                "unit": "kWh"
+                            },
+                            "voltage": {
+                                "value": 800,
+                                "unit": "V"
+                            }
+                        },
+
+                        "charging": {
+                            "dc": {
+                                "connector": "CCS",
+                                "maximumPower": {
+                                    "value": 270,
+                                    "unit": "kW"
+                                },
+                                "chargeTime": {
+                                    "fromPercent": 10,
+                                    "toPercent": 80,
+                                    "value": 21,
+                                    "unit": "minutes"
+                                },
+                                "chargingConditions": {
+                                    "voltage": ">850 V",
+                                    "chargingStation": ">270 kW",
+                                    "batteryTemperature": "25 °C",
+                                    "initialStateOfCharge": "9%"
+                                }
+                            }
+                        },
+
+                        "range": {
+                            "min": 524,
+                            "max": 611,
+                            "unit": "km",
+                            "standard": "WLTP",
+                            "type": "combined model range"
+                        },
+
                     },
                     {
                         "carId": "macan-turbo-electric",
                         "modelId": "macan",
                         "variantId": "electric",
                         "name": "Macan Turbo Electric",
+                        "hero": {
+                            "title": "Power at its peak.",
+                            "description": "The Macan Turbo pushes electric performance to another level, combining breathtaking acceleration, exceptional agility, and unmistakable Porsche character."
+                        },
                         "year": 2027,
                         "fuelType": "Electric",
                         "driveType": "All-Wheel Drive",
@@ -501,11 +612,15 @@ export const Macan = [
                                 "side": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_8.png",
                             },
 
+                            "bootSpace": {
+                                "front": "/images/front-space.webp",
+                                "rear": "/images/back-space.webp",
+                            },
+
                             "lights": {
                                 "headlights": "/images/cars/macan/macanTurboElectric/HeadLight.png",
                                 "taillights": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_11.png",
-                                "frontIndicators": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_6.png",
-                                "rearIndicators": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_11.png"
+                                "Indicators": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_6.png",
                             },
 
                             "wheels": {
@@ -536,7 +651,47 @@ export const Macan = [
                                 "value": 260,
                                 "unit": "km/h"
                             }
-                        }
+                        },
+                        "battery": {
+                            "type": "Lithium-ion high-performance battery",
+                            "grossCapacity": {
+                                "value": 100,
+                                "unit": "kWh"
+                            },
+                            "voltage": {
+                                "value": 800,
+                                "unit": "V"
+                            }
+                        },
+                        "charging": {
+                            "dc": {
+                                "connector": "CCS",
+                                "maximumPower": {
+                                    "value": 270,
+                                    "unit": "kW"
+                                },
+                                "chargeTime": {
+                                    "fromPercent": 10,
+                                    "toPercent": 80,
+                                    "value": 21,
+                                    "unit": "minutes"
+                                },
+                                "chargingConditions": {
+                                    "voltage": ">850 V",
+                                    "chargingStation": ">270 kW",
+                                    "batteryTemperature": "25 °C",
+                                    "initialStateOfCharge": "9%"
+                                }
+                            }
+                        },
+                        "range": {
+                            "min": 528,
+                            "max": 589,
+                            "unit": "km",
+                            "standard": "WLTP",
+                            "type": "combined model range",
+                            "preliminary": true
+                        },
                     }
                 ]
             }
