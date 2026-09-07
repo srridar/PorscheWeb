@@ -4,9 +4,10 @@ import { useParams } from "react-router-dom";
 import { Cayenne_Car } from "../../../data/Cayenne_Car_model/Cayenne";
 import { Macan } from "../../../data/Macan_Car_model/Macan";
 import { Taycan } from "../../../data/Taycan_Car_model/Taycan";
-import EV_HeroSection from "./EV_HeroSection";
-import EVFeatures from "./EV_Car_Features/EVFeatures";
+import HeroSection from "../../common/HeroSection";
+import EVFeatures from "../../common/Features";
 import EV_CarTechnicalSection from "./EV_CarTechnicalSection";
+import Footer from "@/components/common/Footer";
 
 interface EVCarHomeProps {
     modelId?: string;
@@ -18,9 +19,6 @@ const EVCarHomePage = () => {
 
     const { modelId, variantId, carId } = useParams<EVCarHomeProps>();
 
-    console.log("Model ID:", modelId);
-    console.log("Variant ID:", variantId);
-    console.log("Car ID:", carId);
 
     const Cayenne_EV = Cayenne_Car.flatMap((model) =>
         model.variants.flatMap((variant) =>
@@ -76,16 +74,14 @@ const EVCarHomePage = () => {
     return (
         <div className="min-h-screen bg-[#0A0A0A] text-white">
 
-                <EV_HeroSection car={car} />
+                <HeroSection car={car} />
           
                 <EVFeatures car={car}/>
        
                 <EV_CarTechnicalSection technicalData={car?.technical_data}  />
-     
+             
+                <Footer/>
 
-            <footer>
-                Porsche
-            </footer>
 
         </div>
     );

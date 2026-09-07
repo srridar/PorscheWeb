@@ -20,14 +20,13 @@ export const car_911 = [
                         "price": {
                             "amount": 21129000,
                             "currency": "INR",
+                            "formatted": "₹2,11,29,000.00",
                             "taxIncluded": true,
                             "tax": "VAT"
                         },
-                        "specifications": {
-                            "fuelType": "Gasoline",
-                            "driveType": "Rear-Wheel Drive",
-                            "transmission": "Automatic"
-                        },
+                        "fuelType": "Gasoline",
+                        "driveType": "Rear-Wheel Drive",
+                        "transmission": "Automatic",
                         "images": {
                             "hero": "/images/cars/911/911carrera/911-carrera-3.avif",
 
@@ -69,6 +68,7 @@ export const car_911 = [
                                 "/images/cars/911/911carrera/911-carrera-8.avif",
                             ]
                         },
+
                         "technical_data": {
                             "power-unit": {
                                 "bore": {
@@ -101,14 +101,11 @@ export const car_911 = [
                                     "unit": "1/min"
                                 }
                             },
-
                             "performance": {
-                                
                                 "topSpeed": {
                                     "value": 294,
                                     "unit": "km/h"
                                 },
-
                                 "acceleration": {
                                     "zeroTo100": {
                                         "standard": {
@@ -163,23 +160,13 @@ export const car_911 = [
                                     }
                                 }
                             },
-
                             "soundLevel": {
                                 "standard": "UN-R 51",
-                                "stationaryVehicleRpm": {
-                                    "value": 3325,
-                                    "unit": "1/min"
-                                },
-                                "stationaryVehicle": {
-                                    "value": 93,
-                                    "unit": "dB(A)"
-                                },
                                 "passingVehicle": {
                                     "value": 71,
                                     "unit": "dB(A)"
                                 }
                             },
-
                             "terrainFeatures": {
                                 "approachAngle": {
                                     "pasm": {
@@ -193,13 +180,22 @@ export const car_911 = [
                                         "unit": "mm"
                                     }
                                 },
-
                                 "departureAngle": {
                                     "pasm": {
                                         "value": 14.3,
                                         "unit": "°"
                                     }
                                 },
+                                "overhang": {
+                                    "front": {
+                                        "value": "1,016",
+                                        "unit": "mm"
+                                    },
+                                    "rear": {
+                                        "value": "1,076",
+                                        "unit": "mm"
+                                    },
+                                }
                             },
 
                             "capacities": {
@@ -209,12 +205,6 @@ export const car_911 = [
                                 },
 
                                 "openLuggageCompartmentVolumeBehindFrontSeats": {
-                                    "withRearSeats": {
-                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                        "value": 261,
-                                        "unit": "l"
-                                    },
-
                                     "withoutRearSeats": {
                                         "transmission": "8-speed Porsche Doppelkupplung (PDK)",
                                         "value": 373,
@@ -267,11 +257,10 @@ export const car_911 = [
                             "taxIncluded": true,
                             "tax": "VAT"
                         },
-                        "specifications": {
-                            "fuelType": "Gasoline",
-                            "driveType": "All-Wheel Drive",
-                            "transmission": "Automatic"
-                        },
+                        "fuelType": "Gasoline",
+                        "driveType": "All-Wheel Drive",
+                        "transmission": "Automatic",
+
                         "images": {
                             "hero": "/images/cars/911/911carrera4GTS/gt4.png",
 
@@ -405,14 +394,6 @@ export const car_911 = [
                             },
                             "soundLevel": {
                                 "standard": "UN-R 51",
-                                "stationaryVehicleRpm": {
-                                    "value": 3325,
-                                    "unit": "1/min"
-                                },
-                                "stationaryVehicle": {
-                                    "value": 98,
-                                    "unit": "dB(A)"
-                                },
                                 "passingVehicle": {
                                     "value": 71,
                                     "unit": "dB(A)"
@@ -438,6 +419,18 @@ export const car_911 = [
                                         "unit": "°"
                                     }
                                 },
+
+                                "overhang": {
+                                    "front": {
+                                        "value": "1,016",
+                                        "unit": "mm"
+                                    },
+                                    "rear": {
+                                        "value": "1,087",
+                                        "unit": "mm"
+                                    },
+
+                                }
                             },
                             "capacities": {
                                 "luggageCompartmentVolumeFront": {
@@ -479,17 +472,6 @@ export const car_911 = [
                                     "unit": "m"
                                 },
 
-                                "maximumLoad": {
-                                    "withRearSeats": {
-                                        "value": 420,
-                                        "unit": "kg"
-                                    },
-                                    "withoutRearSeats": {
-                                        "value": 320,
-                                        "unit": "kg"
-                                    }
-                                },
-
                             }
                         },
 
@@ -518,11 +500,9 @@ export const car_911 = [
                             "taxIncluded": true,
                             "tax": "VAT"
                         },
-                        "specifications": {
-                            "fuelType": "Gasoline",
-                            "driveType": "Rear-Wheel Drive",
-                            "transmission": "Automatic"
-                        },
+                        "fuelType": "Gasoline",
+                        "driveType": "Rear-Wheel Drive",
+                        "transmission": "Automatic",
                         "images": {
                             "hero": "/images/cars/911/911GT3/911_GT_17_main.png",
 
@@ -641,14 +621,6 @@ export const car_911 = [
                             },
                             "soundLevel": {
                                 "standard": "UN-R 51",
-                                "stationaryVehicleRpm": {
-                                    "value": 3658,
-                                    "unit": "1/min"
-                                },
-                                "stationaryVehicle": {
-                                    "value": 96,
-                                    "unit": "dB(A)"
-                                },
                                 "passingVehicle": {
                                     "value": 71,
                                     "unit": "dB(A)"
@@ -661,21 +633,22 @@ export const car_911 = [
                                         "unit": "°"
                                     }
                                 },
-                                "breakoverAngle": {
-                                    "pasm": {
-                                        "value": 10.6,
-                                        "unit": "°"
-                                    }
-                                },
+
                                 "maxGroundClearance": {
                                     "pasm": {
                                         "value": 76,
                                         "unit": "mm"
                                     }
                                 },
-                                "overhangFront": {
-                                    "value": 1037,
-                                    "unit": "mm"
+                                "overhang": {
+                                    "front": {
+                                        "value": 1037,
+                                        "unit": "mm"
+                                    },
+                                    "rear": {
+                                        "value": 1076,
+                                        "unit": "mm"
+                                    },
                                 },
                                 "departureAngle": {
                                     "pasm": {
@@ -683,10 +656,7 @@ export const car_911 = [
                                         "unit": "°"
                                     }
                                 },
-                                "overhangRear": {
-                                    "value": 1076,
-                                    "unit": "mm"
-                                }
+
                             },
                             "capacities": {
                                 "luggageCompartmentVolumeFront": {
@@ -707,14 +677,6 @@ export const car_911 = [
                                     "value": 1852,
                                     "unit": "mm"
                                 },
-                                "widthWithMirrors": {
-                                    "value": 2033,
-                                    "unit": "mm"
-                                },
-                                "widthWithMirrorsFolded": {
-                                    "value": 1834,
-                                    "unit": "mm"
-                                },
                                 "height": {
                                     "pasm": {
                                         "value": 1306,
@@ -733,16 +695,6 @@ export const car_911 = [
                                     "value": 10.9,
                                     "unit": "m"
                                 },
-                                "unladenWeight": {
-                                    "din": {
-                                        "value": 1645,
-                                        "unit": "kg"
-                                    },
-                                    "eu": {
-                                        "value": 1720,
-                                        "unit": "kg"
-                                    }
-                                },
                                 "maximumLoad": {
                                     "withRearSeats": {
                                         "transmission": "8-speed Porsche Doppelkupplung (PDK)",
@@ -755,23 +707,6 @@ export const car_911 = [
                                         "unit": "kg"
                                     }
                                 },
-                                "permissibleGrossWeight": {
-                                    "withRearSeats": {
-                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                        "value": 2065,
-                                        "unit": "kg"
-                                    },
-                                    "withoutRearSeats": {
-                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                        "value": 1965,
-                                        "unit": "kg"
-                                    }
-                                },
-                                "maxPermissibleRoofLoad": {
-                                    "system": "Porsche roof transport system",
-                                    "value": 75,
-                                    "unit": "kg"
-                                }
                             }
                         },
 
@@ -799,11 +734,11 @@ export const car_911 = [
                             "taxIncluded": true,
                             "tax": "VAT"
                         },
-                        "specifications": {
-                            "fuelType": "Gasoline",
-                            "driveType": "All-Wheel Drive",
-                            "transmission": "Automatic"
-                        },
+
+                        "fuelType": "Gasoline",
+                        "driveType": "All-Wheel Drive",
+                        "transmission": "Automatic"
+                        ,
                         "images": {
                             "hero": "/images/cars/911/911TurboS/911_Turbo_S_10.png",
 
@@ -976,11 +911,7 @@ export const car_911 = [
                                     "unit": "l"
                                 },
                                 "openLuggageCompartmentVolumeBehindFrontSeats": {
-                                    "withRearSeats": {
-                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                        "value": 261,
-                                        "unit": "l"
-                                    },
+                                
                                     "withoutRearSeats": {
                                         "transmission": "8-speed Porsche Doppelkupplung (PDK)",
                                         "value": 373,
@@ -995,14 +926,6 @@ export const car_911 = [
                                 },
                                 "width": {
                                     "value": 1852,
-                                    "unit": "mm"
-                                },
-                                "widthWithMirrors": {
-                                    "value": 2033,
-                                    "unit": "mm"
-                                },
-                                "widthWithMirrorsFolded": {
-                                    "value": 1834,
                                     "unit": "mm"
                                 },
                                 "height": {
@@ -1023,16 +946,6 @@ export const car_911 = [
                                     "value": 10.9,
                                     "unit": "m"
                                 },
-                                "unladenWeight": {
-                                    "din": {
-                                        "value": 1645,
-                                        "unit": "kg"
-                                    },
-                                    "eu": {
-                                        "value": 1720,
-                                        "unit": "kg"
-                                    }
-                                },
                                 "maximumLoad": {
                                     "withRearSeats": {
                                         "transmission": "8-speed Porsche Doppelkupplung (PDK)",
@@ -1045,23 +958,7 @@ export const car_911 = [
                                         "unit": "kg"
                                     }
                                 },
-                                "permissibleGrossWeight": {
-                                    "withRearSeats": {
-                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                        "value": 2065,
-                                        "unit": "kg"
-                                    },
-                                    "withoutRearSeats": {
-                                        "transmission": "8-speed Porsche Doppelkupplung (PDK)",
-                                        "value": 1965,
-                                        "unit": "kg"
-                                    }
-                                },
-                                "maxPermissibleRoofLoad": {
-                                    "system": "Porsche roof transport system",
-                                    "value": 75,
-                                    "unit": "kg"
-                                }
+
                             }
                         },
                     }

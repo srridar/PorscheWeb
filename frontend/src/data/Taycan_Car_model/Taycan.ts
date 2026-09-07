@@ -64,7 +64,6 @@ export const Taycan = [
                                 "/images/cars/taycan/taycan4s/porsche-taycan-4s.avif"
                             ]
                         },
-
                         "technical_data": {
                             "height": "1379mm",
                             "length": "4963mm",
@@ -157,6 +156,7 @@ export const Taycan = [
 
                             "soundLevel": {
                                 "standard": "UN-R 51",
+                                "typeApproved": true,
                                 "passingVehicle": {
                                     "value": 68,
                                     "unit": "dB(A)"
@@ -448,34 +448,21 @@ export const Taycan = [
                                     "performanceBatteryPlus": {
                                         "value": 710,
                                         "unit": "Nm"
-                                    },
-                                    "J9E": {
-                                        "value": 695,
-                                        "unit": "Nm"
                                     }
                                 },
-                                "power": {
+                                "powerUpTo": {
                                     "performanceBatteryPlus": {
                                         "kw": 380,
                                         "ps": 517
                                     },
-                                    "J9E": {
-                                        "kw": 340,
-                                        "ps": 462
-                                    }
                                 },
                                 "overboostPowerWithLaunchControl": {
                                     "performanceBatteryPlus": {
                                         "kw": 440,
                                         "ps": 598
                                     },
-                                    "J9E": {
-                                        "kw": 400,
-                                        "ps": 544
-                                    }
                                 }
                             },
-
                             "performance": {
                                 "topSpeed": {
                                     "value": 250,
@@ -483,154 +470,42 @@ export const Taycan = [
                                 },
 
                                 "acceleration": {
-                                    "0To100": {
-                                        "value": 3.7,
-                                        "unit": "seconds",
-                                        "test": "0 - 100 km/h with Launch Control"
+
+                                    "zeroTo100": {
+                                        "withLaunchControl": {
+                                            "value": 3.7,
+                                            "unit": "seconds",
+                                            "test": "0 - 100 km/h with Launch Control"
+                                        }
                                     },
-                                    "0To160": {
+                                    "zeroTo160": {
                                         "performanceBatteryPlus": {
                                             "value": 7.8,
                                             "unit": "seconds",
                                             "test": "0 - 160 km/h with Launch Control"
                                         },
-                                        "J9E": {
-                                            "value": 8.1,
-                                            "unit": "seconds",
-                                            "test": "0 - 160 km/h with Launch Control"
-                                        }
+
                                     },
-                                    "0To200": {
+                                    "zeroTo200": {
                                         "performanceBatteryPlus": {
                                             "value": 12.0,
                                             "unit": "seconds",
                                             "test": "0 - 200 km/h with Launch Control"
                                         },
-                                        "J9E": {
-                                            "value": 12.5,
-                                            "unit": "seconds",
-                                            "test": "0 - 200 km/h with Launch Control"
-                                        }
+
                                     },
-                                    "80To120": {
+                                    "inGear80To120": {
                                         "performanceBatteryPlus": {
                                             "value": 2.1,
                                             "unit": "seconds",
                                             "test": "80 - 120 km/h (50 - 75 mph) with Launch Control"
                                         },
-                                        "J9E": {
-                                            "value": 2.2,
-                                            "unit": "seconds",
-                                            "test": "80 - 120 km/h (50 - 75 mph) with Launch Control"
-                                        }
+
                                     }
                                 }
                             },
 
-                            "charging": {
-                                "battery": {
-                                    "grossEnergyContent": {
-                                        "performanceBatteryPlus": {
-                                            "value": 105.0,
-                                            "unit": "kWh"
-                                        },
-                                        "J9E": {
-                                            "value": 89.0,
-                                            "unit": "kWh"
-                                        }
-                                    }
-                                },
 
-                                "ac": {
-                                    "chargeTime": {
-                                        "9.6kW": {
-                                            "performanceBatteryPlus": {
-                                                "fromPercent": 0,
-                                                "toPercent": 100,
-                                                "value": 13.0,
-                                                "unit": "hours"
-                                            },
-                                            "J9E": {
-                                                "fromPercent": 0,
-                                                "toPercent": 100,
-                                                "value": 11.5,
-                                                "unit": "hours"
-                                            }
-                                        },
-                                        "11kW": {
-                                            "performanceBatteryPlus": {
-                                                "fromPercent": 0,
-                                                "toPercent": 100,
-                                                "value": 11.0,
-                                                "unit": "hours"
-                                            },
-                                            "J9E": {
-                                                "fromPercent": 0,
-                                                "toPercent": 100,
-                                                "value": 9.0,
-                                                "unit": "hours"
-                                            }
-                                        },
-                                        "22kW": {
-                                            "performanceBatteryPlus": {
-                                                "fromPercent": 0,
-                                                "toPercent": 100,
-                                                "value": 6.0,
-                                                "unit": "hours"
-                                            },
-                                            "J9E": {
-                                                "fromPercent": 0,
-                                                "toPercent": 100,
-                                                "value": 5.0,
-                                                "unit": "hours"
-                                            }
-                                        }
-                                    }
-                                },
-
-                                "dc": {
-                                    "chargeTime": {
-                                        "400VInfrastructure": {
-                                            "fromPercent": 10,
-                                            "toPercent": 80,
-                                            "value": 33,
-                                            "unit": "minutes"
-                                        },
-                                        "maximumChargingPower": {
-                                            "fromPercent": 10,
-                                            "toPercent": 80,
-                                            "value": 18,
-                                            "unit": "minutes"
-                                        }
-                                    },
-
-                                    "maximumChargingPower": {
-                                        "performanceBatteryPlus": {
-                                            "value": 320,
-                                            "unit": "kW"
-                                        },
-                                        "J9E": {
-                                            "value": 270,
-                                            "unit": "kW"
-                                        }
-                                    },
-
-                                    "rechargedRangeIn10Minutes": {
-                                        "performanceBatteryPlus": {
-                                            "min": 263,
-                                            "max": 300,
-                                            "unit": "km",
-                                            "standard": "WLTP"
-                                        },
-                                        "J9E": {
-                                            "min": 226,
-                                            "max": 258,
-                                            "unit": "km",
-                                            "standard": "WLTP"
-                                        }
-                                    }
-                                }
-                            },
 
                             "soundLevel": {
                                 "standard": "UN-R 51",
@@ -638,131 +513,6 @@ export const Taycan = [
                                 "passingVehicle": {
                                     "value": 68,
                                     "unit": "dB(A)"
-                                }
-                            },
-
-                            "body": {
-                                "dimensions": {
-                                    "length": {
-                                        "value": 4963,
-                                        "unit": "mm"
-                                    },
-                                    "width": {
-                                        "value": 1966,
-                                        "unit": "mm"
-                                    },
-                                    "widthWithMirrors": {
-                                        "value": 2144,
-                                        "unit": "mm"
-                                    },
-                                    "widthWithMirrorsFolded": {
-                                        "value": 1950,
-                                        "unit": "mm"
-                                    },
-                                    "wheelbase": {
-                                        "value": 2900,
-                                        "unit": "mm"
-                                    },
-
-                                    "height": {
-                                        "airSuspension": {
-                                            "standardLevel": {
-                                                "value": 1379,
-                                                "unit": "mm"
-                                            },
-                                            "lowLevel": {
-                                                "value": 1369,
-                                                "unit": "mm"
-                                            },
-                                            "extraLowLevel": {
-                                                "value": 1357,
-                                                "unit": "mm"
-                                            },
-                                            "offRoadLevel": {
-                                                "value": 1399,
-                                                "unit": "mm"
-                                            }
-                                        },
-
-                                        "withRoofRails": {
-                                            "standardLevel": {
-                                                "value": 1379,
-                                                "unit": "mm"
-                                            },
-                                            "lowLevel": {
-                                                "value": 1369,
-                                                "unit": "mm"
-                                            },
-                                            "extraLowLevel": {
-                                                "value": 1357,
-                                                "unit": "mm"
-                                            },
-                                            "offRoadLevel": {
-                                                "value": 1399,
-                                                "unit": "mm"
-                                            }
-                                        }
-                                    }
-                                },
-
-                                "turningCircle": {
-                                    "withoutRearAxleSteering": {
-                                        "value": 11.7,
-                                        "unit": "m"
-                                    },
-                                    "performanceBatteryPlusRearAxleSteering": {
-                                        "value": 11.1,
-                                        "unit": "m"
-                                    }
-                                },
-
-                                "weight": {
-                                    "maximumLoad": {
-                                        "performanceBatteryPlus": {
-                                            "value": 630,
-                                            "unit": "kg"
-                                        },
-                                        "J9E": {
-                                            "value": 710,
-                                            "unit": "kg"
-                                        }
-                                    },
-
-                                    "unladenWeight": {
-                                        "din": {
-                                            "performanceBatteryPlus": {
-                                                "value": 2250,
-                                                "unit": "kg"
-                                            },
-                                            "J9E": {
-                                                "value": 2170,
-                                                "unit": "kg"
-                                            }
-                                        },
-                                        "eu": {
-                                            "performanceBatteryPlus": {
-                                                "value": 2325,
-                                                "unit": "kg"
-                                            },
-                                            "J9E": {
-                                                "value": 2245,
-                                                "unit": "kg"
-                                            }
-                                        }
-                                    },
-
-                                    "permissibleGrossWeight": {
-                                        "value": 2880,
-                                        "unit": "kg"
-                                    }
-                                },
-
-                                "roofLoad": {
-                                    "maximumPermissible": {
-                                        "value": 75,
-                                        "unit": "kg",
-                                        "system": "Porsche roof transport system"
-                                    }
                                 }
                             },
 
@@ -832,6 +582,97 @@ export const Taycan = [
                                         "value": 407,
                                         "unit": "liters",
                                         "variant": "V210-2"
+                                    }
+                                }
+                            },
+
+                            "charging": {
+                                "battery": {
+                                    "performanceBatteryPlus": {
+                                        "grossEnergy": {
+                                            "value": 105.0,
+                                            "unit": "kWh"
+                                        }
+                                    }
+                                },
+
+                                "dc": {
+                                    "maximumPower": {
+                                        "performanceBatteryPlus": {
+                                            "value": 320,
+                                            "unit": "kW"
+                                        }
+                                    },
+
+                                    "chargeTime": {
+                                        "infrastructure400V": {
+                                            "from": 10,
+                                            "to": 80,
+                                            "value": 33,
+                                            "unit": "minutes"
+                                        },
+                                        "maximumChargingPower": {
+                                            "from": 10,
+                                            "to": 80,
+                                            "value": 18,
+                                            "unit": "minutes"
+                                        }
+                                    },
+
+                                    "rechargedRangeIn10Min": {
+                                        "performanceBatteryPlus": {
+                                            "min": 263,
+                                            "max": 300,
+                                            "unit": "km",
+                                            "standard": "WLTP"
+                                        }
+                                    }
+                                },
+
+                                "ac": {
+                                    "9_6kW": {
+                                        "performanceBatteryPlus": {
+                                            "power": {
+                                                "value": 9.6,
+                                                "unit": "kW"
+                                            },
+                                            "chargeTime": {
+                                                "from": 0,
+                                                "to": 100,
+                                                "value": 13.0,
+                                                "unit": "hours"
+                                            }
+                                        }
+                                    },
+
+                                    "11kW": {
+                                        "performanceBatteryPlus": {
+                                            "power": {
+                                                "value": 11,
+                                                "unit": "kW"
+                                            },
+                                            "chargeTime": {
+                                                "from": 0,
+                                                "to": 100,
+                                                "value": 11.0,
+                                                "unit": "hours"
+                                            }
+                                        }
+                                    },
+
+                                    "22kW": {
+                                        "performanceBatteryPlus": {
+                                            "power": {
+                                                "value": 22,
+                                                "unit": "kW"
+                                            },
+                                            "chargeTime": {
+                                                "from": 0,
+                                                "to": 100,
+                                                "value": 6.0,
+                                                "unit": "hours"
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -906,7 +747,7 @@ export const Taycan = [
                                     "value": 890,
                                     "unit": "Nm"
                                 },
-                                "power": {
+                                "powerUnit": {
                                     "kw": 520,
                                     "ps": 707
                                 },
@@ -923,22 +764,22 @@ export const Taycan = [
                                 "acceleration": {
                                     "0To100": {
                                         "value": 2.7,
-                                        "unit": "seconds",
+                                        "unit": "s",
                                         "test": "0 - 100 km/h with Launch Control"
                                     },
                                     "0To160": {
                                         "value": 5.5,
-                                        "unit": "seconds",
+                                        "unit": "s",
                                         "test": "0 - 160 km/h with Launch Control"
                                     },
                                     "0To200": {
                                         "value": 8.2,
-                                        "unit": "seconds",
+                                        "unit": "s",
                                         "test": "0 - 200 km/h with Launch Control"
                                     },
                                     "80To120": {
                                         "value": 1.5,
-                                        "unit": "seconds",
+                                        "unit": "s",
                                         "test": "80 - 120 km/h (50 - 75 mph) with Launch Control"
                                     }
                                 }
@@ -951,133 +792,57 @@ export const Taycan = [
                                     "unit": "dB(A)"
                                 }
                             },
-                            "body": {
-                                "dimensions": {
-                                    "length": {
-                                        "value": 4962,
-                                        "unit": "mm"
-                                    },
-                                    "width": {
-                                        "value": 1966,
-                                        "unit": "mm"
-                                    },
-                                    "widthWithMirrors": {
-                                        "value": 2144,
-                                        "unit": "mm"
-                                    },
-                                    "widthWithMirrorsFolded": {
-                                        "value": 1950,
-                                        "unit": "mm"
-                                    },
-                                    "wheelbase": {
-                                        "value": 2900,
-                                        "unit": "mm"
-                                    },
-                                    "height": {
-                                        "airSuspension": {
-                                            "standardLevel": {
-                                                "value": 1381,
-                                                "unit": "mm"
-                                            },
-                                            "lowLevel": {
-                                                "value": 1371,
-                                                "unit": "mm"
-                                            },
-                                            "extraLowLevel": {
-                                                "value": 1359,
-                                                "unit": "mm"
-                                            },
-                                            "offRoadLevel": {
-                                                "value": 1401,
-                                                "unit": "mm"
-                                            }
-                                        },
-                                        "withRoofRails": {
-                                            "standardLevel": {
-                                                "value": 1381,
-                                                "unit": "mm"
-                                            },
-                                            "lowLevel": {
-                                                "value": 1371,
-                                                "unit": "mm"
-                                            },
-                                            "offRoadLevel": {
-                                                "value": 1401,
-                                                "unit": "mm"
-                                            }
-                                        }
-                                    }
-                                },
-                                "turningCircle": {
-                                    "withoutRearAxleSteering": {
-                                        "value": 11.7,
-                                        "unit": "m"
-                                    },
-                                    "performanceBatteryPlusRearAxleSteering": {
-                                        "value": 11.1,
-                                        "unit": "m"
-                                    }
-                                },
-                                "weight": {
-                                    "maximumLoad": {
-                                        "value": 590,
-                                        "unit": "kg"
-                                    },
-                                    "unladenWeight": {
-                                        "din": {
-                                            "value": 2290,
-                                            "unit": "kg"
-                                        },
-                                        "eu": {
-                                            "value": 2365,
-                                            "unit": "kg"
-                                        }
-                                    },
-                                    "permissibleGrossWeight": {
-                                        "value": 2880,
-                                        "unit": "kg"
-                                    }
-                                },
-                                "roofLoad": {
-                                    "maximumPermissible": {
-                                        "value": 75,
-                                        "unit": "kg",
-                                        "system": "Porsche roof transport system"
-                                    }
-                                }
-                            },
+
                             "terrainFeatures": {
+                                "groundClearance": {
+                                    "airSuspensionNormal": {
+                                        "value": 128,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 148,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionLow": {
+                                        "value": 118,
+                                        "unit": "mm"
+                                    }
+                                },
                                 "approachAngle": {
-                                    "pasm": {
-                                        "value": 9.9,
+                                    "airSuspensionStandard": {
+                                        "value": 11.2,
                                         "unit": "°"
                                     }
                                 },
                                 "breakoverAngle": {
-                                    "pasm": {
-                                        "value": 12.7,
+                                    "airSuspensionStandard": {
+                                        "value": 10.7,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionLow": {
+                                        "value": 9.9,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 12.3,
                                         "unit": "°"
                                     }
-                                },
-                                "maxGroundClearance": {
-                                    "pasm": {
-                                        "value": 122,
-                                        "unit": "mm"
-                                    }
-                                },
-                                "overhangFront": {
-                                    "value": 1016,
-                                    "unit": "mm"
                                 },
                                 "departureAngle": {
-                                    "pasm": {
-                                        "value": 14.3,
+                                    "airSuspensionStandard": {
+                                        "value": 14.4,
                                         "unit": "°"
                                     }
                                 },
-                                "overhangRear": {
-                                    "value": 1076,
-                                    "unit": "mm"
+                                "overhang": {
+                                    "front": {
+                                        "value": 996,
+                                        "unit": "mm"
+                                    },
+                                    "rear": {
+                                        "value": 1066,
+                                        "unit": "mm"
+                                    }
                                 }
                             },
                             "capacities": {
@@ -1093,121 +858,64 @@ export const Taycan = [
                                     }
                                 }
                             },
-                            "battery": {
-                                "type": "Performance Battery Plus",
 
-                                "grossCapacity": {
-                                    "value": 105,
-                                    "unit": "kWh"
-                                },
-
-                                "netCapacity": {
-                                    "value": 97,
-                                    "unit": "kWh"
-                                },
-
-                                "voltage": {
-                                    "value": 800,
-                                    "unit": "V"
-                                }
-                            },
                             "charging": {
-                                "dc": {
-                                    "connector": "CCS",
-
-                                    "maximumPower": {
+                                "battery": {
+                                    "grossEnergyContent": {
+                                        "value": 105.0,
+                                        "unit": "kWh"
+                                    }
+                                },
+                                "acCharging": {
+                                    "chargingTime": {
+                                        "9_6kW": {
+                                            "value": 13.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "11kW": {
+                                            "value": 11.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "22kW": {
+                                            "value": 6.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        }
+                                    }
+                                },
+                                "dcCharging": {
+                                    "chargingTime": {
+                                        "400VInfrastructure": {
+                                            "value": 33,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        },
+                                        "maximumChargingPower": {
+                                            "value": 18,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        }
+                                    },
+                                    "maximumChargingPower": {
                                         "value": 320,
                                         "unit": "kW"
                                     },
-
-                                    "chargeTime": {
-                                        "fromPercent": 10,
-                                        "toPercent": 80,
-                                        "value": 18,
-                                        "unit": "minutes"
-                                    },
-
-                                    "chargingConditions": {
-                                        "voltage": "800 V",
-                                        "chargingStation": ">320 kW",
-                                        "batteryTemperature": "23 °C"
-                                    },
-
-                                    "alternativeCharging": [
-                                        {
-                                            "power": 120,
-                                            "unit": "kW",
-                                            "fromPercent": 10,
-                                            "toPercent": 80,
-                                            "time": 46,
-                                            "timeUnit": "minutes",
-                                            "condition": "500 V / 250 A"
-                                        },
-                                        {
-                                            "power": 150,
-                                            "unit": "kW",
-                                            "fromPercent": 10,
-                                            "toPercent": 80,
-                                            "time": 33,
-                                            "timeUnit": "minutes"
+                                    "rechargedRangeIn10Minutes": {
+                                        "maximumChargingPower": {
+                                            "value": "266-296",
+                                            "unit": "km",
+                                            "standard": "WLTP"
                                         }
-                                    ]
-                                },
-
-                                "ac": {
-                                    "onboardCharger": {
-                                        "power": 11,
-                                        "unit": "kW"
-                                    },
-
-                                    "chargeTime": {
-                                        "fromPercent": 0,
-                                        "toPercent": 100,
-                                        "value": 11,
-                                        "unit": "hours"
-                                    },
-
-                                    "alternativeCharging": [
-                                        {
-                                            "power": 9.6,
-                                            "unit": "kW",
-                                            "fromPercent": 0,
-                                            "toPercent": 100,
-                                            "time": 12,
-                                            "timeUnit": "hours"
-                                        },
-                                        {
-                                            "power": 19.2,
-                                            "unit": "kW",
-                                            "fromPercent": 0,
-                                            "toPercent": 100,
-                                            "time": 7,
-                                            "timeUnit": "hours"
-                                        },
-                                        {
-                                            "power": 22,
-                                            "unit": "kW",
-                                            "fromPercent": 0,
-                                            "toPercent": 100,
-                                            "time": 6,
-                                            "timeUnit": "hours"
-                                        }
-                                    ]
+                                    }
                                 }
-                            },
-                            "range": {
-                                "value": 634,
-                                "unit": "km",
-                                "standard": "WLTP",
-                                "type": "vehicle specific"
-                            },
+                            }
+
                         },
-
-
                     }
                 ]
             }
-
         ]
     },
 ]

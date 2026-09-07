@@ -33,23 +33,21 @@ export const Panamera_Car = [
                             "exterior": {
                                 "front": "/images/cars/panamera/panamera_4.png",
                                 "rear": "/images/cars/panamera/panamera_9.png",
-                                "side": "/images/cars/panamera/panamera_16.png",
+                                "side": "/images/cars/panamera/panamera_16.jpg",
+                                "wheels": {
+                                    "frontWheel": "/images/cars/panamera/panamera_8.png",
+                                    "rearWheel": "/images/cars/panamera/panamera_20.png",
+                                },
+                                "lights": {
+                                    "headlights": "/images/cars/panamera/panamera_6.png",
+                                    "taillights": "/images/cars/panamera/panamera_10.png",
+                                    "Indicators": "/images/cars/panamera/panamera_19.png",
+                                },
                             },
 
                             "bootSpace": {
                                 "front": "/images/front-space.webp",
                                 "rear": "/images/back-space.webp",
-                            },
-
-                            "lights": {
-                                "headlights": "/images/cars/panamera/panamera_6.png",
-                                "taillights": "/images/cars/panamera/panamera_10.png",
-                                "Indicator": "/images/cars/panamera/panamera_19.png",
-                            },
-
-                            "wheels": {
-                                "frontWheel": "/images/cars/panamera/panamera_8.png",
-                                "rearWheel": "/images/cars/panamera/panamera_20.png",
                             },
 
                             "interior": {
@@ -68,178 +66,151 @@ export const Panamera_Car = [
                             "length": "4963mm",
                             "wheelbase": "2900mm",
                             "width": "1966mm",
+
                             "powerUnit": {
-                                "maxTorqueWithLaunchControl": {
-                                    "performanceBatteryPlus": {
-                                        "value": 710,
-                                        "unit": "Nm"
+                                "bore": {
+                                    "value": 84.5,
+                                    "unit": "mm"
+                                },
+                                "numberOfCylinders": 6,
+                                "stroke": {
+                                    "value": 86.0,
+                                    "unit": "mm"
+                                },
+                                "displacement": {
+                                    "value": 2894,
+                                    "unit": "cm³"
+                                },
+                                "maxTorque": {
+                                    "value": 500,
+                                    "unit": "Nm"
+                                },
+                                "power": {
+                                    "kW": {
+                                        "value": 260,
+                                        "unit": "kW"
                                     },
-                                    "j9e": {
-                                        "value": 695,
-                                        "unit": "Nm"
+                                    "PS": {
+                                        "value": 353,
+                                        "unit": "PS"
                                     }
                                 },
-                                "powerUpTo": {
-                                    "performanceBatteryPlus": {
-                                        "kw": 380,
-                                        "ps": 517
+                                "maxOutputPerLiter": {
+                                    "kWPerLiter": {
+                                        "value": 89.0,
+                                        "unit": "kW/l"
                                     },
-                                    "j9e": {
-                                        "kw": 340,
-                                        "ps": 462
+                                    "PSPerLiter": {
+                                        "value": 121.0,
+                                        "unit": "PS/l"
                                     }
                                 },
-                                "overboostPowerWithLaunchControl": {
-                                    "performanceBatteryPlus": {
-                                        "kw": 440,
-                                        "ps": 598
-                                    },
-                                    "j9e": {
-                                        "kw": 400,
-                                        "ps": 544
-                                    }
+                                "maximumEngineSpeed": {
+                                    "value": 6800,
+                                    "unit": "1/min"
                                 }
                             },
+
                             "performance": {
                                 "topSpeed": {
-                                    "value": 250,
+                                    "value": 272,
                                     "unit": "km/h"
                                 },
                                 "acceleration": {
                                     "zeroTo100": {
-                                        "withLaunchControl": {
-                                            "value": 3.7,
-                                            "unit": "s",
-                                            "test": "0 - 100 km/h with Launch Control"
-                                        }
+                                        "value": 5.3,
+                                        "unit": "s"
                                     },
                                     "zeroTo160": {
-                                        "performanceBatteryPlus": {
-                                            "value": 7.8,
-                                            "unit": "s",
-                                            "test": "0 - 160 km/h with Launch Control (Performance Battery Plus)"
-                                        },
-                                        "j9e": {
-                                            "value": 8.1,
-                                            "unit": "s",
-                                            "test": "0 - 160 km/h with Launch Control (J9E)"
-                                        }
+                                        "value": 12.4,
+                                        "unit": "s"
                                     },
                                     "zeroTo200": {
-                                        "performanceBatteryPlus": {
-                                            "value": 12.0,
-                                            "unit": "s",
-                                            "test": "0 - 200 km/h with Launch Control (Performance Battery Plus)"
-                                        },
-                                        "j9e": {
-                                            "value": 12.5,
-                                            "unit": "s",
-                                            "test": "0 - 200 km/h with Launch Control (J9E)"
-                                        }
+                                        "value": 20.1,
+                                        "unit": "s"
                                     },
-                                    "inGear80To120": {
-                                        "performanceBatteryPlus": {
-                                            "value": 2.1,
-                                            "unit": "s",
-                                            "test": "80-120km/h (50-75 mph) with Launch Control (Performance Battery Plus)"
-                                        },
-                                        "j9e": {
-                                            "value": 2.2,
-                                            "unit": "s",
-                                            "test": "80-120km/h (50-75 mph) with Launch Control (J9E)"
-                                        }
+                                    "inGear": {
+                                        "speedRange": "80-120 km/h",
+                                        "mphRange": "50-75 mph",
+                                        "value": 3.4,
+                                        "unit": "s"
+                                    }
+                                },
+                                "sportChronoPackage": {
+                                    "zeroTo100": {
+                                        "value": 5.1,
+                                        "unit": "s"
+                                    },
+                                    "zeroTo160": {
+                                        "value": 12.1,
+                                        "unit": "s"
+                                    },
+                                    "zeroTo200": {
+                                        "value": 19.8,
+                                        "unit": "s"
                                     }
                                 }
                             },
+                            
                             "soundLevel": {
                                 "standard": "UN-R 51",
                                 "stationaryVehicleRpm": {
-                                    "value": 3325,
+                                    "value": 2850,
                                     "unit": "1/min"
                                 },
                                 "stationaryVehicle": {
-                                    "value": 93,
+                                    "value": 76,
                                     "unit": "dB(A)"
                                 },
                                 "passingVehicle": {
-                                    "value": 71,
+                                    "value": 69,
                                     "unit": "dB(A)"
                                 }
                             },
                             "terrainFeatures": {
                                 "groundClearance": {
-                                    "airSuspension": {
-                                        "normalRideHeight": {
-                                            "value": 127,
-                                            "unit": "mm"
-                                        },
-                                        "offRoadLevel": {
-                                            "value": 147,
-                                            "unit": "mm"
-                                        },
-                                        "lowLevel": {
-                                            "value": 117,
-                                            "unit": "mm"
-                                        }
-                                    }
-                                },
-                                "approachAngle": {
-                                    "airSuspension": {
-                                        "standardLevel": {
-                                            "value": 11.1,
-                                            "unit": "degrees"
-                                        }
+                                    "airSuspensionNormal": {
+                                        "value": 132,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionLow": {
+                                        "value": 122,
+                                        "unit": "mm"
                                     }
                                 },
                                 "breakoverAngle": {
-                                    "airSuspension": {
-                                        "standardLevel": {
-                                            "value": 10.6,
-                                            "unit": "degrees"
-                                        },
-                                        "lowLevel": {
-                                            "value": 9.8,
-                                            "unit": "degrees"
-                                        },
-                                        "offRoadLevel": {
-                                            "value": 12.2,
-                                            "unit": "degrees"
-                                        }
-                                    }
-                                },
-                                "overhangFront": {
-                                    "value": 1016,
-                                    "unit": "mm"
-                                },
-                                "departureAngle": {
-                                    "airSuspension": {
-                                        "standardLevel": {
-                                            "value": 14.2,
-                                            "unit": "degrees"
-                                        }
+                                    "airSuspensionStandard": {
+                                        "value": 10.9,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionLow": {
+                                        "value": 10.1,
+                                        "unit": "°"
                                     }
                                 },
                                 "overhang": {
                                     "front": {
-                                        "value": 997,
+                                        "value": 972,
                                         "unit": "mm"
                                     },
                                     "rear": {
-                                        "value": 1066,
+                                        "value": 1130,
                                         "unit": "mm"
                                     }
                                 }
                             },
+
                             "capacities": {
                                 "luggageCompartment": {
-                                    "front": {
-                                        "value": 81,
-                                        "unit": "liters"
+                                    "openVolume": {
+                                        "value": 494,
+                                        "unit": "l",
+                                        "description": "Up to the upper edge of the rear seats"
                                     },
-                                    "rear": {
-                                        "value": 407,
-                                        "unit": "liters",
-                                        "variant": "V210-2"
+                                    "largestVolume": {
+                                        "value": 1328,
+                                        "unit": "l",
+                                        "description": "Behind front seats, up to roof"
                                     }
                                 }
                             }

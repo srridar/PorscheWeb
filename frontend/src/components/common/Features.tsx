@@ -1,8 +1,8 @@
 import { Car } from "lucide-react";
 
 
-import InteriorCarousel from "./InteriorCarousel";
-import ExteriorCarousel from "./ExteriorCarousel";
+import InteriorCarousel from "../CarDetails/EV_Car/EV_Car_Features/InteriorCarousel";
+import ExteriorCarousel from "../CarDetails/EV_Car/EV_Car_Features/ExteriorCarousel";
 
 interface Car {
   carId: string;
@@ -111,10 +111,10 @@ const EVFeatures = ({ car }: { car: Car }) => {
           </div>
         </div>
 
-        <div className="mt-16 border-y border-black/10">
+        <div className="mt-16 ">
           <div className="grid md:grid-cols-3">
 
-            <div className="border-b  p-7 md:border-b-0 md:border-r border-white/10">
+            <div className="border-b  p-7 md:border-b-0 ">
 
               <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold text-white">
                 {car.transmission}
@@ -126,7 +126,7 @@ const EVFeatures = ({ car }: { car: Car }) => {
             </div>
 
 
-            <div className="border-b  p-7 md:border-b-0 md:border-r border-white/10">
+            <div className="border-b  p-7 md:border-b-0 ">
 
               <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold text-white">
                 {car.driveType}
@@ -139,7 +139,7 @@ const EVFeatures = ({ car }: { car: Car }) => {
 
 
             <div className="p-7">
-           
+
               <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold text-white">
                 {car.fuelType}
               </span>
@@ -156,7 +156,7 @@ const EVFeatures = ({ car }: { car: Car }) => {
           <div className="  ">
             <div className="flex justify-center gap-1 p-2 rounded-full mb-10">
               <h3 className="rounded-full  px-3 py-1 text-4xl text-center font-mono text-white">
-                It's Interior
+                Experience Every Detail
               </h3>
             </div>
 
@@ -168,7 +168,7 @@ const EVFeatures = ({ car }: { car: Car }) => {
           <div className="">
             <div className="flex justify-center gap-1 p-2 rounded-full mb-10">
               <h3 className="rounded-full  px-3 py-1 text-4xl text-center font-mono text-white">
-                It's Exterior
+                Every Line Has a Purpose
               </h3>
             </div>
 
@@ -176,6 +176,7 @@ const EVFeatures = ({ car }: { car: Car }) => {
           </div>
         </div>
 
+        { (rearLuggage?.value) && (frontLuggage?.value) && (
         <div className="mt-20">
           <div className="flex flex-col items-center justify-center gap-5 sm:flex-row sm:items-center">
             <h3 className="mt-3 text-center text-3xl font-mono tracking-tight">
@@ -183,10 +184,10 @@ const EVFeatures = ({ car }: { car: Car }) => {
             </h3>
           </div>
 
-          <div className="mt-10 flex justify-center gap-4">
+          <div className="mt-10 flex justify-center gap-20">
             {frontLuggage && (
-              <div className="group relative w-full max-w-md overflow-hidden rounded-xl bg-[#434141]">
-                <div className="relative aspect-[5/4] overflow-hidden">
+              <div className="group relative w-full max-w-6xl overflow-hidden rounded-xl bg-[#434141]">
+                <div className="relative aspect-[6/5] overflow-hidden">
                   <img
                     src={car.images.bootSpace?.front}
                     alt="Front luggage compartment"
@@ -215,8 +216,8 @@ const EVFeatures = ({ car }: { car: Car }) => {
             )}
 
             {rearLuggage && (
-              <div className="group relative w-full max-w-md overflow-hidden rounded-xl bg-[#434141]">
-                <div className="relative aspect-[5/4] overflow-hidden">
+              <div className="group relative w-full max-w-6xl overflow-hidden rounded-xl bg-[#434141]">
+                <div className="relative aspect-[6/5] overflow-hidden">
                   <img
                     src={car.images.bootSpace?.rear}
                     alt="Rear luggage compartment"
@@ -245,6 +246,10 @@ const EVFeatures = ({ car }: { car: Car }) => {
             )}
           </div>
         </div>
+        )
+        }
+
+
 
       </div>
     </section>

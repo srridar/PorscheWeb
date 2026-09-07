@@ -65,26 +65,18 @@ const ExteriorCarousel = ({ car }) => {
 
     const getImage = () => {
         if (currentImage.category) {
-            return car.images.exterior?.[currentImage.category]?.[
-                currentImage.key
-            ];
+            return car.images.exterior?.[currentImage.category]?.[currentImage.key];
         }
 
         return car.images.exterior?.[currentImage.key];
     };
 
     const nextSlide = () => {
-        setCurrentIndex(
-            (prev) => (prev + 1) % exteriorImages.length
-        );
+        setCurrentIndex( (prev) => (prev + 1) % exteriorImages.length);
     };
 
     const previousSlide = () => {
-        setCurrentIndex(
-            (prev) =>
-                (prev - 1 + exteriorImages.length) %
-                exteriorImages.length
-        );
+        setCurrentIndex((prev) => (prev - 1 + exteriorImages.length) % exteriorImages.length);
     };
 
     return (
@@ -101,8 +93,8 @@ const ExteriorCarousel = ({ car }) => {
 
                 <div
                     key={currentImage.key}
-                    className="relative mx-auto aspect-[16/8] w-4/5 overflow-hidden rounded-2xl bg-cover object-cover bg-top transition-all duration-500"
-                    style={{   backgroundImage: `url(${getImage()})`}}
+                    className="relative mx-auto aspect-[16/8] w-4.5/5 overflow-hidden rounded-2xl bg-cover object-cover bg-top transition-all duration-500"
+                    style={{  backgroundImage: `url(${getImage()})`}}
                 >
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

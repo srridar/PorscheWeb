@@ -102,261 +102,232 @@ export const Macan = [
                                     "unit": "1/min"
                                 }
                             },
-
-                        },
-
-                        "performance": {
-                            "topSpeed": {
-                                "value": 232,
-                                "unit": "km/h"
-                            },
-                            "acceleration": {
-                                "zeroTo100": {
-                                    "standard": {
-                                        "value": 6.4,
-                                        "unit": "s",
-                                        "test": "0 - 100 km/h"
-                                    },
-                                    "sportChrono": {
-                                        "value": 6.2,
-                                        "unit": "s",
-                                        "test": "0 - 100 km/h with Sport Chrono Package"
-                                    }
+                            "performance": {
+                                "topSpeed": {
+                                    "value": 232,
+                                    "unit": "km/h"
                                 },
-                                "zeroTo160": {
-                                    "standard": {
-                                        "value": 16.3,
-                                        "unit": "s",
-                                        "test": "0 - 160 km/h"
+                                "acceleration": {
+                                    "zeroTo100": {
+                                        "standard": {
+                                            "value": 6.4,
+                                            "unit": "s",
+                                            "test": "0 - 100 km/h"
+                                        },
+                                        "sportChrono": {
+                                            "value": 6.2,
+                                            "unit": "s",
+                                            "test": "0 - 100 km/h with Sport Chrono Package"
+                                        }
                                     },
-                                    "sportChrono": {
-                                        "value": 16.1,
-                                        "unit": "s",
-                                        "test": "0 - 160 km/h with Sport Chrono Package"
-                                    }
-                                },
-                                "inGear80To120": {
-                                    "standard": {
-                                        "value": 4.5,
-                                        "unit": "s",
-                                        "test": "80-120km/h (50-75 mph)"
-                                    }
-                                }
-                            }
-                        },
-
-                        "soundLevel": {
-                            "standard": "UN-R 51",
-                            "stationaryVehicleRpm": {
-                                "value": 3750,
-                                "unit": "1/min"
-                            },
-                            "stationaryVehicle": {
-                                "value": 76,
-                                "unit": "dB(A)"
-                            },
-                            "passingVehicle": {
-                                "value": 69,
-                                "unit": "dB(A)"
-                            }
-                        },
-
-                        "body": {
-                            "length": {
-                                "value": 4726,
-                                "unit": "mm"
-                            },
-                            "widthWithMirrors": {
-                                "value": 2097,
-                                "unit": "mm"
-                            },
-                            "height": {
-                                "steelSuspension": {
-                                    "din": {
-                                        "value": 1621,
-                                        "unit": "mm"
+                                    "zeroTo160": {
+                                        "standard": {
+                                            "value": 16.3,
+                                            "unit": "s",
+                                            "test": "0 - 160 km/h"
+                                        },
+                                        "sportChrono": {
+                                            "value": 16.1,
+                                            "unit": "s",
+                                            "test": "0 - 160 km/h with Sport Chrono Package"
+                                        }
                                     },
-                                    "dinWithRoofRails": {
-                                        "value": 1627,
-                                        "unit": "mm"
-                                    },
-                                    "ec": {
-                                        "value": 1616,
-                                        "unit": "mm"
-                                    },
-                                    "ecWithRoofRails": {
-                                        "value": 1622,
-                                        "unit": "mm"
-                                    },
-                                    "pasmDin": {
-                                        "value": 1621,
-                                        "unit": "mm"
-                                    },
-                                    "pasmDinWithRoofRails": {
-                                        "value": 1627,
-                                        "unit": "mm"
-                                    }
-                                },
-                                "airSuspension": {
-                                    "standardLevel": {
-                                        "value": 1606,
-                                        "unit": "mm"
-                                    },
-                                    "standardLevelWithRoofRails": {
-                                        "value": 1612,
-                                        "unit": "mm"
-                                    },
-                                    "lowLevel": {
-                                        "value": 1596,
-                                        "unit": "mm"
-                                    },
-                                    "lowLevelWithRoofRails": {
-                                        "value": 1602,
-                                        "unit": "mm"
-                                    },
-                                    "extraLowLevel": {
-                                        "value": 1586,
-                                        "unit": "mm"
-                                    },
-                                    "offRoadLevel": {
-                                        "value": 1646,
-                                        "unit": "mm"
-                                    },
-                                    "offRoadLevelWithRoofRails": {
-                                        "value": 1652,
-                                        "unit": "mm"
-                                    }
-                                }
-                            },
-                            "wheelbase": {
-                                "value": 2807,
-                                "unit": "mm"
-                            },
-                            "turningCircle": {
-                                "value": 12.0,
-                                "unit": "m"
-                            },
-                            "unladenWeight": {
-                                "din": {
-                                    "value": 1845,
-                                    "unit": "kg"
-                                },
-                                "eu": {
-                                    "value": 1920,
-                                    "unit": "kg"
-                                }
-                            },
-                            "maximumLoad": {
-                                "value": 665,
-                                "unit": "kg"
-                            },
-                            "permissibleGrossWeight": {
-                                "value": 2510,
-                                "unit": "kg"
-                            },
-                            "maxTowingLoad": {
-                                "braked": {
-                                    "value": 2000,
-                                    "unit": "kg"
-                                },
-                                "unbraked": {
-                                    "value": 750,
-                                    "unit": "kg"
-                                }
-                            },
-                            "noseWeightEg": {
-                                "value": 80,
-                                "unit": "kg"
-                            },
-                            "maxPermissibleRoofLoad": {
-                                "system": "Porsche roof transport system",
-                                "value": 75,
-                                "unit": "kg"
-                            }
-                        },
-
-                        "terrainFeatures": {
-                            "clearanceToWaterSensitiveParts": {
-                                "steelSuspension": {
-                                    "value": 300,
-                                    "unit": "mm"
-                                },
-                                "airSuspension": {
-                                    "normalRideHeight": {
-                                        "value": 285,
-                                        "unit": "mm"
-                                    }
-                                }
-                            },
-                            "groundClearance": {
-                                "airSuspension": {
-                                    "normalRideHeight": {
-                                        "value": 187,
-                                        "unit": "mm"
-                                    }
-                                }
-                            },
-                            "slopeAngle": {
-                                "steelSuspension": {
-                                    "frontRear": {
-                                        "min": 16.8,
-                                        "max": 23.5,
-                                        "unit": "degrees"
-                                    }
-                                },
-                                "airSuspension": {
-                                    "normalRideHeight": {
-                                        "frontRear": {
-                                            "min": 15.7,
-                                            "max": 22.5,
-                                            "unit": "degrees"
+                                    "inGear80To120": {
+                                        "standard": {
+                                            "value": 4.5,
+                                            "unit": "s",
+                                            "test": "80-120km/h (50-75 mph)"
                                         }
                                     }
                                 }
                             },
-                            "rampBreakoverAngle": {
-                                "steelSuspension": {
-                                    "value": 16.7,
-                                    "unit": "degrees"
+                            "soundLevel": {
+                                "standard": "UN-R 51",
+
+                                "passingVehicle": {
+                                    "value": 69,
+                                    "unit": "dB(A)"
+                                }
+                            },
+                            "body": {
+                                "length": {
+                                    "value": 4726,
+                                    "unit": "mm"
                                 },
-                                "airSuspension": {
-                                    "normalRideHeight": {
-                                        "value": 15.4,
+                                "widthWithMirrors": {
+                                    "value": 2097,
+                                    "unit": "mm"
+                                },
+                                "height": {
+                                    "steelSuspension": {
+                                        "din": {
+                                            "value": 1621,
+                                            "unit": "mm"
+                                        },
+                                        "dinWithRoofRails": {
+                                            "value": 1627,
+                                            "unit": "mm"
+                                        },
+                                        "ec": {
+                                            "value": 1616,
+                                            "unit": "mm"
+                                        },
+                                        "ecWithRoofRails": {
+                                            "value": 1622,
+                                            "unit": "mm"
+                                        },
+                                        "pasmDin": {
+                                            "value": 1621,
+                                            "unit": "mm"
+                                        },
+                                        "pasmDinWithRoofRails": {
+                                            "value": 1627,
+                                            "unit": "mm"
+                                        }
+                                    },
+                                    "airSuspension": {
+                                        "standardLevel": {
+                                            "value": 1606,
+                                            "unit": "mm"
+                                        },
+                                        "standardLevelWithRoofRails": {
+                                            "value": 1612,
+                                            "unit": "mm"
+                                        },
+                                        "lowLevel": {
+                                            "value": 1596,
+                                            "unit": "mm"
+                                        },
+                                        "lowLevelWithRoofRails": {
+                                            "value": 1602,
+                                            "unit": "mm"
+                                        },
+                                        "extraLowLevel": {
+                                            "value": 1586,
+                                            "unit": "mm"
+                                        },
+                                        "offRoadLevel": {
+                                            "value": 1646,
+                                            "unit": "mm"
+                                        },
+                                        "offRoadLevelWithRoofRails": {
+                                            "value": 1652,
+                                            "unit": "mm"
+                                        }
+                                    }
+                                },
+                                "wheelbase": {
+                                    "value": 2807,
+                                    "unit": "mm"
+                                },
+                                "turningCircle": {
+                                    "value": 12.0,
+                                    "unit": "m"
+                                },
+                                "unladenWeight": {
+                                    "din": {
+                                        "value": 1845,
+                                        "unit": "kg"
+                                    },
+                                    "eu": {
+                                        "value": 1920,
+                                        "unit": "kg"
+                                    }
+                                },
+                                "maximumLoad": {
+                                    "value": 665,
+                                    "unit": "kg"
+                                },
+                                "permissibleGrossWeight": {
+                                    "value": 2510,
+                                    "unit": "kg"
+                                },
+                                "maxTowingLoad": {
+                                    "braked": {
+                                        "value": 2000,
+                                        "unit": "kg"
+                                    },
+                                    "unbraked": {
+                                        "value": 750,
+                                        "unit": "kg"
+                                    }
+                                },
+                                "noseWeightEg": {
+                                    "value": 80,
+                                    "unit": "kg"
+                                },
+                                "maxPermissibleRoofLoad": {
+                                    "system": "Porsche roof transport system",
+                                    "value": 75,
+                                    "unit": "kg"
+                                }
+                            },
+
+                            "terrainFeatures": {
+                                "clearanceToWaterSensitiveParts": {
+                                    "steelSuspension": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspension": {
+                                        "normalRideHeight": {
+                                            "value": 285,
+                                            "unit": "mm"
+                                        }
+                                    }
+                                },
+                                "groundClearance": {
+                                    "airSuspension": {
+                                        "normalRideHeight": {
+                                            "value": 187,
+                                            "unit": "mm"
+                                        }
+                                    }
+                                },
+
+                                "rampBreakoverAngle": {
+                                    "steelSuspension": {
+                                        "value": 16.7,
                                         "unit": "degrees"
+                                    },
+                                    "airSuspension": {
+                                        "normalRideHeight": {
+                                            "value": 15.4,
+                                            "unit": "degrees"
+                                        }
+                                    }
+                                },
+                                "loadingSillHeight": {
+                                    "steelSuspension": {
+                                        "value": 765,
+                                        "unit": "mm",
+                                        "standard": "DIN"
                                     }
                                 }
                             },
-                            "loadingSillHeight": {
-                                "steelSuspension": {
-                                    "value": 765,
-                                    "unit": "mm",
-                                    "standard": "DIN"
+                            "capacities": {
+                                "openLuggageCompartmentVolume": {
+                                    "upToUpperEdgeOfRearSeats": {
+                                        "value": 488,
+                                        "unit": "l"
+                                    },
+                                    "behindFrontSeats": {
+                                        "value": 954,
+                                        "unit": "l"
+                                    }
+                                },
+                                "largestLuggageCompartmentVolume": {
+                                    "behindFrontSeatsUpToRoof": {
+                                        "value": 1503,
+                                        "unit": "l"
+                                    }
+                                },
+                                "luggageCompartmentVolumeRearV210_2": {
+                                    "value": 458,
+                                    "unit": "l"
                                 }
                             }
                         },
-
-                        "capacities": {
-                            "openLuggageCompartmentVolume": {
-                                "upToUpperEdgeOfRearSeats": {
-                                    "value": 488,
-                                    "unit": "l"
-                                },
-                                "behindFrontSeats": {
-                                    "value": 954,
-                                    "unit": "l"
-                                }
-                            },
-                            "largestLuggageCompartmentVolume": {
-                                "behindFrontSeatsUpToRoof": {
-                                    "value": 1503,
-                                    "unit": "l"
-                                }
-                            },
-                            "luggageCompartmentVolumeRearV210_2": {
-                                "value": 458,
-                                "unit": "l"
-                            }
-                        }
 
                     },
                 ]
@@ -419,61 +390,211 @@ export const Macan = [
                             },
                             "gallery": []
                         },
-                        "performance": {
-                            "acceleration": {
-                                "value": 5.7,
-                                "unit": "seconds",
-                                "test": "0 - 100 km/h with Launch Control"
-                            },
-                            "power": {
-                                "kw": 265,
-                                "ps": 360
-                            },
-                            "topSpeed": {
-                                "value": 220,
-                                "unit": "km/h"
-                            }
-                        },
-                        "battery": {
-                            "type": "Lithium-ion high-performance battery",
-                            "grossCapacity": {
-                                "value": 100,
-                                "unit": "kWh"
-                            },
-                            "voltage": {
-                                "value": 800,
-                                "unit": "V"
-                            }
-                        },
-                        "charging": {
-                            "dc": {
-                                "connector": "CCS",
-                                "maximumPower": {
-                                    "value": 270,
-                                    "unit": "kW"
+
+                        "technical_data": {
+                            "height": "1623mm",
+                            "length": "4784mm",
+                            "wheelbase": "2893mm",
+                            "width": "1938mm",
+                            "powerUnit": {
+                                "maxTorqueWithLaunchControl": {
+                                    "value": 563,
+                                    "unit": "Nm"
                                 },
-                                "chargeTime": {
-                                    "fromPercent": 10,
-                                    "toPercent": 80,
-                                    "value": 21,
-                                    "unit": "minutes"
+                                "power": {
+                                    "kw": 250,
+                                    "ps": 340,
                                 },
-                                "chargingConditions": {
-                                    "voltage": ">850 V",
-                                    "chargingStation": ">270 kW",
-                                    "batteryTemperature": "25 °C",
-                                    "initialStateOfCharge": "9%"
+                                "overboostPowerWithLaunchControl": {
+                                    "kw": 265,
+                                    "ps": 360,
+                                }
+                            },
+                            "performance": {
+                                "topSpeed": {
+                                    "value": 220,
+                                    "unit": "km/h"
+                                },
+                                "acceleration": {
+                                    "zeroTo100": {
+                                        "value": 5.7,
+                                        "unit": "s",
+                                        "test": "0 - 100 km/h with Launch Control"
+                                    },
+                                    "zeroTo160": {
+                                        "value": 12.9,
+                                        "unit": "s",
+                                        "test": "0 - 160 km/h with Launch Control"
+                                    },
+                                    "zeroTo200": {
+                                        "value": 20.9,
+                                        "unit": "s",
+                                        "test": "0 - 200 km/h with Launch Control"
+                                    },
+                                    "80To120": {
+                                        "value": 3.3,
+                                        "unit": "s",
+                                        "test": "80 - 120 km/h (50 - 75 mph) with Launch Control"
+                                    }
+                                }
+                            },
+                            "charging": {
+                                "battery": {
+                                    "grossEnergyContent": {
+                                        "value": 100.0,
+                                        "unit": "kWh"
+                                    }
+                                },
+                                "acCharging": {
+                                    "chargingTime": {
+                                        "9_6kW": {
+                                            "value": 11.5,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "11kW": {
+                                            "value": 10.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        }
+                                    }
+                                },
+                                "dcCharging": {
+                                    "chargingTime": {
+                                        "150kW": {
+                                            "value": 33,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        },
+                                        "maximumChargingPower": {
+                                            "value": 21,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        }
+                                    },
+                                    "maximumChargingPower": {
+                                        "value": 270,
+                                        "unit": "kW"
+                                    },
+                                    "rechargedRangeIn10Minutes": {
+                                        "150kW": {
+                                            "value": 129,
+                                            "unit": "km",
+                                            "standard": "WLTP"
+                                        },
+                                        "maximumChargingPower": {
+                                            "value": 261,
+                                            "unit": "km",
+                                            "standard": "WLTP"
+                                        }
+                                    }
+                                }
+                            },
+                            "capacities": {
+                                "luggageCompartment": {
+                                    "front": {
+                                        "value": 84,
+                                        "unit": "l"
+                                    },
+                                    "rear": {
+                                        "openVolume": {
+                                            "value": 540,
+                                            "unit": "l",
+                                            "description": "Up to the upper edge of the rear seats"
+                                        },
+                                        "largestVolume": {
+                                            "value": 1348,
+                                            "unit": "l",
+                                            "description": "Behind front seats, up to roof"
+                                        }
+                                    }
+                                }
+                            },
+                            "soundLevel": {
+                                "passingVehicle": {
+                                    "value": 69,
+                                    "unit": "dB(A)"
+                                },
+                                "standard": "UN-R 51"
+                            },
+                            "terrainFeatures": {
+                                "groundClearance": {
+                                    "steelSuspension": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionNormal": {
+                                        "value": 185,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 225,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "waterClearance": {
+                                    "steelSuspension": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionNormal": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 340,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "slopeAngle": {
+                                    "steelSuspension": {
+                                        "front": {
+                                            "value": 12.6,
+                                            "unit": "°"
+                                        },
+                                        "rear": {
+                                            "value": 20.7,
+                                            "unit": "°"
+                                        }
+                                    },
+                                    "airSuspensionNormal": {
+                                        "front": {
+                                            "value": 12.8,
+                                            "unit": "°"
+                                        },
+                                        "rear": {
+                                            "value": 20.6,
+                                            "unit": "°"
+                                        }
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "front": {
+                                            "value": 15.4,
+                                            "unit": "°"
+                                        },
+                                        "rear": {
+                                            "value": 23.9,
+                                            "unit": "°"
+                                        }
+                                    }
+                                },
+                                "breakoverAngle": {
+                                    "steelSuspension": {
+                                        "value": 14.9,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionNormal": {
+                                        "value": 14.9,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 18.1,
+                                        "unit": "°"
+                                    }
                                 }
                             }
-                        },
-                        "range": {
-                            "min": 548,
-                            "max": 641,
-                            "unit": "km",
-                            "standard": "WLTP",
-                            "type": "combined model range",
-                            "preliminary": true
-                        },
+                        }
+
                     },
                     {
                         "carId": "macan-4s-electric",
@@ -525,63 +646,225 @@ export const Macan = [
                             },
                             "gallery": []
                         },
-                        "performance": {
-                            "acceleration": {
-                                "value": 4.1,
-                                "unit": "seconds",
-                                "test": "0 - 100 km/h with Launch Control"
-                            },
-                            "power": {
-                                "kw": 380,
-                                "ps": 516
-                            },
-                            "topSpeed": {
-                                "value": 240,
-                                "unit": "km/h"
-                            }
-                        },
-                        "battery": {
-                            "type": "Lithium-ion high-performance battery",
-                            "grossCapacity": {
-                                "value": 100,
-                                "unit": "kWh"
-                            },
-                            "voltage": {
-                                "value": 800,
-                                "unit": "V"
-                            }
-                        },
-
-                        "charging": {
-                            "dc": {
-                                "connector": "CCS",
-                                "maximumPower": {
-                                    "value": 270,
+                        "technical_data": {
+                            "height": "1623mm",
+                            "length": "4784mm",
+                            "wheelbase": "2893mm",
+                            "width": "1938mm",
+                            "powerUnit": {
+                                "electricMotorTorque": {
+                                    "value": 560,
+                                    "unit": "Nm"
+                                },
+                                "electricMotorPower": {
+                                    "value": 352,
                                     "unit": "kW"
                                 },
-                                "chargeTime": {
-                                    "fromPercent": 10,
-                                    "toPercent": 80,
-                                    "value": 21,
-                                    "unit": "minutes"
+                                "maxTorqueWithLaunchControl": {
+                                    "value": 820,
+                                    "unit": "Nm"
                                 },
-                                "chargingConditions": {
-                                    "voltage": ">850 V",
-                                    "chargingStation": ">270 kW",
-                                    "batteryTemperature": "25 °C",
-                                    "initialStateOfCharge": "9%"
+                                "power": {
+                                    "kW": 330,
+                                    "PS": 449,
+
+                                },
+                                "overboostPowerWithLaunchControl": {
+                                    "kW": 380,
+                                    "PS": 516,
+                                }
+                            },
+                            "performance": {
+                                "topSpeed": {
+                                    "value": 240,
+                                    "unit": "km/h"
+                                },
+                                "acceleration": {
+                                    "zeroTo100": {
+                                        "value": 4.1,
+                                        "unit": "s",
+                                        "test": "0 - 100 km/h with Launch Control"
+                                    },
+                                    "zeroTo160": {
+                                        "value": 9.1,
+                                        "unit": "s",
+                                        "test": "0 - 160 km/h with Launch Control"
+                                    },
+                                    "zeroTo200": {
+                                        "value": 14.3,
+                                        "unit": "s",
+                                        "test": "0 - 200 km/h with Launch Control"
+                                    },
+                                    "80To120": {
+                                        "value": 2.4,
+                                        "unit": "s",
+                                        "test": "80 - 120 km/h (50 - 75 mph) with Launch Control"
+                                    }
+                                }
+                            },
+                            "charging": {
+                                "battery": {
+                                    "grossEnergyContent": {
+                                        "value": 100.0,
+                                        "unit": "kWh"
+                                    }
+                                },
+                                "acCharging": {
+                                    "chargingTime": {
+                                        "9_6kW": {
+                                            "value": 11.5,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "11kW": {
+                                            "value": 10.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "19_2kW": {
+                                            "value": 5.75,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "22kW": {
+                                            "value": 5.25,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        }
+                                    }
+                                },
+                                "dcCharging": {
+                                    "chargingTime": {
+                                        "400VInfrastructure": {
+                                            "value": 33,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        },
+                                        "maximumChargingPower": {
+                                            "value": 21,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        }
+                                    },
+                                    "maximumChargingPower": {
+                                        "value": 270,
+                                        "unit": "kW"
+                                    },
+                                    "rechargedRangeIn10Minutes": {
+                                        "150kW": {
+                                            "value": 123,
+                                            "unit": "km",
+                                            "standard": "WLTP"
+                                        },
+                                        "maximumChargingPower": {
+                                            "value": "214-250",
+                                            "unit": "km",
+                                            "standard": "WLTP"
+                                        }
+                                    }
+                                }
+                            },
+                            "soundLevel": {
+                                "passingVehicle": {
+                                    "value": 69,
+                                    "unit": "dB(A)"
+                                },
+                                "standard": "UN-R 51"
+                            },
+                            "terrainFeatures": {
+                                "groundClearance": {
+                                    "steelSuspension": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "steelSuspensionPASM": {
+                                        "value": 186,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionExtraOffRoad": {
+                                        "value": 225,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 205,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionLow": {
+                                        "value": 170,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "waterClearance": {
+                                    "steelSuspensionDIN": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "steelSuspensionEC": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "steelSuspensionPASMDIN": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionStandard": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 320,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionExtraOffRoad": {
+                                        "value": 340,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "breakoverAngle": {
+                                    "steelSuspensionPASMDIN": {
+                                        "value": 15.0,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionLow": {
+                                        "value": 13.7,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 16.6,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionExtraOffRoad": {
+                                        "value": 18.2,
+                                        "unit": "°"
+                                    }
+                                },
+                                "departureAngle": {
+                                    "steelSuspensionPASMDIN": {
+                                        "value": 20.8,
+                                        "unit": "°"
+                                    }
+                                }
+
+                            },
+                            "capacities": {
+                                "luggageCompartment": {
+                                    "frontVolume": {
+                                        "value": 84,
+                                        "unit": "l"
+                                    },
+                                    "openVolume": {
+                                        "value": 540,
+                                        "unit": "l",
+                                        "description": "Up to the upper edge of the rear seats"
+                                    },
+                                    "largestVolume": {
+                                        "value": 1348,
+                                        "unit": "l",
+                                        "description": "Behind front seats, up to roof"
+                                    }
                                 }
                             }
                         },
-
-                        "range": {
-                            "min": 524,
-                            "max": 611,
-                            "unit": "km",
-                            "standard": "WLTP",
-                            "type": "combined model range"
-                        },
-
                     },
                     {
                         "carId": "macan-turbo-electric",
@@ -637,61 +920,216 @@ export const Macan = [
                             },
                             "gallery": []
                         },
-                        "performance": {
-                            "acceleration": {
-                                "value": 3.3,
-                                "unit": "seconds",
-                                "test": "0 - 100 km/h with Launch Control"
-                            },
-                            "power": {
-                                "kw": 470,
-                                "ps": 639
-                            },
-                            "topSpeed": {
-                                "value": 260,
-                                "unit": "km/h"
-                            }
-                        },
-                        "battery": {
-                            "type": "Lithium-ion high-performance battery",
-                            "grossCapacity": {
-                                "value": 100,
-                                "unit": "kWh"
-                            },
-                            "voltage": {
-                                "value": 800,
-                                "unit": "V"
-                            }
-                        },
-                        "charging": {
-                            "dc": {
-                                "connector": "CCS",
-                                "maximumPower": {
-                                    "value": 270,
+                        "technical_data": {
+                            "height": "1623mm",
+                            "length": "4784mm",
+                            "wheelbase": "2893mm",
+                            "width": "1938mm",
+                            "powerUnit": {
+                                "electricMotorTorque": {
+                                    "value": 820,
+                                    "unit": "Nm"
+                                },
+                                "electricMotorPower": {
+                                    "value": 495,
                                     "unit": "kW"
                                 },
-                                "chargeTime": {
-                                    "fromPercent": 10,
-                                    "toPercent": 80,
-                                    "value": 21,
-                                    "unit": "minutes"
+                                "maxTorqueWithLaunchControl": {
+                                    "value": 1130,
+                                    "unit": "Nm"
                                 },
-                                "chargingConditions": {
-                                    "voltage": ">850 V",
-                                    "chargingStation": ">270 kW",
-                                    "batteryTemperature": "25 °C",
-                                    "initialStateOfCharge": "9%"
+                                "power": {
+                                    "kW": {
+                                        "value": 430,
+                                        "unit": "kW"
+                                    },
+                                    "PS": {
+                                        "value": 585,
+                                        "unit": "PS"
+                                    }
+                                },
+                                "overboostPowerWithLaunchControl": {
+                                    "kW": {
+                                        "value": 470,
+                                        "unit": "kW"
+                                    },
+                                    "PS": {
+                                        "value": 639,
+                                        "unit": "PS"
+                                    }
+                                }
+                            },
+                            "performance": {
+                                "topSpeed": {
+                                    "value": 260,
+                                    "unit": "km/h"
+                                },
+                                "launchControl": {
+                                    "zeroTo100": {
+                                        "value": 3.3,
+                                        "unit": "s"
+                                    },
+                                    "zeroTo160": {
+                                        "value": 7.4,
+                                        "unit": "s"
+                                    },
+                                    "zeroTo200": {
+                                        "value": 11.7,
+                                        "unit": "s"
+                                    },
+                                    "inGear": {
+                                        "speedRange": "80-120 km/h",
+                                        "mphRange": "50-75 mph",
+                                        "value": 2.0,
+                                        "unit": "s"
+                                    }
+                                }
+                            },
+                            "charging": {
+                                "battery": {
+                                    "grossEnergyContent": {
+                                        "value": 100.0,
+                                        "unit": "kWh"
+                                    }
+                                },
+                                "acCharging": {
+                                    "chargingTime": {
+                                        "9_6kW": {
+                                            "value": 11.5,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "11kW": {
+                                            "value": 10.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "19_2kW": {
+                                            "value": 5.75,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "22kW": {
+                                            "value": 5.25,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        }
+                                    }
+                                },
+                                "dcCharging": {
+                                    "chargingTime": {
+                                        "400VInfrastructure": {
+                                            "value": 33,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        },
+                                        "maximumChargingPower": {
+                                            "value": 21,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        }
+                                    },
+                                    "maximumChargingPower": {
+                                        "value": 270,
+                                        "unit": "kW"
+                                    },
+                                    "rechargedRangeIn10Minutes": {
+                                        "150kW": {
+                                            "value": 119,
+                                            "unit": "km",
+                                            "standard": "WLTP"
+                                        },
+                                        "maximumChargingPower": {
+                                            "value": "216-241",
+                                            "unit": "km",
+                                            "standard": "WLTP"
+                                        }
+                                    }
+                                }
+                            },
+                            "soundLevel": {
+                                "passingVehicle": {
+                                    "value": 68,
+                                    "unit": "dB(A)"
+                                },
+                                "standard": "UN-R 51"
+                            },
+                            "terrainFeatures": {
+                                "groundClearance": {
+                                    "airSuspensionExtraOffRoad": {
+                                        "value": 225,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 205,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionLow": {
+                                        "value": 170,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "waterClearance": {
+                                    "steelSuspensionDIN": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "steelSuspensionEC": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "steelSuspensionPASMDIN": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionStandard": {
+                                        "value": 300,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 320,
+                                        "unit": "mm"
+                                    },
+                                    "airSuspensionExtraOffRoad": {
+                                        "value": 340,
+                                        "unit": "mm"
+                                    }
+                                },
+                                "breakoverAngle": {
+                                    "airSuspensionExtraOffRoad": {
+                                        "value": 18.1,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionLow": {
+                                        "value": 13.7,
+                                        "unit": "°"
+                                    },
+                                    "airSuspensionOffRoad": {
+                                        "value": 16.5,
+                                        "unit": "°"
+                                    }
+                                }
+                            },
+                            "capacities": {
+                                "luggageCompartment": {
+                                    "frontVolume": {
+                                        "value": 84,
+                                        "unit": "l"
+                                    },
+                                    "openVolume": {
+                                        "value": 480,
+                                        "unit": "l",
+                                        "description": "Up to the upper edge of the rear seats"
+                                    },
+                                    "largestVolume": {
+                                        "value": 1288,
+                                        "unit": "l",
+                                        "description": "Behind front seats, up to roof"
+                                    }
                                 }
                             }
-                        },
-                        "range": {
-                            "min": 528,
-                            "max": 589,
-                            "unit": "km",
-                            "standard": "WLTP",
-                            "type": "combined model range",
-                            "preliminary": true
-                        },
+                        }
+
                     }
                 ]
             }

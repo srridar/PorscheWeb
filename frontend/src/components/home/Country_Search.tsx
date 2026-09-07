@@ -22,26 +22,13 @@ const Country_Search = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-[#040404] px-6 py-8">
      
-      <img
-        src="/images/background.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover opacity-[0.4]"
-      />
+      <img src="/images/background.png" alt="background-image" aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover opacity-[0.4]"/>
 
-      {/* DARK OVERLAY */}
       <div className="pointer-events-none fixed inset-0 z-0 bg-black/50" />
-
-      {/* MAIN CONTENT */}
       <main className="relative z-10 mx-auto w-full max-w-6xl">
-        {/* LOGO */}
+  
         <div className="mb-12 flex flex-col items-center justify-center">
-          <img
-            src="/images/flags/porscheLogo.png"
-            alt="Porsche logo"
-            className="h-28 w-28 object-contain"
-          />
-         
+          <img src="/images/flags/porscheLogo.png" alt="Porsche logo" className="h-28 w-28 object-contain"/>
         </div>
 
 
@@ -58,13 +45,12 @@ const Country_Search = () => {
           </div>
         </div>
 
-        {/* REGIONS */}
+
         <section className="text-[#e0e0da]">
           <h2 className="mb-6 text-sm font-semibold uppercase tracking-[0.15em] text-gray-500">
             Available Regions and Countries
           </h2>
 
-          {/* REGION GRID */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filteredRegions.map((region) => {
               const isOpen = openRegion === region.id;
@@ -74,7 +60,7 @@ const Country_Search = () => {
                   key={region.id}
                   className="rounded-lg  p-5 shadow-2xl transition-all duration-300 "
                 >
-                  {/* REGION HEADER */}
+
                   <button
                     type="button"
                     onClick={() => handleRegionToggle(region.id)}
@@ -90,7 +76,7 @@ const Country_Search = () => {
                     )}
                   </button>
 
-                  {/* COUNTRIES */}
+
                   <div
                     className={`overflow-hidden transition-all duration-300 ease-in-out ${
                       isOpen ? "mt-4 max-h-[500px] opacity-100" : "max-h-0 opacity-0"
@@ -102,7 +88,7 @@ const Country_Search = () => {
                           key={country.name}
                           className="flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors duration-200 hover:bg-white/5"
                         >
-                          {/* Country Logo */}
+           
                           <img
                             src={country.logoImg}
                             alt={country.name}
@@ -127,7 +113,7 @@ const Country_Search = () => {
             })}
           </div>
 
-          {/* NO RESULTS */}
+  
           {filteredRegions.length === 0 && (
             <p className="mt-10 text-center text-gray-400">
               No country or region found.

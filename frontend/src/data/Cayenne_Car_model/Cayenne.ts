@@ -62,69 +62,223 @@ export const Cayenne_Car = [{
                             "/images/cars/cayenne/cayenne_electric/"
                         ]
                     },
-                    "performance": {
-                        "acceleration": {
-                            "value": 4.8,
-                            "unit": "seconds",
-                            "test": "0 - 100 km/h with Launch Control"
-                        },
-                        "power": {
-                            "kw": 325,
-                            "ps": 442
-                        },
-                        "topSpeed": {
-                            "value": 230,
-                            "unit": "km/h"
-                        }
-                    },
-                    "battery": {
-                        "type": "High-voltage lithium-ion battery",
-                        "voltage": {
-                            "value": 800,
-                            "unit": "V"
-                        }
-                    },
-
-                    "charging": {
-                        "dc": {
-                            "connector": "CCS",
-                            "maximumPower": {
-                                "value": 390,
-                                "unit": "kW"
+                    "technical_data": {
+                        "powerUnit": {
+                            "maxTorqueWithLaunchControl": {
+                                "value": 835,
+                                "unit": "Nm"
                             },
-                            "chargeTime": {
-                                "fromPercent": 10,
-                                "toPercent": 80,
-                                "value": 16,
-                                "unit": "minutes"
+                            "powerUpTo": {
+                                "kw": 300,
+                                "ps": 408
                             },
-                            "chargingConditions": {
-                                "voltage": ">850 V",
-                                "chargingStation": ">390 kW",
-                                "current": ">520 A",
-                                "batteryTemperature": "15 °C",
-                                "initialStateOfCharge": "9%"
+                            "overboostPowerWithLaunchControl": {
+                                "ps": 442,
+                                "kw": 325
                             }
                         },
-
-                        "ac": {
-                            "onboardCharger": {
-                                "power": 11,
-                                "unit": "kW"
+                        "performance": {
+                            "topSpeed": {
+                                "value": 230,
+                                "unit": "km/h"
                             },
-                            "maximumOptionalPower": {
-                                "power": 22,
-                                "unit": "kW"
+                            "acceleration": {
+                                "inGear80To120": {
+                                    "value": 3.0,
+                                    "unit": "s",
+                                    "test": "80-120 km/h (50-75 mph) with Launch Control"
+                                },
+                                "zeroTo100": {
+                                    "value": 4.8,
+                                    "unit": "s",
+                                    "test": "0-100 km/h with Launch Control"
+                                },
+                                "zeroTo160": {
+                                    "value": 11.3,
+                                    "unit": "s",
+                                    "test": "0-160 km/h with Launch Control"
+                                },
+                                "zeroTo200": {
+                                    "value": 18.4,
+                                    "unit": "s",
+                                    "test": "0-200 km/h with Launch Control"
+                                }
+                            }
+                        },
+                        "soundLevel": {
+                            "standard": "UN-R 51",
+                            "passingVehicle": {
+                                "value": 66,
+                                "unit": "dB(A)"
+                            }
+                        },
+                        "charging": {
+                            "battery": {
+                                "grossEnergyContent": {
+                                    "value": 113.0,
+                                    "unit": "kWh"
+                                }
+                            },
+
+                            "acCharging": {
+                                "chargingTime": {
+                                    "9_6kW": {
+                                        "value": 13.0,
+                                        "unit": "h",
+                                        "chargeRange": "0-100%"
+                                    },
+                                    "11kW": {
+                                        "value": 11.0,
+                                        "unit": "h",
+                                        "chargeRange": "0-100%"
+                                    },
+                                    "19_2kW": {
+                                        "value": 6.5,
+                                        "unit": "h",
+                                        "chargeRange": "0-100%"
+                                    },
+                                    "22kW": {
+                                        "value": 5.75,
+                                        "unit": "h",
+                                        "chargeRange": "0-100%"
+                                    }
+                                }
+                            },
+
+                            "dcCharging": {
+                                "chargingTime": {
+                                    "400VInfrastructure": {
+                                        "value": 26,
+                                        "unit": "min",
+                                        "chargeRange": "10-80%"
+                                    },
+                                    "maximumChargingPower": {
+                                        "value": 16,
+                                        "unit": "min",
+                                        "chargeRange": "10-80%"
+                                    }
+                                },
+
+                                "maximumChargingPower": {
+                                    "value": 390,
+                                    "unit": "kW"
+                                },
+
+                                "rechargedRangeIn10Minutes": {
+                                    "value": 325,
+                                    "unit": "km",
+                                    "standard": "WLTP",
+                                    "chargingPower": "maximum DC charging power"
+                                }
+                            }
+                        },
+                        "terrainFeatures": {
+                            "maxClearanceWaterSensitivePartsNormalRideHeight": {
+                                "value": 500,
+                                "unit": "mm"
+                            },
+                            "maxGroundClearanceNormalRideHeight": {
+                                "value": 190,
+                                "unit": "mm"
+                            },
+                            "maxClearanceWaterSensitivePartsOffRoadRideHeight": {
+                                "value": 555,
+                                "unit": "mm"
+                            },
+                            "maxGroundClearanceOffRoadRideHeight": {
+                                "value": 245,
+                                "unit": "mm"
+                            },
+                            "maxClearanceWaterSensitivePartsOffRoadLevel": {
+                                "value": 520,
+                                "unit": "mm"
+                            },
+                            "maxGroundClearanceOffRoadLevel": {
+                                "value": 210,
+                                "unit": "mm"
+                            },
+
+                            "breakoverAngleLowLevel": {
+                                "value": 13.4,
+                                "unit": "°"
+                            },
+
+                            "overhang": {
+                                "front": {
+                                    "value": 955,
+                                    "unit": "mm"
+                                },
+                                "rear": {
+                                    "value": 1007,
+                                    "unit": "mm"
+                                }
+                            },
+                            "maxGroundClearanceLowLevel": {
+                                "value": 175,
+                                "unit": "mm"
+                            },
+
+                        },
+                        "capacities": {
+                            "luggageCompartmentVolumeFront": {
+                                "value": 90,
+                                "unit": "l"
+                            },
+                            "openLuggageCompartmentVolume": {
+                                "value": 781,
+                                "unit": "l",
+                                "description": "Up to the upper edge of the rear seats"
+                            },
+                        },
+                        "body": {
+                            "length": {
+                                "value": 4985,
+                                "unit": "mm"
+                            },
+                            "width": {
+                                "value": 1980,
+                                "unit": "mm"
+                            },
+                            "wheelbase": {
+                                "value": 3023,
+                                "unit": "mm"
+                            },
+                            "turningCircle": {
+                                "performanceBattery": {
+                                    "value": 12.7,
+                                    "unit": "m"
+                                },
+                                "performanceBatteryRearAxleSteering": {
+                                    "value": 11.6,
+                                    "unit": "m"
+                                }
+                            },
+                            "height": {
+                                "airSuspension": {
+                                    "standardLevel": {
+                                        "value": 1674,
+                                        "unit": "mm"
+                                    },
+                                    "lowLevel": {
+                                        "value": 1659,
+                                        "unit": "mm"
+                                    },
+                                    "extraLowLevel": {
+                                        "value": 1644,
+                                        "unit": "mm"
+                                    },
+                                    "offRoadLevel": {
+                                        "value": 1694,
+                                        "unit": "mm"
+                                    },
+                                    "extraOffRoadLevel": {
+                                        "value": 1729,
+                                        "unit": "mm"
+                                    }
+                                },
+
                             }
                         }
-                    },
-
-                    "range": {
-                        "min": 576,
-                        "max": 643,
-                        "unit": "km",
-                        "standard": "WLTP",
-                        "type": "combined model range"
                     },
                 },
                 {
@@ -183,69 +337,212 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "performance": {
-                        "acceleration": {
-                            "value": 2.5,
-                            "unit": "seconds",
-                            "test": "0 - 100 km/h with Launch Control"
-                        },
-                        "power": {
-                            "kw": 850,
-                            "ps": 1156
-                        },
-                        "topSpeed": {
-                            "value": 260,
-                            "unit": "km/h"
-                        }
-                    },
-                    "battery": {
-                        "type": "High-voltage lithium-ion battery",
-                        "voltage": {
-                            "value": 800,
-                            "unit": "V"
-                        }
-                    },
-
-                    "charging": {
-                        "dc": {
-                            "connector": "CCS",
-                            "maximumPower": {
-                                "value": 390,
-                                "unit": "kW"
+                    "technical_data": {
+                        "powerUnit": {
+                            "maxTorqueWithLaunchControl": {
+                                "value": 1500,
+                                "unit": "Nm"
                             },
-                            "chargeTime": {
-                                "fromPercent": 10,
-                                "toPercent": 80,
-                                "value": 16,
-                                "unit": "minutes"
+                            "powerUpTo": {
+                                "kw": 530,
+                                "ps": 857
                             },
-                            "chargingConditions": {
-                                "voltage": ">850 V",
-                                "chargingStation": ">390 kW",
-                                "current": ">520 A",
-                                "batteryTemperature": "15 °C",
-                                "initialStateOfCharge": "9%"
+                            "overboostPowerWithLaunchControl": {
+                                "ps": 1156,
+                                "kw": 850
                             }
                         },
-
-                        "ac": {
-                            "onboardCharger": {
-                                "power": 11,
-                                "unit": "kW"
+                        "performance": {
+                            "topSpeed": {
+                                "value": 260,
+                                "unit": "km/h"
                             },
-                            "maximumOptionalPower": {
-                                "power": 22,
-                                "unit": "kW"
+                            "acceleration": {
+                                "inGear80To120": {
+                                    "value": 1.2,
+                                    "unit": "s",
+                                    "test": "80-120 km/h (50-75 mph) with Launch Control"
+                                },
+                                "zeroTo100": {
+                                    "value": 2.5,
+                                    "unit": "s",
+                                    "test": "0-100 km/h with Launch Control"
+                                },
+                                "zeroTo160": {
+                                    "value": 4.9,
+                                    "unit": "s",
+                                    "test": "0-160 km/h with Launch Control"
+                                },
+                                "zeroTo200": {
+                                    "value": 7.4,
+                                    "unit": "s",
+                                    "test": "0-200 km/h with Launch Control"
+                                }
+                            }
+                        },
+                        "soundLevel": {
+                            "standard": "UN-R 51",
+                            "passingVehicle": {
+                                "value": 68,
+                                "unit": "dB(A)"
+                            }
+                        },
+                        "charging": {
+                            "battery": {
+                                "grossEnergyContent": {
+                                    "value": 113.0,
+                                    "unit": "kWh"
+                                }
+                            },
+
+                            "acCharging": {
+                                "chargingTime": {
+                                    "9_6kW": {
+                                        "value": 13.0,
+                                        "unit": "h",
+                                        "chargeRange": "0-100%"
+                                    },
+                                    "11kW": {
+                                        "value": 11.0,
+                                        "unit": "h",
+                                        "chargeRange": "0-100%"
+                                    },
+                                    "19_2kW": {
+                                        "value": 6.5,
+                                        "unit": "h",
+                                        "chargeRange": "0-100%"
+                                    },
+                                    "22kW": {
+                                        "value": 5.75,
+                                        "unit": "h",
+                                        "chargeRange": "0-100%"
+                                    }
+                                }
+                            },
+
+                            "dcCharging": {
+                                "chargingTime": {
+                                    "400VInfrastructure": {
+                                        "value": 26,
+                                        "unit": "min",
+                                        "chargeRange": "10-80%"
+                                    },
+                                    "maximumChargingPower": {
+                                        "value": 16,
+                                        "unit": "min",
+                                        "chargeRange": "10-80%"
+                                    }
+                                },
+
+                                "maximumChargingPower": {
+                                    "value": 390,
+                                    "unit": "kW"
+                                },
+
+                                "rechargedRangeIn10Minutes": {
+                                    "value": 312,
+                                    "unit": "km",
+                                    "chargingPower": "maximum DC charging power"
+                                }
+                            }
+                        },
+                        "terrainFeatures": {
+                            "maxClearanceWaterSensitivePartsNormalRideHeight": {
+                                "value": 500,
+                                "unit": "mm"
+                            },
+                            "maxGroundClearanceNormalRideHeight": {
+                                "value": 190,
+                                "unit": "mm"
+                            },
+                            "maxClearanceWaterSensitivePartsOffRoadRideHeight": {
+                                "value": 555,
+                                "unit": "mm"
+                            },
+                            "maxGroundClearanceOffRoadRideHeight": {
+                                "value": 245,
+                                "unit": "mm"
+                            },
+                            "maxClearanceWaterSensitivePartsOffRoadLevel": {
+                                "value": 520,
+                                "unit": "mm"
+                            },
+                            "maxGroundClearanceOffRoadLevel": {
+                                "value": 210,
+                                "unit": "mm"
+                            },
+
+                            "breakoverAngleLowLevel": {
+                                "value": 13.4,
+                                "unit": "°"
+                            },
+
+                            "overhang": {
+                                "front": {
+                                    "value": 955,
+                                    "unit": "mm"
+                                },
+                                "rear": {
+                                    "value": 1007,
+                                    "unit": "mm"
+                                }
+                            },
+                            "maxGroundClearanceLowLevel": {
+                                "value": 175,
+                                "unit": "mm"
+                            },
+
+                        },
+                        "capacities": {
+                            "luggageCompartmentVolumeFront": {
+                                "value": 90,
+                                "unit": "l"
+                            },
+                            "openLuggageCompartmentVolume": {
+                                "value": 747,
+                                "unit": "l",
+                                "description": "Up to the upper edge of the rear seats"
+                            },
+                        },
+                        "body": {
+                            "length": {
+                                "value": 4985,
+                                "unit": "mm"
+                            },
+                            "width": {
+                                "value": 1980,
+                                "unit": "mm"
+                            },
+                            "wheelbase": {
+                                "value": 3023,
+                                "unit": "mm"
+                            },
+                            "height": {
+                                "airSuspension": {
+                                    "standardLevel": {
+                                        "value": 1674,
+                                        "unit": "mm"
+                                    },
+                                    "lowLevel": {
+                                        "value": 1659,
+                                        "unit": "mm"
+                                    },
+                                    "extraLowLevel": {
+                                        "value": 1644,
+                                        "unit": "mm"
+                                    },
+                                    "offRoadLevel": {
+                                        "value": 1694,
+                                        "unit": "mm"
+                                    },
+                                    "extraOffRoadLevel": {
+                                        "value": 1729,
+                                        "unit": "mm"
+                                    }
+                                },
+
                             }
                         }
-                    },
-
-                    "range": {
-                        "min": 564,
-                        "max": 624,
-                        "unit": "km",
-                        "standard": "WLTP",
-                        "type": "combined model range"
                     },
                 }
             ]
@@ -264,7 +561,7 @@ export const Cayenne_Car = [{
                         "title": "Power meets versatility.",
                         "description": "The Cayenne delivers signature Porsche performance with exceptional comfort, confident handling, and the everyday versatility of a luxury SUV."
                     },
-                    "year": 2027,
+                    "year": 2026,
                     "fuelType": "Gasoline",
                     "driveType": "All-Wheel Drive",
                     "transmission": "Automatic",
@@ -309,21 +606,169 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "performance": {
-                        "acceleration": {
-                            "value": 6.0,
-                            "unit": "seconds",
-                            "test": "0 - 100 km/h"
+                    "technical_data": {
+                        "powerUnit": {
+                            "bore": {
+                                "value": 84.5,
+                                "unit": "mm"
+                            },
+                            "numberOfCylinders": 6,
+                            "stroke": {
+                                "value": 89.0,
+                                "unit": "mm"
+                            },
+                            "displacement": {
+                                "value": 2995,
+                                "unit": "cm³"
+                            },
+                            "maxTorque": {
+                                "value": 500,
+                                "unit": "Nm"
+                            },
+                            "power": {
+                                "kW": {
+                                    "value": 260,
+                                    "unit": "kW"
+                                },
+                                "PS": {
+                                    "value": 353,
+                                    "unit": "PS"
+                                }
+                            },
+                            "maxOutputPerLiter": {
+                                "kWPerLiter": {
+                                    "value": 87.0,
+                                    "unit": "kW/l"
+                                },
+                                "PSPerLiter": {
+                                    "value": 118.0,
+                                    "unit": "PS/l"
+                                }
+                            },
+                            "maximumEngineSpeed": {
+                                "value": 6500,
+                                "unit": "1/min"
+                            }
                         },
-                        "power": {
-                            "kw": 260,
-                            "ps": 353
+                        "performance": {
+                            "topSpeed": {
+                                "value": 248,
+                                "unit": "km/h"
+                            },
+                            "acceleration": {
+                                "inGear80To120": {
+                                    "value": 4.0,
+                                    "unit": "s",
+                                    "test": "80-120 km/h (50-75 mph) with Launch Control"
+                                },
+                                "zeroTo100": {
+                                    "value": 6.0,
+                                    "unit": "s",
+                                    "test": "0-100 km/h with Launch Control"
+                                },
+                                "zeroTo160": {
+                                    "value": 13.9,
+                                    "unit": "s",
+                                    "test": "0-160 km/h with Launch Control"
+                                },
+                                "zeroTo200": {
+                                    "value": 24.0,
+                                    "unit": "s",
+                                    "test": "0-200 km/h with Launch Control"
+                                }
+                            }
                         },
-                        "topSpeed": {
-                            "value": 248,
-                            "unit": "km/h"
+                        "soundLevel": {
+                            "standard": "UN-R 51",
+                            "passingVehicle": {
+                                "value": 69,
+                                "unit": "dB(A)"
+                            }
+                        },
+                        "terrainFeatures": {
+                            "maxGroundClearance": {
+                                "value": 238,
+                                "unit": "mm",
+                                "level": "extra off-road"
+                            },
+                            "breakoverAngle": {
+                                "value": 21.2,
+                                "unit": "°",
+                                "level": "extra off-road"
+                            },
+                            "departureAngle": {
+                                "value": 24.3,
+                                "unit": "°",
+                                "level": "extra off-road"
+                            },
+                            "overhang": {
+                                "front": {
+                                    "value": 1013,
+                                    "unit": "mm"
+                                },
+                                "rear": {
+                                    "value": 1022,
+                                    "unit": "mm"
+                                }
+                            }
+                        },
+                        "capacities": {
+                            "luggageCompartment": {
+                                "openVolume": {
+                                    "value": 772,
+                                    "unit": "l",
+                                    "description": "Up to the upper edge of the rear seats"
+                                },
+                                "largestVolume": {
+                                    "value": 1708,
+                                    "unit": "l",
+                                    "description": "Behind front seats, up to roof"
+                                },
+                                "rearVolumeV210_2": {
+                                    "value": 698,
+                                    "unit": "l"
+                                }
+                            }
+                        },
+                        "body": {
+                            "length": {
+                                "value": 4930,
+                                "unit": "mm"
+                            },
+                            "width": {
+                                "value": 1983,
+                                "unit": "mm"
+                            },
+                            "wheelbase": {
+                                "value": 2895,
+                                "unit": "mm"
+                            },
+
+                            "height": {
+
+                                "airSuspensionStandard": {
+                                    "value": 1679,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 1669,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraLow": {
+                                    "value": 1654,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 1694,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 1725,
+                                    "unit": "mm"
+                                }
+                            }
                         }
-                    }
+                    },
                 },
                 {
                     "carId": "cayenne-black-edition",
@@ -379,21 +824,206 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "performance": {
-                        "acceleration": {
-                            "value": 6.0,
-                            "unit": "seconds",
-                            "test": "0 - 100 km/h"
+                    "technical_data": {
+                        "powerUnit": {
+                            "bore": {
+                                "value": 84.5,
+                                "unit": "mm"
+                            },
+                            "numberOfCylinders": 6,
+                            "stroke": {
+                                "value": 89.0,
+                                "unit": "mm"
+                            },
+                            "displacement": {
+                                "value": 2995,
+                                "unit": "cm³"
+                            },
+                            "maxTorque": {
+                                "value": 500,
+                                "unit": "Nm"
+                            },
+                            "power": {
+                                "kW": {
+                                    "value": 260,
+                                    "unit": "kW"
+                                },
+                                "PS": {
+                                    "value": 353,
+                                    "unit": "PS"
+                                }
+                            },
+                            "maxOutputPerLiter": {
+                                "kWPerLiter": {
+                                    "value": 87.0,
+                                    "unit": "kW/l"
+                                },
+                                "PSPerLiter": {
+                                    "value": 118.0,
+                                    "unit": "PS/l"
+                                }
+                            },
+                            "maximumEngineSpeed": {
+                                "value": 6500,
+                                "unit": "1/min"
+                            }
                         },
-                        "power": {
-                            "kw": 260,
-                            "ps": 353
+                        "performance": {
+                            "topSpeed": {
+                                "value": 248,
+                                "unit": "km/h"
+                            },
+                            "acceleration": {
+                                "zeroTo100": {
+                                    "value": 6.0,
+                                    "unit": "s"
+                                },
+                                "zeroTo160": {
+                                    "value": 13.9,
+                                    "unit": "s"
+                                },
+                                "zeroTo200": {
+                                    "value": 24.0,
+                                    "unit": "s"
+                                },
+                                "inGear": {
+                                    "speedRange": "80-120 km/h",
+                                    "mphRange": "50-75 mph",
+                                    "value": 4.0,
+                                    "unit": "s"
+                                }
+                            },
+                            "sportChronoPackage": {
+                                "zeroTo100": {
+                                    "value": 5.7,
+                                    "unit": "s"
+                                },
+                                "zeroTo160": {
+                                    "value": 13.6,
+                                    "unit": "s"
+                                },
+                                "zeroTo200": {
+                                    "value": 23.7,
+                                    "unit": "s"
+                                }
+                            }
                         },
-                        "topSpeed": {
-                            "value": 248,
-                            "unit": "km/h"
+                        "soundLevel": {
+                            "standard": "UN-R 51",
+                            "passingVehicle": {
+                                "value": 69,
+                                "unit": "dB(A)"
+                            }
+                        },
+                        "terrainFeatures": {
+                            "groundClearance": {
+                                "steelSuspensionPASM": {
+                                    "value": 212,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionNormal": {
+                                    "value": 193,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 183,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 208,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 238,
+                                    "unit": "mm"
+                                }
+                            },
+                            "departureAngle": {
+                                "steelSuspensionPASM": {
+                                    "value": 22.3,
+                                    "unit": "°"
+                                },
+                                "airSuspensionStandard": {
+                                    "value": 21.0,
+                                    "unit": "°"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 24.3,
+                                    "unit": "°"
+                                }
+                            },
+                            "overhang": {
+                                "front": {
+                                    "value": 1013,
+                                    "unit": "mm"
+                                },
+                                "rear": {
+                                    "value": 1022,
+                                    "unit": "mm"
+                                }
+                            }
+                        },
+                        "capacities": {
+                            "luggageCompartment": {
+                                "openVolume": {
+                                    "value": 772,
+                                    "unit": "l",
+                                    "description": "Up to the upper edge of the rear seats"
+                                },
+                                "largestVolume": {
+                                    "value": 1708,
+                                    "unit": "l",
+                                    "description": "Behind front seats, up to roof"
+                                },
+                                "rearVolumeV210_2": {
+                                    "value": 698,
+                                    "unit": "l"
+                                }
+                            }
+                        },
+                        "body": {
+                            "dimensions": {
+                                "length": {
+                                    "value": 4930,
+                                    "unit": "mm"
+                                },
+                                "width": {
+                                    "value": 1983,
+                                    "unit": "mm"
+                                },
+                                "wheelbase": {
+                                    "value": 2895,
+                                    "unit": "mm"
+                                },
+                            },
+
+                            "height": {
+                                "airSuspensionStandard": {
+                                    "value": 1679,
+                                    "unit": "mm"
+                                },
+
+                                "airSuspensionLow": {
+                                    "value": 1669,
+                                    "unit": "mm"
+                                },
+
+                                "airSuspensionExtraLow": {
+                                    "value": 1654,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 1694,
+                                    "unit": "mm"
+                                },
+
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 1725,
+                                    "unit": "mm"
+                                },
+                            }
                         }
-                    }
+                    },
                 },
                 {
                     "carId": "cayenne-gts",
@@ -449,21 +1079,205 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "performance": {
-                        "acceleration": {
-                            "value": 4.7,
-                            "unit": "seconds",
-                            "test": "0 - 100 km/h"
+                    "technical_data": {
+                        "powerUnit": {
+                            "bore": {
+                                "value": 86.0,
+                                "unit": "mm"
+                            },
+                            "numberOfCylinders": 8,
+                            "stroke": {
+                                "value": 86.0,
+                                "unit": "mm"
+                            },
+                            "displacement": {
+                                "value": 3996,
+                                "unit": "cm³"
+                            },
+                            "maxTorque": {
+                                "value": 660,
+                                "unit": "Nm"
+                            },
+                            "power": {
+                                "kW": {
+                                    "value": 368,
+                                    "unit": "kW"
+                                },
+                                "PS": {
+                                    "value": 500,
+                                    "unit": "PS"
+                                }
+                            },
+                            "maxOutputPerLiter": {
+                                "kWPerLiter": {
+                                    "value": 92.0,
+                                    "unit": "kW/l"
+                                },
+                                "PSPerLiter": {
+                                    "value": 125.0,
+                                    "unit": "PS/l"
+                                }
+                            },
+                            "maximumEngineSpeed": {
+                                "value": 6800,
+                                "unit": "1/min"
+                            }
                         },
-                        "power": {
-                            "kw": 368,
-                            "ps": 500
+                        "performance": {
+                            "topSpeed": {
+                                "value": 275,
+                                "unit": "km/h"
+                            },
+                            "acceleration": {
+                                "zeroTo100": {
+                                    "value": 4.7,
+                                    "unit": "s"
+                                },
+                                "zeroTo160": {
+                                    "value": 10.6,
+                                    "unit": "s"
+                                },
+                                "zeroTo200": {
+                                    "value": 17.0,
+                                    "unit": "s"
+                                },
+                                "inGear": {
+                                    "speedRange": "80-120 km/h",
+                                    "mphRange": "50-75 mph",
+                                    "value": 3.1,
+                                    "unit": "s"
+                                }
+                            },
+                            "sportChronoPackage": {
+                                "zeroTo100": {
+                                    "value": 4.4,
+                                    "unit": "s"
+                                },
+                                "zeroTo160": {
+                                    "value": 10.3,
+                                    "unit": "s"
+                                },
+                                "zeroTo200": {
+                                    "value": 16.7,
+                                    "unit": "s"
+                                },
+                                "inGear": {
+                                    "speedRange": "80-120 km/h",
+                                    "mphRange": "50-75 mph",
+                                    "value": 2.9,
+                                    "unit": "s"
+                                }
+                            }
                         },
-                        "topSpeed": {
-                            "value": 275,
-                            "unit": "km/h"
+                        "soundLevel": {
+                            "standard": "UN-R 51",
+                            "passingVehicle": {
+                                "value": 70,
+                                "unit": "dB(A)"
+                            }
+                        },
+                        "terrainFeatures": {
+                            "groundClearance": {
+                                "airSuspensionNormal": {
+                                    "value": 189,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 181,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 204,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 234,
+                                    "unit": "mm"
+                                }
+                            },
+                            "departureAngle": {
+                                "airSuspensionStandard": {
+                                    "value": 20.9,
+                                    "unit": "°"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 24.2,
+                                    "unit": "°"
+                                }
+                            },
+                            "overhang": {
+                                "front": {
+                                    "value": 1013,
+                                    "unit": "mm"
+                                },
+                                "rear": {
+                                    "value": 1022,
+                                    "unit": "mm"
+                                }
+                            }
+                        },
+                        "capacities": {
+                            "luggageCompartment": {
+                                "openVolume": {
+                                    "value": 772,
+                                    "unit": "l",
+                                    "description": "Up to the upper edge of the rear seats"
+                                },
+                                "largestVolume": {
+                                    "value": 1708,
+                                    "unit": "l",
+                                    "description": "Behind front seats, up to roof"
+                                },
+                                "rearVolumeV210_2": {
+                                    "value": 656,
+                                    "unit": "l"
+                                }
+                            }
+                        },
+                        "body": {
+                            "dimensions": {
+                                "length": {
+                                    "value": 4930,
+                                    "unit": "mm"
+                                },
+                                "width": {
+                                    "value": 1983,
+                                    "unit": "mm"
+                                },
+                                "wheelbase": {
+                                    "value": 2895,
+                                    "unit": "mm"
+                                },
+
+                            },
+
+                            "height": {
+                                "airSuspensionStandard": {
+                                    "value": 1674,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 1666,
+                                    "unit": "mm"
+                                },
+
+                                "airSuspensionExtraLow": {
+                                    "value": 1659,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 1689,
+                                    "unit": "mm"
+                                },
+
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 1719,
+                                    "unit": "mm"
+                                },
+
+                            }
                         }
-                    }
+                    },
                 }
             ]
         },
@@ -525,21 +1339,196 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "performance": {
-                        "acceleration": {
-                            "value": 5.7,
-                            "unit": "seconds",
-                            "test": "0 - 100 km/h with Sport Chrono Package"
+                    "technical_data": {
+                        "powerUnit": {
+                            "bore": {
+                                "value": 84.5,
+                                "unit": "mm"
+                            },
+                            "numberOfCylinders": 6,
+                            "stroke": {
+                                "value": 89.0,
+                                "unit": "mm"
+                            },
+                            "displacement": {
+                                "value": 2995,
+                                "unit": "cm³"
+                            },
+                            "maxTorque": {
+                                "value": 500,
+                                "unit": "Nm"
+                            },
+                            "power": {
+                                "kW": {
+                                    "value": 260,
+                                    "unit": "kW"
+                                },
+                                "PS": {
+                                    "value": 353,
+                                    "unit": "PS"
+                                }
+                            },
+                            "maxOutputPerLiter": {
+                                "kWPerLiter": {
+                                    "value": 87.0,
+                                    "unit": "kW/l"
+                                },
+                                "PSPerLiter": {
+                                    "value": 118.0,
+                                    "unit": "PS/l"
+                                }
+                            },
+                            "maximumEngineSpeed": {
+                                "value": 6500,
+                                "unit": "1/min"
+                            }
                         },
-                        "power": {
-                            "kw": 260,
-                            "ps": 353
+                        "performance": {
+                            "topSpeed": {
+                                "value": 248,
+                                "unit": "km/h"
+                            },
+                            "acceleration": {
+                                "inGear": {
+                                    "speedRange": "80-120 km/h",
+                                    "mphRange": "50-75 mph",
+                                    "value": 3.9,
+                                    "unit": "s"
+                                }
+                            },
+                            "sportChronoPackage": {
+                                "zeroTo100": {
+                                    "value": 5.7,
+                                    "unit": "s"
+                                },
+                                "zeroTo160": {
+                                    "value": 13.6,
+                                    "unit": "s"
+                                },
+                                "zeroTo200": {
+                                    "value": 23.7,
+                                    "unit": "s"
+                                },
+                                "inGear": {
+                                    "speedRange": "80-120 km/h",
+                                    "mphRange": "50-75 mph",
+                                    "value": 3.9,
+                                    "unit": "s"
+                                }
+                            }
                         },
-                        "topSpeed": {
-                            "value": 248,
-                            "unit": "km/h"
+                        "soundLevel": {
+                            "standard": "UN-R 51",
+                            "passingVehicle": {
+                                "value": 69,
+                                "unit": "dB(A)"
+                            }
+                        },
+                        "terrainFeatures": {
+                            "groundClearance": {
+                                "airSuspensionNormal": {
+                                    "value": 192,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 182,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 207,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 237,
+                                    "unit": "mm"
+                                }
+                            },
+
+                            "departureAngle": {
+                                "steelSuspensionPASM": {
+                                    "value": 22.5,
+                                    "unit": "°"
+                                },
+                                "airSuspensionStandard": {
+                                    "value": 20.9,
+                                    "unit": "°"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 24.3,
+                                    "unit": "°"
+                                }
+                            },
+                            "overhang": {
+                                "front": {
+                                    "value": 1013,
+                                    "unit": "mm"
+                                },
+                                "rear": {
+                                    "value": 1022,
+                                    "unit": "mm"
+                                }
+                            }
+                        },
+                        "capacities": {
+                            "luggageCompartment": {
+                                "openVolume": {
+                                    "value": 592,
+                                    "unit": "l",
+                                    "description": "Up to the upper edge of the rear seats"
+                                },
+                                "largestVolume": {
+                                    "value": 1502,
+                                    "unit": "l",
+                                    "description": "Behind front seats, up to roof"
+                                },
+                                "rearVolumeV210_2": {
+                                    "value": 554,
+                                    "unit": "l"
+                                }
+                            }
+                        },
+                        "body": {
+                            "dimensions": {
+                                "length": {
+                                    "value": 4930,
+                                    "unit": "mm"
+                                },
+                                "width": {
+                                    "value": 1983,
+                                    "unit": "mm"
+                                },
+                                "wheelbase": {
+                                    "value": 2895,
+                                    "unit": "mm"
+                                },
+
+                            },
+
+                            "height": {
+
+                                "airSuspensionStandard": {
+                                    "value": 1659,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 1649,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraLow": {
+                                    "value": 1634,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 1674,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 1704,
+                                    "unit": "mm"
+                                }
+                            }
                         }
-                    }
+                    },
                 },
                 {
                     "carId": "cayenne-coupe-black-edition",
@@ -594,21 +1583,198 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "performance": {
-                        "acceleration": {
-                            "value": 5.7,
-                            "unit": "seconds",
-                            "test": "0 - 100 km/h with Sport Chrono Package"
+                    "technical_data": {
+                        "powerUnit": {
+                            "bore": {
+                                "value": 84.5,
+                                "unit": "mm"
+                            },
+                            "numberOfCylinders": 6,
+                            "stroke": {
+                                "value": 89.0,
+                                "unit": "mm"
+                            },
+                            "displacement": {
+                                "value": 2995,
+                                "unit": "cm³"
+                            },
+                            "maxTorque": {
+                                "value": 500,
+                                "unit": "Nm"
+                            },
+                            "power": {
+                                "kW": {
+                                    "value": 260,
+                                    "unit": "kW"
+                                },
+                                "PS": {
+                                    "value": 353,
+                                    "unit": "PS"
+                                }
+                            },
+                            "maxOutputPerLiter": {
+                                "kWPerLiter": {
+                                    "value": 87.0,
+                                    "unit": "kW/l"
+                                },
+                                "PSPerLiter": {
+                                    "value": 118.0,
+                                    "unit": "PS/l"
+                                }
+                            },
+                            "maximumEngineSpeed": {
+                                "value": 6500,
+                                "unit": "1/min"
+                            }
                         },
-                        "power": {
-                            "kw": 260,
-                            "ps": 353
+                        "performance": {
+                            "topSpeed": {
+                                "value": 248,
+                                "unit": "km/h"
+                            },
+                            "acceleration": {
+                                "inGear": {
+                                    "speedRange": "80-120 km/h",
+                                    "mphRange": "50-75 mph",
+                                    "value": 3.9,
+                                    "unit": "s"
+                                }
+                            },
+                            "sportChronoPackage": {
+                                "zeroTo100": {
+                                    "value": 5.7,
+                                    "unit": "s"
+                                },
+                                "zeroTo160": {
+                                    "value": 13.6,
+                                    "unit": "s"
+                                },
+                                "zeroTo200": {
+                                    "value": 23.7,
+                                    "unit": "s"
+                                },
+                                "inGear": {
+                                    "speedRange": "80-120 km/h",
+                                    "mphRange": "50-75 mph",
+                                    "value": 3.9,
+                                    "unit": "s"
+                                }
+                            }
                         },
-                        "topSpeed": {
-                            "value": 248,
-                            "unit": "km/h"
+                        "soundLevel": {
+                            "standard": "UN-R 51",
+                            "passingVehicle": {
+                                "value": 69,
+                                "unit": "dB(A)"
+                            }
+                        },
+                        "terrainFeatures": {
+                            "groundClearance": {
+                                "steelSuspensionPASM": {
+                                    "value": 214,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionNormal": {
+                                    "value": 192,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 182,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 207,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 237,
+                                    "unit": "mm"
+                                }
+                            },
+
+                            "departureAngle": {
+                                "steelSuspensionPASM": {
+                                    "value": 22.5,
+                                    "unit": "°"
+                                },
+                                "airSuspensionStandard": {
+                                    "value": 20.9,
+                                    "unit": "°"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 24.3,
+                                    "unit": "°"
+                                }
+                            },
+                            "overhang": {
+                                "front": {
+                                    "value": 1013,
+                                    "unit": "mm"
+                                },
+                                "rear": {
+                                    "value": 1022,
+                                    "unit": "mm"
+                                }
+                            }
+                        },
+                        "capacities": {
+                            "luggageCompartment": {
+                                "openVolume": {
+                                    "value": 592,
+                                    "unit": "l",
+                                    "description": "Up to the upper edge of the rear seats"
+                                },
+                                "largestVolume": {
+                                    "value": 1502,
+                                    "unit": "l",
+                                    "description": "Behind front seats, up to roof"
+                                },
+                                "rearVolumeV210_2": {
+                                    "value": 554,
+                                    "unit": "l"
+                                }
+                            }
+                        },
+                        "body": {
+                            "dimensions": {
+                                "length": {
+                                    "value": 4930,
+                                    "unit": "mm"
+                                },
+                                "width": {
+                                    "value": 1983,
+                                    "unit": "mm"
+                                },
+                                "wheelbase": {
+                                    "value": 2895,
+                                    "unit": "mm"
+                                },
+
+                            },
+                            "height": {
+                                "airSuspensionStandard": {
+                                    "value": 1659,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 1649,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraLow": {
+                                    "value": 1634,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 1674,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 1704,
+                                    "unit": "mm"
+                                }
+                            }
                         }
-                    }
+                    },
                 },
                 {
                     "carId": "cayenne-gts-coupe",
@@ -664,21 +1830,224 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "performance": {
-                        "acceleration": {
-                            "value": 4.4,
-                            "unit": "seconds",
-                            "test": "0 - 100 km/h with Sport Chrono Package"
+                    "technical_data": {
+                        "powerUnit": {
+                            "bore": {
+                                "value": 86.0,
+                                "unit": "mm"
+                            },
+                            "numberOfCylinders": 8,
+                            "stroke": {
+                                "value": 86.0,
+                                "unit": "mm"
+                            },
+                            "displacement": {
+                                "value": 3996,
+                                "unit": "cm³"
+                            },
+                            "maxTorque": {
+                                "value": 660,
+                                "unit": "Nm"
+                            },
+                            "power": {
+                                "kW": {
+                                    "value": 368,
+                                    "unit": "kW"
+                                },
+                                "PS": {
+                                    "value": 500,
+                                    "unit": "PS"
+                                }
+                            },
+                            "maxOutputPerLiter": {
+                                "kWPerLiter": {
+                                    "value": 92.0,
+                                    "unit": "kW/l"
+                                },
+                                "PSPerLiter": {
+                                    "value": 125.0,
+                                    "unit": "PS/l"
+                                }
+                            },
+                            "maximumEngineSpeed": {
+                                "value": 6800,
+                                "unit": "1/min"
+                            }
                         },
-                        "power": {
-                            "kw": 368,
-                            "ps": 500
+                        "performance": {
+                            "topSpeed": {
+                                "value": 275,
+                                "unit": "km/h"
+                            },
+                            "sportChronoPackage": {
+                                "zeroTo100": {
+                                    "value": 4.4,
+                                    "unit": "s"
+                                },
+                                "zeroTo160": {
+                                    "value": 10.3,
+                                    "unit": "s"
+                                },
+                                "zeroTo200": {
+                                    "value": 16.7,
+                                    "unit": "s"
+                                },
+                                "inGear": {
+                                    "speedRange": "80-120 km/h",
+                                    "mphRange": "50-75 mph",
+                                    "value": 2.9,
+                                    "unit": "s"
+                                }
+                            }
                         },
-                        "topSpeed": {
-                            "value": 275,
-                            "unit": "km/h"
+                        "soundLevel": {
+                            "standard": "UN-R 51",
+                            "passingVehicle": {
+                                "value": 70,
+                                "unit": "dB(A)"
+                            }
+                        },
+                        "terrainFeatures": {
+                            "groundClearance": {
+                                "airSuspensionNormal": {
+                                    "value": 189,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 181,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 204,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 234,
+                                    "unit": "mm"
+                                }
+                            },
+                            "waterClearance": {
+                                "airSuspensionStandard": {
+                                    "value": 471,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 496,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 525,
+                                    "unit": "mm"
+                                }
+                            },
+                            "approachAngle": {
+                                "airSuspensionStandard": {
+                                    "value": 23.3,
+                                    "unit": "°"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 26.6,
+                                    "unit": "°"
+                                }
+                            },
+                            "breakoverAngle": {
+                                "airSuspensionLow": {
+                                    "value": 16.0,
+                                    "unit": "°"
+                                },
+                                "airSuspensionStandard": {
+                                    "value": 16.7,
+                                    "unit": "°"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 18.0,
+                                    "unit": "°"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 20.7,
+                                    "unit": "°"
+                                }
+                            },
+                            "departureAngle": {
+                                "airSuspensionStandard": {
+                                    "value": 20.7,
+                                    "unit": "°"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 24.1,
+                                    "unit": "°"
+                                }
+                            },
+                            "overhang": {
+                                "front": {
+                                    "value": 1013,
+                                    "unit": "mm"
+                                },
+                                "rear": {
+                                    "value": 1022,
+                                    "unit": "mm"
+                                }
+                            }
+                        },
+                        "capacities": {
+                            "luggageCompartment": {
+                                "openVolume": {
+                                    "value": 592,
+                                    "unit": "l",
+                                    "description": "Up to the upper edge of the rear seats"
+                                },
+                                "largestVolume": {
+                                    "value": 1502,
+                                    "unit": "l",
+                                    "description": "Behind front seats, up to roof"
+                                },
+                                "rearVolumeV210_2": {
+                                    "value": 554,
+                                    "unit": "l"
+                                }
+                            }
+                        },
+                        "body": {
+                            "dimensions": {
+                                "length": {
+                                    "value": 4930,
+                                    "unit": "mm"
+                                },
+                                "width": {
+                                    "value": 1989,
+                                    "unit": "mm"
+                                },
+                                "wheelbase": {
+                                    "value": 2895,
+                                    "unit": "mm"
+                                },
+
+                            },
+
+                            "height": {
+                                "airSuspensionStandard": {
+                                    "value": 1654,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionLow": {
+                                    "value": 1646,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraLow": {
+                                    "value": 1639,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionOffRoad": {
+                                    "value": 1669,
+                                    "unit": "mm"
+                                },
+                                "airSuspensionExtraOffRoad": {
+                                    "value": 1699,
+                                    "unit": "mm"
+                                }
+                            }
                         }
-                    }
+                    },
                 }
             ]
         },

@@ -68,7 +68,7 @@ const InteriorCarousel = ({ car }) => {
 
                 <div
                     key={currentImage.key}
-                    className="relative aspect-[16/8] w-4/5 rounded-2xl mx-auto bg-cover bg-center transition-all duration-500"
+                    className="relative aspect-[16/8] w-4.5/5 rounded-2xl mx-auto bg-cover bg-center transition-all duration-500"
                     style={{ backgroundImage: `url(${car.images.interior?.[currentImage.key]})`, }}
                 >
 
@@ -78,10 +78,6 @@ const InteriorCarousel = ({ car }) => {
                         <h2 className="mb-4 text-3xl font-mono sm:text-5xl"> {currentImage.title} </h2>
                         <p className="text-sm leading-7 text-white/80 sm:text-base">  {currentImage.description} </p>
                     </div>
-
-
-
-
 
                 </div>
 

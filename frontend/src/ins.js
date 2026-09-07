@@ -9,15 +9,6 @@
 // │       └── Turbo
 // │           └── 911 Turbo S
 // │
-// ├── Taycan(model)
-// │   └── Electric
-// │           ├── Taycan 4S
-// │           ├── Taycan 4S Black Edition
-// │           └── Taycan Turbo
-// │
-// ├── Panamera(model)
-// │   └── Gasoline
-// │           └── Panamera
 // │
 // ├── Macan(model)
 // │   ├── Gasoline

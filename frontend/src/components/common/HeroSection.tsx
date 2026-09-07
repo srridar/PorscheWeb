@@ -57,7 +57,7 @@ interface Car {
   };
 }
 
-const EV_HeroSection = ({ car }: { car: Car }) => {
+const HeroSection = ({ car }: { car: Car }) => {
   if (!car) return null;
 
   return (
@@ -98,4 +98,4 @@ const EV_HeroSection = ({ car }: { car: Car }) => {
   );
 };
 
-export default EV_HeroSection;
+export default HeroSection;
