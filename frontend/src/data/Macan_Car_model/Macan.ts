@@ -28,12 +28,23 @@ export const Macan = [
                             "tax": "VAT"
                         },
                         "images": {
-                            "hero": "/images/cars/macan/macan/porsche-Macan.webp",
+                            "hero": "/images/cars/macan/macan/porsche-macan.webp",
 
                             "exterior": {
-                                "front": "/images/cars/macan/macan/porsche-macan-gts.webp",
-                                "rear": "/images/cars/macan/macan/porsche-macan-3.png",
-                                "side": "/images/cars/macan/macan/porsche-macan-gasoline.avif",
+                                "front": "/images/cars/macan/macan/porsche-macan-front.png",
+                                "rear": "/images/cars/macan/macan/porsche-macan-rear.png",
+                                "side": "/images/cars/macan/macan/porsche-macan-side.png",
+                                "lights": {
+                                    "headlights": "/images/cars/macan/macan/porsche-macan-headlight.png",
+                                    "taillights": "/images/cars/macan/macan/porsche-macan-taillight.png",
+                                    "Indicators": "/images/cars/macan/macan/Indicators.png",
+
+                                },
+
+                                "wheels": {
+                                    "frontWheel": "/images/cars/macan/macan/porsche-macan-fw.png",
+                                    "rearWheel": "/images/cars/macan/macan/RW.png",
+                                },
                             },
 
                             "bootSpace": {
@@ -41,21 +52,9 @@ export const Macan = [
                                 "rear": "/images/back-space.webp",
                             },
 
-                            "lights": {
-                                "headlights": "/images/cars/macan/macan/porsche-macan-fi.png",
-                                "taillights": "/images/cars/macan/macan/porsche-macan-tl.png",
-                                "Indicators": "/images/cars/macan/macan/Fi.png",
-
-                            },
-
-                            "wheels": {
-                                "frontWheel": "/images/cars/macan/macan/porsche-macan-fw.png",
-                                "rearWheel": "/images/cars/macan/macan/RW.png",
-                            },
-
                             "interior": {
-                                "interior": "/images/cars/macan/macan/porsche-macan-5.png",
-                                "dashboard": "/images/cars/macan/macan/porsche-macan-interiaor.png",
+                                "interior": "/images/cars/macan/macan/porsche-macan-interior.png",
+                                "dashboard": "/images/cars/macan/macan/porsche-macan-dashboard.png",
                                 "frontSeats": "/images/cars/macan/macan/porsche-macan-5.png",
                                 "rearSeats": "/images/cars/macan/macan/porsche-macan-rs.png",
                                 "centerConsole": "/images/cars/macan/macan/CenterConsole.png",
@@ -90,14 +89,26 @@ export const Macan = [
                                     "unit": "Nm"
                                 },
                                 "power": {
-                                    "kw": 195,
-                                    "ps": 265
+                                    "kW": {
+                                        "value": 195,
+                                        "unit": "kW"
+                                    },
+                                    "PS": {
+                                        "value": 265,
+                                        "unit": "PS"
+                                    }
                                 },
                                 "maxOutputPerLiter": {
-                                    "kwPerLiter": 98.00,
-                                    "psPerLiter": 133.00
+                                    "kWPerLiter": {
+                                        "value": 98.0,
+                                        "unit": "kW/l"
+                                    },
+                                    "PSPerLiter": {
+                                        "value": 133.0,
+                                        "unit": "PS/l"
+                                    }
                                 },
-                                "maxEngineSpeed": {
+                                "maximumEngineSpeed": {
                                     "value": 6800,
                                     "unit": "1/min"
                                 }
@@ -109,160 +120,53 @@ export const Macan = [
                                 },
                                 "acceleration": {
                                     "zeroTo100": {
-                                        "standard": {
-                                            "value": 6.4,
-                                            "unit": "s",
-                                            "test": "0 - 100 km/h"
-                                        },
-                                        "sportChrono": {
+
+                                        "value": 6.4,
+                                        "unit": "s",
+                                        "test": "0 - 100 km/h",
+
+                                    },
+                                    "zeroTo160": {
+                                        "value": 16.3,
+                                        "unit": "s",
+                                        "test": "0 - 160 km/h",
+                                    },
+                                    "sportChrono": {
+                                        "zeroTo100": {
                                             "value": 6.2,
                                             "unit": "s",
                                             "test": "0 - 100 km/h with Sport Chrono Package"
-                                        }
-                                    },
-                                    "zeroTo160": {
-                                        "standard": {
-                                            "value": 16.3,
-                                            "unit": "s",
-                                            "test": "0 - 160 km/h"
                                         },
-                                        "sportChrono": {
+                                        "zeroTo160": {
                                             "value": 16.1,
                                             "unit": "s",
                                             "test": "0 - 160 km/h with Sport Chrono Package"
                                         }
+
                                     },
-                                    "inGear80To120": {
-                                        "standard": {
-                                            "value": 4.5,
-                                            "unit": "s",
-                                            "test": "80-120km/h (50-75 mph)"
-                                        }
+                                    "inGear": {
+                                        "speedRange": "80-120 km/h",
+                                        "mphRange": "50-75 mph",
+                                        "value": 4.5,
+                                        "unit": "s",
                                     }
                                 }
                             },
                             "soundLevel": {
                                 "standard": "UN-R 51",
-
+                                "stationaryVehicleRpm": {
+                                    "value": 3750,
+                                    "unit": "1/min"
+                                },
+                                "stationaryVehicle": {
+                                    "value": 76,
+                                    "unit": "dB(A)"
+                                },
                                 "passingVehicle": {
                                     "value": 69,
                                     "unit": "dB(A)"
                                 }
                             },
-                            "body": {
-                                "length": {
-                                    "value": 4726,
-                                    "unit": "mm"
-                                },
-                                "widthWithMirrors": {
-                                    "value": 2097,
-                                    "unit": "mm"
-                                },
-                                "height": {
-                                    "steelSuspension": {
-                                        "din": {
-                                            "value": 1621,
-                                            "unit": "mm"
-                                        },
-                                        "dinWithRoofRails": {
-                                            "value": 1627,
-                                            "unit": "mm"
-                                        },
-                                        "ec": {
-                                            "value": 1616,
-                                            "unit": "mm"
-                                        },
-                                        "ecWithRoofRails": {
-                                            "value": 1622,
-                                            "unit": "mm"
-                                        },
-                                        "pasmDin": {
-                                            "value": 1621,
-                                            "unit": "mm"
-                                        },
-                                        "pasmDinWithRoofRails": {
-                                            "value": 1627,
-                                            "unit": "mm"
-                                        }
-                                    },
-                                    "airSuspension": {
-                                        "standardLevel": {
-                                            "value": 1606,
-                                            "unit": "mm"
-                                        },
-                                        "standardLevelWithRoofRails": {
-                                            "value": 1612,
-                                            "unit": "mm"
-                                        },
-                                        "lowLevel": {
-                                            "value": 1596,
-                                            "unit": "mm"
-                                        },
-                                        "lowLevelWithRoofRails": {
-                                            "value": 1602,
-                                            "unit": "mm"
-                                        },
-                                        "extraLowLevel": {
-                                            "value": 1586,
-                                            "unit": "mm"
-                                        },
-                                        "offRoadLevel": {
-                                            "value": 1646,
-                                            "unit": "mm"
-                                        },
-                                        "offRoadLevelWithRoofRails": {
-                                            "value": 1652,
-                                            "unit": "mm"
-                                        }
-                                    }
-                                },
-                                "wheelbase": {
-                                    "value": 2807,
-                                    "unit": "mm"
-                                },
-                                "turningCircle": {
-                                    "value": 12.0,
-                                    "unit": "m"
-                                },
-                                "unladenWeight": {
-                                    "din": {
-                                        "value": 1845,
-                                        "unit": "kg"
-                                    },
-                                    "eu": {
-                                        "value": 1920,
-                                        "unit": "kg"
-                                    }
-                                },
-                                "maximumLoad": {
-                                    "value": 665,
-                                    "unit": "kg"
-                                },
-                                "permissibleGrossWeight": {
-                                    "value": 2510,
-                                    "unit": "kg"
-                                },
-                                "maxTowingLoad": {
-                                    "braked": {
-                                        "value": 2000,
-                                        "unit": "kg"
-                                    },
-                                    "unbraked": {
-                                        "value": 750,
-                                        "unit": "kg"
-                                    }
-                                },
-                                "noseWeightEg": {
-                                    "value": 80,
-                                    "unit": "kg"
-                                },
-                                "maxPermissibleRoofLoad": {
-                                    "system": "Porsche roof transport system",
-                                    "value": 75,
-                                    "unit": "kg"
-                                }
-                            },
-
                             "terrainFeatures": {
                                 "clearanceToWaterSensitiveParts": {
                                     "steelSuspension": {
@@ -305,6 +209,7 @@ export const Macan = [
                                     }
                                 }
                             },
+
                             "capacities": {
                                 "openLuggageCompartmentVolume": {
                                     "upToUpperEdgeOfRearSeats": {
@@ -357,28 +262,27 @@ export const Macan = [
                             "tax": "VAT"
                         },
                         "images": {
-                            "hero": "/images/cars/macan/macanElectric/macanElectric/",
+                            "hero": "/images/cars/macan/macanElectric/macanElectric/macanElectric-3.png",
 
                             "exterior": {
                                 "front": "/images/cars/macan/macanElectric/macanElectric/macanElectric-5.png",
-                                "rear": "/images/cars/macan/macanElectric/macanElectric/macanElectric-5.png",
+                                "rear": "/images/cars/macan/macanElectric/macanElectric/macanElectric-7.png",
                                 "side": "/images/cars/macan/macanElectric/macanElectric/macanElectric-3.png",
+                                "lights": {
+                                    "headlights": "/images/cars/macan/macanElectric/macanElectric/macanElectric-14.png",
+                                    "taillights": "/images/cars/macan/macanElectric/macanElectric/macanElectric-15.png",
+                                    "Indicators": "/images/cars/macan/macanElectric/macanElectric/macanElectric-16.png",
+                                },
+
+                                "wheels": {
+                                    "frontWheel": "/images/cars/macan/macanElectric/macanElectric/macanElectric-18.png",
+                                    "rearWheel": "/images/cars/macan/macanElectric/macanElectric/macanElectric-19.png",
+                                },
                             },
 
                             "bootSpace": {
                                 "front": "/images/front-space.webp",
                                 "rear": "/images/back-space.webp",
-                            },
-
-                            "lights": {
-                                "headlights": "/images/cars/macan/macanElectric/macanElectric/macanElectric-14.png",
-                                "taillights": "/images/cars/macan/macanElectric/macanElectric/macanElectric-15.png",
-                                "Indicators": "/images/cars/macan/macanElectric/macanElectric/macanElectric-16.png",
-                            },
-
-                            "wheels": {
-                                "frontWheel": "/images/cars/macan/macanElectric/macanElectric/macanElectric-18.png",
-                                "rearWheel": "/images/cars/macan/macanElectric/macanElectric/macanElectric-19.png",
                             },
 
                             "interior": {
@@ -401,7 +305,7 @@ export const Macan = [
                                     "value": 563,
                                     "unit": "Nm"
                                 },
-                                "power": {
+                                "powerUpTo": {
                                     "kw": 250,
                                     "ps": 340,
                                 },
@@ -517,6 +421,7 @@ export const Macan = [
                                 },
                                 "standard": "UN-R 51"
                             },
+
                             "terrainFeatures": {
                                 "groundClearance": {
                                     "steelSuspension": {
@@ -597,7 +502,7 @@ export const Macan = [
 
                     },
                     {
-                        "carId": "macan-4s-electric",
+                        "carId": "macan-4s",
                         "modelId": "macan",
                         "variantId": "electric",
                         "name": "Macan 4S Electric",
@@ -617,30 +522,31 @@ export const Macan = [
                             "tax": "VAT"
                         },
                         "images": {
-                            "hero": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_4.png",
+                            "hero": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s.jpg",
                             "exterior": {
-                                "front": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s.jpg",
-                                "rear": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png",
-                                "side": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_5.png",
+                                "front": "/images/cars/macan/macanElectric/macan4SElectric/Front.png",
+                                "rear": "/images/cars/macan/macanElectric/macan4SElectric/Back.png",
+                                "side": "/images/cars/macan/macanElectric/macan4SElectric/Side.png",
+                                "lights": {
+                                    "headlights": "/images/cars/macan/macanElectric/macan4SElectric/HeadLight.png",
+                                    "taillights": "/images/cars/macan/macanElectric/macan4SElectric/TailLight.png",
+                                    "Indicators": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png",
+                                },
+                                "wheels": {
+                                    "frontWheel": "/images/cars/macan/macanElectric/macan4SElectric/FrontWheel.png",
+                                    "rearWheel": "/images/cars/macan/macanElectric/macan4SElectric/RareWheel.png",
+                                },
                             },
 
                             "bootSpace": {
-                                "front": "/images/front-space.webp",
-                                "rear": "/images/back-space.webp",
+                                "front": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_13.png",
+                                "rear": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_12.png",
                             },
-                            "lights": {
-                                "headlights": "/images/cars/macan/macanElectric/macan4SElectric/HeadLight.png",
-                                "taillights": "/images/cars/macan/macanElectric/macan4SElectric/TailLight.png",
-                                "Indicators": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png",
-                            },
-                            "wheels": {
-                                "frontWheel": "/images/cars/macan/macanElectric/macan4SElectric/FrontWheel.png",
-                                "rearWheel": "/images/cars/macan/macanElectric/macan4SElectric/RareWheel.png",
-                            },
+
                             "interior": {
                                 "interior": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_8.png",
                                 "dashboard": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_10.png",
-                                "frontSeats": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png",
+                                "frontSeats": "/images/cars/macan/macanElectric/macan4SElectric/FrontSeat.png",
                                 "rearSeats": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_11.png",
                                 "centerConsole": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_6.png",
                             },
@@ -664,10 +570,9 @@ export const Macan = [
                                     "value": 820,
                                     "unit": "Nm"
                                 },
-                                "power": {
+                                "powerUpTo": {
                                     "kW": 330,
                                     "PS": 449,
-
                                 },
                                 "overboostPowerWithLaunchControl": {
                                     "kW": 380,
@@ -848,22 +753,25 @@ export const Macan = [
                             },
                             "capacities": {
                                 "luggageCompartment": {
-                                    "frontVolume": {
+                                    "front": {
                                         "value": 84,
                                         "unit": "l"
                                     },
-                                    "openVolume": {
-                                        "value": 540,
-                                        "unit": "l",
-                                        "description": "Up to the upper edge of the rear seats"
-                                    },
-                                    "largestVolume": {
-                                        "value": 1348,
-                                        "unit": "l",
-                                        "description": "Behind front seats, up to roof"
+                                    "rear": {
+                                        "openVolume": {
+                                            "value": 540,
+                                            "unit": "l",
+                                            "description": "Up to the upper edge of the rear seats"
+                                        },
+                                        "largestVolume": {
+                                            "value": 1348,
+                                            "unit": "l",
+                                            "description": "Behind front seats, up to roof"
+                                        }
                                     }
                                 }
                             }
+
                         },
                     },
                     {

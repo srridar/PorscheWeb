@@ -34,20 +34,20 @@ export const car_911 = [
                                 "front": "/images/cars/911/911carrera/911-carrera-5.avif",
                                 "rear": "/images/cars/911/911carrera/911-carrera-9.png",
                                 "side": "/images/cars/911/911carrera/911-side-view.png",
+                                "lights": {
+                                    "headlights": "/images/cars/911/911carrera/911-carrera-10.png",
+                                    "taillights": "/images/cars/911/911carrera/tail-light.png",
+                                    "Indicators": "/images/cars/911/911carrera/911-carrera-front-indi.png",
+                                },
+
+                                "wheels": {
+                                    "frontWheel": "/images/cars/911/911carrera/911-carrera-front-wheel.png",
+                                    "rearWheel": "/images/cars/911/911carrera/911-carrera-rear-wheel.png",
+                                },
                             },
                             "bootSpace": {
                                 "front": "/images/front-space.webp",
                                 "rear": "/images/back-space.webp",
-                            },
-                            "lights": {
-                                "headlights": "/images/cars/911/911carrera/911-carrera-10.png",
-                                "taillights": "/images/cars/911/911carrera/tail-light.png",
-                                "Indicators": "/images/cars/911/911carrera/911-carrera-front-indi.png",
-                            },
-
-                            "wheels": {
-                                "frontWheel": "/images/cars/911/911carrera/911-carrera-front-wheel.png",
-                                "rearWheel": "/images/cars/911/911carrera/911-carrera-rear-wheel.png",
                             },
 
                             "interior": {
@@ -70,7 +70,11 @@ export const car_911 = [
                         },
 
                         "technical_data": {
-                            "power-unit": {
+                            "height": "1302mm",
+                            "length": "4542mm",
+                            "wheelbase": "2450mm",
+                            "width": "1852mm",
+                            "powerUnit": {
                                 "bore": {
                                     "value": 91.0,
                                     "unit": "mm"
@@ -89,14 +93,27 @@ export const car_911 = [
                                     "unit": "Nm"
                                 },
                                 "power": {
-                                    "kw": 290,
-                                    "ps": 394
+                                    "kW": {
+                                        "value": 290,
+                                        "unit": "kw"
+                                    },
+                                    "PS": {
+                                        "value": 394,
+                                        "unit": "PS"
+                                    }
+
                                 },
                                 "maxOutputPerLiter": {
-                                    "kwPerLiter": 96.00,
-                                    "psPerLiter": 131.00
+                                    "kWPerLiter": {
+                                        "value": 96.00,
+                                        "unit": "kW/l"
+                                    },
+                                    "PSPerLiter": {
+                                        "value": 131.00,
+                                        "unit": "PS/l"
+                                    }
                                 },
-                                "maxEngineSpeed": {
+                                "maximumEngineSpeed": {
                                     "value": 7500,
                                     "unit": "1/min"
                                 }
@@ -146,7 +163,7 @@ export const car_911 = [
                                         }
                                     },
 
-                                    "inGear80To120": {
+                                    "inGear": {
                                         "standard": {
                                             "value": 2.5,
                                             "unit": "s",
@@ -213,32 +230,6 @@ export const car_911 = [
                                 }
                             },
 
-                            "body": {
-                                "length": {
-                                    "value": 4542,
-                                    "unit": "mm"
-                                },
-
-                                "width": {
-                                    "value": 1852,
-                                    "unit": "mm"
-                                },
-
-                                "height": {
-                                    "value": 1302,
-                                    "unit": "mm"
-                                },
-
-                                "wheelbase": {
-                                    "value": 2450,
-                                    "unit": "mm"
-                                },
-
-                                "turningCircle": {
-                                    "value": 10.9,
-                                    "unit": "m"
-                                }
-                            }
                         }
                     },
                     {
@@ -911,7 +902,7 @@ export const car_911 = [
                                     "unit": "l"
                                 },
                                 "openLuggageCompartmentVolumeBehindFrontSeats": {
-                                
+
                                     "withoutRearSeats": {
                                         "transmission": "8-speed Porsche Doppelkupplung (PDK)",
                                         "value": 373,

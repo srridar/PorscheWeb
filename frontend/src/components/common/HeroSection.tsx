@@ -75,12 +75,12 @@ const HeroSection = ({ car }: { car: Car }) => {
         
       
       
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/35 to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/10" />
       <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/40 to-transparent" />
 
 
-      <div className="absolute left-1/2 top-29 z-20 -translate-x-1/2">
-        <h1 className="whitespace-nowrap text-center text-5xl font-bold italic tracking-tight text-black sm:text-6xl lg:text-7xl">
+      <div className="absolute left-1/2 top-30 z-20 -translate-x-1/2">
+        <h1 className="whitespace-nowrap text-center text-gray-900 dark:text-white text-5xl font-bold italic tracking-tight  sm:text-6xl lg:text-7xl">
           {car.name}
         </h1>
       </div>

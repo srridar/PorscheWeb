@@ -20,7 +20,7 @@ interface Car {
   driveType: string;
   transmission: string;
 
-  price: {
+  price?: {
     amount: number;
     currency: string;
     formatted: string;
@@ -28,7 +28,7 @@ interface Car {
     tax: string;
   };
 
-  images: {
+  images?: {
     hero: string;
 
     bootSpace?: {
@@ -65,7 +65,7 @@ interface Car {
     gallery?: string[];
   };
 
-  technical_data: {
+  technical_data?: {
     capacities?: {
       luggageCompartment?: {
         front?: {
@@ -85,8 +85,8 @@ interface Car {
 }
 
 const EVFeatures = ({ car }: { car: Car }) => {
-  const frontLuggage = car.technical_data.capacities?.luggageCompartment?.front;
-  const rearLuggage = car.technical_data.capacities?.luggageCompartment?.rear;
+  const frontLuggage = car?.technical_data?.capacities?.luggageCompartment?.front;
+  const rearLuggage = car?.technical_data?.capacities?.luggageCompartment?.rear;
 
   return (
     <section className=" px-6 py-20 text-gray-400 sm:px-10 lg:px-16">

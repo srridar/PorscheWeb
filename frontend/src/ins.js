@@ -11,10 +11,7 @@
 // │
 // │
 // ├── Macan(model)
-// │   ├── Gasoline
-// │   │   └── Macan
 // │   └── Electric
-// │       ├── Macan
 // │       ├── Macan 4S
 // │       └── Macan Turbo
 // │

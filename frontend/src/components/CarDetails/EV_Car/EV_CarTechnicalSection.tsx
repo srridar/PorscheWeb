@@ -32,9 +32,8 @@ const TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
   );
 
 
-
   return (
-    <section className=" text-white">
+    <section className="bg-[#131212] text-white">
 
       <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16">
 
@@ -692,8 +691,6 @@ const TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
 
           </div>
         </div>
-
-
 
       </div>
 

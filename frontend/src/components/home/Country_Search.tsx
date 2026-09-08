@@ -6,12 +6,13 @@ const Country_Search = () => {
   const [search, setSearch] = useState("");
   const [openRegion, setOpenRegion] = useState<string | null>(null);
 
+
+
   const handleRegionToggle = (regionId: string) => {
     setOpenRegion((current) => (current === regionId ? null : regionId));
   };
 
-  const filteredRegions = markets.regions
-    .map((region) => ({
+  const filteredRegions = markets.regions.map((region) => ({
       ...region,
       countries: region.countries.filter((country) =>
         country.name.toLowerCase().includes(search.toLowerCase())
@@ -53,22 +54,17 @@ const Country_Search = () => {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {filteredRegions.map((region) => {
-              const isOpen = openRegion === region.id;
+             const isOpen = search.trim() !== "" || openRegion === region.id;
 
               return (
-                <div
-                  key={region.id}
-                  className="rounded-lg  p-5 shadow-2xl transition-all duration-300 "
-                >
+                <div key={region.id} className="rounded-lg  p-5 shadow-2xl transition-all duration-300">
 
                   <button
                     type="button"
                     onClick={() => handleRegionToggle(region.id)}
                     className="flex w-full items-center justify-between text-left"
                   >
-                    <h3 className="text-sm font-medium text-white">
-                      {region.name}
-                    </h3>
+                    <h3 className="text-sm font-medium text-white"> {region.name} </h3>
                     {isOpen ? (
                       <ChevronDown className="h-5 w-5 text-gray-400" />
                     ) : (
@@ -77,31 +73,15 @@ const Country_Search = () => {
                   </button>
 
 
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      isOpen ? "mt-4 max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                    }`}
-                  >
+                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${ isOpen ? "mt-4 max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
                     <div className="flex flex-col gap-2">
                       {region.countries.map((country) => (
-                        <div
-                          key={country.name}
-                          className="flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors duration-200 hover:bg-white/5"
-                        >
-           
-                          <img
-                            src={country.logoImg}
-                            alt={country.name}
-                            className="h-7 w-7 shrink-0 rounded-full object-cover"
-                          />
+                        <div key={country.name} className="flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors duration-200 hover:bg-white/5">
+                          <img src={country.logoImg} alt={country.name} className="h-5 w-5 shrink-0 rounded-full bg-white object-cover"/>
 
-                          {/* Country Information */}
-                          <div className="min-w-0">
-                            <p className="truncate text-sm font-semibold text-white">
-                              {country.name}
-                            </p>
-                            <p className="mt-1 text-xs text-gray-500">
-                              {country.languages.join(" / ")}
+                          <div className="ml-1">
+                            <p className="truncate text-sm font-semibold text-white"> {country.name} </p>
+                            <p className="mt-1 text-xs text-gray-500">{country.languages.join(" / ")}
                             </p>
                           </div>
                         </div>

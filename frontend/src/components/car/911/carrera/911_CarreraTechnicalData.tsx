@@ -8,7 +8,7 @@ interface TechnicalDataProps {
     technicalData: any;
 }
 
-const PanameraTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
+const Carrera_911_TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
 
     const [activeId, setActiveId] = useState<string | null>(null);
 
@@ -62,61 +62,49 @@ const PanameraTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
 
 
                     <div className="mt-8 w-full md:w-3/4 lg:w-2/3 ">
-                        {terrainFeatures?.groundClearance?.airSuspensionNormal && (
+                        {terrainFeatures?.maxGroundClearance && (
                             <div className="flex justify-between items-center py-2.5 text-sm">
                                 <h3 className="text-gray-300 font-medium">
-                                    Max. ground clearance, air suspension (normal ride height)
+                                    Max. ground clearance (PASM)
                                 </h3>
                                 <div className="flex gap-1 items-center font-semibold text-white shrink-0 ml-4">
-                                    <p>{terrainFeatures.groundClearance.airSuspensionNormal.value}</p>
+                                    <p>{terrainFeatures?.maxGroundClearance?.pasm?.value}</p>
                                     <span className="text-xs text-gray-400 font-normal">
-                                        {terrainFeatures.groundClearance.airSuspensionNormal.unit}
+                                        {terrainFeatures?.maxGroundClearance?.pasm?.unit}
                                     </span>
                                 </div>
                             </div>
                         )}
 
-                        {terrainFeatures?.groundClearance?.airSuspensionLow && (
+                        {terrainFeatures?.approachAngle && (
                             <div className="flex justify-between items-center py-2.5 text-sm">
                                 <h3 className="text-gray-300 font-medium">
-                                    Max. ground clearance, air suspension (low level)
+                                    Approach angle (PASM)
                                 </h3>
                                 <div className="flex gap-1 items-center font-semibold text-white shrink-0 ml-4">
-                                    <p>{terrainFeatures.groundClearance.airSuspensionLow.value}</p>
+                                    <p>{terrainFeatures.approachAngle?.pasm?.value}</p>
                                     <span className="text-xs text-gray-400 font-normal">
-                                        {terrainFeatures.groundClearance.airSuspensionLow.unit}
+                                        {terrainFeatures.approachAngle?.pasm?.unit}
                                     </span>
                                 </div>
                             </div>
                         )}
 
-                        {terrainFeatures?.breakoverAngle?.airSuspensionStandard && (
+                        {terrainFeatures?.departureAngle && (
                             <div className="flex justify-between items-center py-2.5 text-sm">
                                 <h3 className="text-gray-300 font-medium">
-                                    Breakover angle, air suspension (standard level)
+                                   Departure angle (PASM)
                                 </h3>
                                 <div className="flex gap-1 items-center font-semibold text-white shrink-0 ml-4">
-                                    <p>{terrainFeatures.breakoverAngle.airSuspensionStandard.value}</p>
+                                    <p>{terrainFeatures.departureAngle.pasm.value}</p>
                                     <span className="text-xs text-gray-400 font-normal">
-                                        {terrainFeatures.breakoverAngle.airSuspensionStandard.unit}
+                                        {terrainFeatures.departureAngle.pasm.unit}
                                     </span>
                                 </div>
                             </div>
                         )}
 
-                        {terrainFeatures?.breakoverAngle?.airSuspensionLow && (
-                            <div className="flex justify-between items-center py-2.5 text-sm">
-                                <h3 className="text-gray-300 font-medium">
-                                    Breakover angle, air suspension (low level)
-                                </h3>
-                                <div className="flex gap-1 items-center font-semibold text-white shrink-0 ml-4">
-                                    <p>{terrainFeatures.breakoverAngle.airSuspensionLow.value}</p>
-                                    <span className="text-xs text-gray-400 font-normal">
-                                        {terrainFeatures.breakoverAngle.airSuspensionLow.unit}
-                                    </span>
-                                </div>
-                            </div>
-                        )}
+                       
 
                         {terrainFeatures?.overhang?.front && (
                             <div className="flex justify-between items-center py-2.5 text-sm">
@@ -172,39 +160,44 @@ const PanameraTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
                                 }`}
                         >
                             <div className="overflow-hidden space-y-3 pt-2">
-
-                                <div className="flex flex-col py-1">
-                                    <div className="flex items-center justify-between">
-                                        <p className="text-sm text-gray-100"> Luggage compartment volume </p>
-                                        <p className="text-sm font-semibold text-gray-500">
-                                            {capacities.luggageCompartment.openVolume.value}
-                                            <span className="ml-1 font-normal text-gray-500">
-                                                {capacities.luggageCompartment.openVolume.unit}
-                                            </span>
-                                        </p>
+                                {/* Front Luggage Compartment */}
+                                {capacities?.luggageCompartmentVolumeFront && (
+                                    <div className="flex flex-col py-1">
+                                        <div className="flex items-center justify-between">
+                                            <p className="text-sm text-gray-100">
+                                                Front luggage compartment volume
+                                            </p>
+                                            <p className="text-sm font-semibold text-gray-500">
+                                                {capacities.luggageCompartmentVolumeFront.value ?? "—"}
+                                                <span className="ml-1 font-normal text-gray-500">
+                                                    {capacities.luggageCompartmentVolumeFront.unit}
+                                                </span>
+                                            </p>
+                                        </div>
                                     </div>
-                                    {capacities.luggageCompartment.openVolume.description && (
-                                        <p className="text-xs text-gray-400 mt-0.5">
-                                            {capacities.luggageCompartment.openVolume.description}
-                                        </p>
-                                    )}
-                                </div>
+                                )}
 
-
-                                <div className="flex flex-col py-1">
-                                    <div className="flex items-center justify-between">
-                                        <p className="text-sm text-gray-100"> Luggage compartment volume with folded rear seats </p>
-                                        <p className="text-sm font-semibold text-gray-500">
-                                            {capacities.luggageCompartment.largestVolume.value}
-                                            <span className="ml-1 font-normal text-gray-500">
-                                                {capacities.luggageCompartment.largestVolume.unit}
-                                            </span>
-                                        </p>
+                              
+                                {capacities?.openLuggageCompartmentVolumeBehindFrontSeats?.withoutRearSeats && (
+                                    <div className="flex flex-col py-1">
+                                        <div className="flex items-center justify-between">
+                                            <p className="text-sm text-gray-100">
+                                                Luggage compartment volume behind front seats
+                                            </p>
+                                            <p className="text-sm font-semibold text-gray-500">
+                                                {capacities.openLuggageCompartmentVolumeBehindFrontSeats.withoutRearSeats.value ?? "—"}
+                                                <span className="ml-1 font-normal text-gray-500">
+                                                    {capacities.openLuggageCompartmentVolumeBehindFrontSeats.withoutRearSeats.unit}
+                                                </span>
+                                            </p>
+                                        </div>
+                                        {capacities.openLuggageCompartmentVolumeBehindFrontSeats.withoutRearSeats.transmission && (
+                                            <p className="text-xs text-gray-400 mt-0.5">
+                                                {capacities.openLuggageCompartmentVolumeBehindFrontSeats.withoutRearSeats.transmission}
+                                            </p>
+                                        )}
                                     </div>
-                                    {capacities.luggageCompartment.largestVolume.description && (
-                                        <p className="text-xs text-gray-400 mt-0.5"> {capacities.luggageCompartment.largestVolume.description} </p>
-                                    )}
-                                </div>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -212,9 +205,8 @@ const PanameraTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
                 </div>
 
             </div>
-
         </section >
     )
 }
 
-export default PanameraTechnicalData
+export default Carrera_911_TechnicalData;

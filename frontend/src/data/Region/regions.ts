@@ -17,7 +17,7 @@ const markets = {
         {
           name: "Other Countries",
           languages: ["English"],
-          logoImg: "/images/flags/othercon.svg",
+          logoImg: "/images/flags/other_countries.png",
         },
       ],
     },
@@ -49,7 +49,7 @@ const markets = {
         {
           name: "Other countries",
           languages: ["English"],
-          logoImg: "/images/flags/othercon.svg",
+          logoImg: "/images/flags/other_countries.png",
         },
       ],
     },
@@ -76,7 +76,7 @@ const markets = {
         {
           name: "Other countries",
           languages: ["English"],
-          logoImg: "/images/flags/other_countries.jpg",
+          logoImg: "/images/flags/other_countries.png",
         },
       ],
     },
@@ -130,7 +130,7 @@ const markets = {
         {
           name: "Other countries",
           languages: ["English"],
-          logoImg: "/images/flags/othercon.svg",
+          logoImg: "/images/flags/other_countries.png",
         },
       ],
     },
@@ -157,7 +157,7 @@ const markets = {
         {
           name: "Other countries",
           languages: ["English"],
-          logoImg: "/images/flags/othercon.svg",
+          logoImg: "/images/flags/other_countries.png",
         },
       ],
     },
