@@ -2,7 +2,6 @@
 // │
 // ├── 911(model)
 // │       ├── Carrera(model variant)
-// │       │   ├── 911 Carrera(car)
 // │       │   └── 911 Carrera 4 GTS
 // │       ├── GT (model_variant)
 // │       │   └── 911 GT3
@@ -10,10 +9,7 @@
 // │           └── 911 Turbo S
 // │
 // │
-// ├── Macan(model)
-// │   └── Electric
-// │       ├── Macan 4S
-// │       └── Macan Turbo
+// 
 // │
 // └── Cayenne(model)
 //     ├── Electric(variant)

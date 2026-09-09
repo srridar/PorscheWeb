@@ -35,8 +35,6 @@ const Carrera_911_HomePage = () => {
             <Features car={car} /> 
             <PanameraTechnicalData technicalData={car.technical_data} />
 
-
-
             <Footer />
 
 

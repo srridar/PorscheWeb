@@ -8,6 +8,7 @@ import HeroSection from "../../common/HeroSection";
 import EVFeatures from "../../common/Features";
 import EV_CarTechnicalSection from "./EV_CarTechnicalSection";
 import Footer from "@/components/common/Footer";
+import EvCarKeyFeatures from "@/components/common/EvCarKeyFeatures";
 
 interface EVCarHomeProps {
     modelId?: string;
@@ -53,7 +54,7 @@ const EVCarHomePage = () => {
         ...Macan_EV
     ];
 
-    console.log("All Electric Cars:", All_EV_Cars);
+
 
     const car = All_EV_Cars.find(
         (car) =>
@@ -74,13 +75,15 @@ const EVCarHomePage = () => {
     return (
         <div className="min-h-screen bg-[#0A0A0A] text-white">
 
-                <HeroSection car={car} />
-          
-                <EVFeatures car={car}/>
-       
-                <EV_CarTechnicalSection technicalData={car?.technical_data}  />
-             
-                <Footer/>
+            <HeroSection car={car} />
+
+            <EVFeatures car={car} />
+
+         
+
+            <EV_CarTechnicalSection technicalData={car?.technical_data} />
+
+            <Footer />
 
 
         </div>

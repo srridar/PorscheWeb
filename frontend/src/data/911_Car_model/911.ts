@@ -483,7 +483,6 @@ export const car_911 = [
                             "description": "A pure expression of motorsport engineering, the 911 GT3 delivers razor-sharp handling, thrilling performance, and an unmistakable connection between driver and road."
                         },
                         "year": 2027,
-                        "status": "New",
                         "price": {
                             "amount": 33260000,
                             "currency": "INR",
@@ -562,8 +561,14 @@ export const car_911 = [
                                     "unit": "Nm"
                                 },
                                 "power": {
-                                    "kw": 375,
-                                    "ps": 510
+                                    "kW": {
+                                        "value": 375,
+                                        "unit": "kw"
+                                    },
+                                    "PS": {
+                                        "value": 510,
+                                        "unit": "PS"
+                                    }
                                 },
                                 "maxOutputPerLiter": {
                                     "kwPerLiter": 93.00,
@@ -794,13 +799,21 @@ export const car_911 = [
                                     "value": 760,
                                     "unit": "Nm"
                                 },
+
                                 "power": {
-                                    "kw": 471,
-                                    "ps": 640
+                                    "kW": {
+                                        "value": 471,
+                                        "unit": "kw"
+                                    },
+                                    "PS": {
+                                        "value": 640,
+                                        "unit": "PS"
+                                    }
                                 },
                                 "powerElectricMotor": {
                                     "kw": 52
                                 },
+
                                 "powerCombined": {
                                     "kw": 523,
                                     "ps": 711

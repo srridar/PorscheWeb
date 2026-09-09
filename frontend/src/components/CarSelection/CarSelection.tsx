@@ -2,11 +2,12 @@ import { Search } from "lucide-react";
 import Header from "@/components/common/Header";
 import { ArrowDown } from "lucide-react";
 import { useState, useMemo } from "react";
-import { car_911 } from '@/data/911_Car_model/911';
-import { Cayenne_Car } from '@/data/Cayenne_Car_model/Cayenne';
-import { Macan } from '@/data/Macan_Car_model/Macan'
-import { Panamera_Car } from '@/data/Panamera_Car_model/Panamera'
-import { Taycan } from '@/data/Taycan_Car_model/Taycan'
+import { car_list } from '@/data/car_card_data/all_car';
+import GasolineCarCard from "./GasolineCarCard";
+import ElectricCarCard from "./ElectricCarCard";
+import Footer from "../common/Footer";
+
+
 
 const CarSelection = () => {
 
@@ -17,106 +18,45 @@ const CarSelection = () => {
     const [selectedModel, setSelectedModel] = useState<(typeof MODEL_CATEGORIES)[number]>("All Models");
     const [searchQuery, setSearchQuery] = useState("");
 
-    const allCars = useMemo(() => {
-        const cars911 = car_911.flatMap((model) =>
-            model.variants.flatMap((variant) => variant.cars)
-        );
 
-        const carsTaycan = Taycan.flatMap((model) =>
-            model.variants.flatMap((variant) => variant.cars)
-        );
+    const gasoline_cars = car_list.cars.gasoline;
+    const electric_cars = car_list.cars.electric;
 
-        const carsPanamera = Panamera_Car.flatMap((model) =>
-            model.variants.flatMap((variant) => variant.cars)
-        );
+    const filteredCars = useMemo(() => {
 
-        const carsMacan = Macan.flatMap((model) =>
-            model.variants.flatMap((variant) => variant.cars)
-        );
+        const allCars = [...gasoline_cars, ...electric_cars];
 
-        const carsCayenne = Cayenne_Car.flatMap((model) =>
-            model.variants.flatMap((variant) => variant.cars)
-        );
+        return allCars.filter((car) => {
 
-        return [
-            ...cars911,
-            ...carsTaycan,
-            ...carsPanamera,
-            ...carsMacan,
-            ...carsCayenne,
-        ];
-    }, []);
+            const matchType = selectedType === 'All' || car.fuelType?.toLowerCase() === selectedType.toLowerCase();
+            const matchModel = selectedModel === "All Models" || car?.modelId?.toLowerCase() === selectedModel.toLowerCase();
 
-    const Cayenne_EV = Cayenne_Car.flatMap((model) =>
-        model.variants.flatMap((variant) =>
-            variant.cars.filter(
-                (car) => car.fuelType === "Electric"
-            )
-        )
+            const query = searchQuery.toLowerCase().trim();
+
+            const matchSearch = query === "" || car.name.toLowerCase().includes(query)
+                || car.modelId?.toLowerCase().includes(query) || car.variantId?.toLowerCase().includes(query);
+
+            return matchType && matchModel && matchSearch;
+
+
+        })
+
+    }, [
+        gasoline_cars,
+        electric_cars,
+        selectedType,
+        selectedModel,
+        searchQuery,
+    ]);
+
+
+    const filteredGasolineCars = filteredCars.filter(
+        (car) => car.fuelType.toLowerCase() === "gasoline"
     );
 
-    const Taycan_EV = Taycan.flatMap((model) =>
-        model.variants.flatMap((variant) =>
-            variant.cars.filter(
-                (car) => car.fuelType === "Electric"
-            )
-        )
+    const filteredElectricCars = filteredCars.filter(
+        (car) => car.fuelType.toLowerCase() === "electric"
     );
-
-    const Macan_EV = Macan.flatMap((model) =>
-        model.variants.flatMap((variant) =>
-            variant.cars.filter(
-                (car) => car.fuelType === "Electric"
-            )
-        )
-    );
-
-
-    const gasoline_911 = car_911.flatMap((model) =>
-        model.variants.flatMap((variant) =>
-            variant.cars.filter(
-                (car) => car.fuelType === "Electric"
-            )
-        )
-    );
-
-    const gasoline_panamera = Panamera_Car.flatMap((model) =>
-        model.variants.flatMap((variant) =>
-            variant.cars.filter(
-                (car) => car.fuelType === "Electric"
-            )
-        )
-    );
-
-    const gasoline_macan = Macan.flatMap((model) =>
-        model.variants.flatMap((variant) =>
-            variant.cars.filter(
-                (car) => car.fuelType === "Electric"
-            )
-        )
-    );
-
-    const gasoline_cayenne = Cayenne_Car.flatMap((model) =>
-        model.variants.flatMap((variant) =>
-            variant.cars.filter(
-                (car) => car.fuelType === "Electric"
-            )
-        )
-    );
-
-    const All_Gas_Cars = [
-        ...gasoline_911,
-        ...gasoline_panamera,
-        ...gasoline_macan,
-        ...gasoline_cayenne
-    ]
-
-
-    const All_EV_Cars = [
-        ...Cayenne_EV,
-        ...Taycan_EV,
-        ...Macan_EV
-    ];
 
     return (
         <div className="min-h-screen bg-white">
@@ -156,126 +96,128 @@ const CarSelection = () => {
                 </div>
             </section>
 
+            <section className=" bg-neutral-950 px-6 py-12 text-white sm:px-10 lg:px-16 ">
 
-            <section className="bg-neutral-950 px-6 py-12 text-white sm:px-10 lg:px-16">
-                <div className="mx-auto max-w-7xl">
+                <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                    <div>
+                        <span className="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-400">
+                            Models
+                        </span>
+                        <h2 className="text-3xl font-light tracking-tight text-zinc-100 sm:text-4xl">
+                            Choose your Porsche
+                        </h2>
+                    </div>
 
-                    <header className="mb-12 space-y-8">
-
-                        <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-                            <div>
-                                <span className="mb-2 block text-xs font-semibold uppercase tracking-widest text-zinc-400">
-                                    Models
-                                </span>
-                                <h2 className="text-3xl font-light tracking-tight text-zinc-100 sm:text-4xl">
-                                    Choose your Porsche
-                                </h2>
-                            </div>
-
-                            <div className="flex flex-wrap gap-2">
-                                {FILTER_TYPES.map((type) => {
-                                    const isActive = selectedType === type;
-                                    return (
-                                        <button
-                                            key={type}
-                                            onClick={() => setSelectedType(type)}
-                                            className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-neutral-950 ${isActive
-                                                ? "bg-zinc-100 text-zinc-950 shadow-sm"
-                                                : "bg-zinc-900/80 text-zinc-400 border border-zinc-800 hover:bg-zinc-800 hover:text-zinc-200"
-                                                }`}
-                                        >
-                                            {type}
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-
-                            <div className="flex flex-wrap gap-2">
-                                {MODEL_CATEGORIES.map((model) => {
-                                    const isActive = selectedModel === model;
-                                    return (
-                                        <button
-                                            key={model}
-                                            onClick={() => setSelectedModel(model)}
-                                            className={`rounded-lg px-4 py-2 text-sm  transition-all duration-200 ${isActive
-                                                ? "bg-zinc-100 text-zinc-950 "
-                                                : "bg-zinc-900 text-zinc-400 "
-                                                }`}
-                                        >
-                                            {model}
-                                        </button>
-                                    );
-                                })}
-                            </div>
-
-
-                            <div className="relative w-full lg:max-w-xs">
-                                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                                    <Search className="h-4 w-4 text-zinc-400" />
-                                </div>
-                                <input
-                                    type="text"
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    placeholder="Search model or variant..."
-                                    className="w-full rounded border   py-2 pl-10 pr-4 text-sm text-zinc-100 placeholder-zinc-500 transition  focus:outline-none focus:ring-1 focus:ring-zinc-500"
-                                />
-                            </div>
-                        </div>
-                    </header>
-
-
-                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                        <article className="group overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900 transition-all duration-300 hover:border-zinc-700 hover:shadow-2xl hover:shadow-black/60">
-
-                            <div className="relative aspect-[16/10] overflow-hidden bg-zinc-950/60 p-4">
-                                <img
-                                    src="/images/cars/911/911carrera/911-carrera-3.avif"
-                                    alt="Porsche 911 Carrera"
-                                    className="h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
-                                />
-                            </div>
-
-
-                            <div className="p-6">
-                                <div className="mb-6">
-                                    <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-zinc-400">
-                                        911 · Carrera
-                                    </span>
-                                    <h3 className="mt-1 text-2xl font-light tracking-tight text-zinc-100">
-                                        911 Carrera
-                                    </h3>
-                                </div>
-
-
-                                <div className="grid grid-cols-3 gap-2 border-t border-zinc-800/80 pt-4 text-left">
-                                    <div>
-                                        <p className="text-[10px] uppercase tracking-wider text-zinc-500">Power</p>
-                                        <p className="mt-0.5 text-sm font-medium text-zinc-200">394 PS</p>
-                                    </div>
-                                    <div>
-                                        <p className="text-[10px] uppercase tracking-wider text-zinc-500">0–100 km/h</p>
-                                        <p className="mt-0.5 text-sm font-medium text-zinc-200">4.1 s</p>
-                                    </div>
-                                    <div>
-                                        <p className="text-[10px] uppercase tracking-wider text-zinc-500">Top Speed</p>
-                                        <p className="mt-0.5 text-sm font-medium text-zinc-200">294 km/h</p>
-                                    </div>
-                                </div>
-
-
-                                <button className="mt-6 w-full rounded-lg border border-zinc-700 bg-transparent py-2.5 text-xs font-semibold uppercase tracking-widest text-zinc-200 transition-all duration-200 hover:border-zinc-100 hover:bg-zinc-100 hover:text-zinc-950 focus:outline-none">
-                                    Explore Model
+                    <div className="flex flex-wrap gap-2">
+                        {FILTER_TYPES.map((type) => {
+                            const isActive = selectedType === type;
+                            return (
+                                <button
+                                    key={type}
+                                    onClick={() => setSelectedType(type)}
+                                    className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-neutral-950 ${isActive
+                                        ? "bg-zinc-100 text-zinc-950 shadow-sm"
+                                        : "bg-zinc-900/80 text-zinc-400 border border-zinc-800 hover:bg-zinc-800 hover:text-zinc-200"
+                                        }`}
+                                >
+                                    {type}
                                 </button>
-                            </div>
-                        </article>
+                            );
+                        })}
+                    </div>
+                </div>
 
+                <div className="flex flex-col mt-8 gap-4 lg:flex-row lg:items-center lg:justify-between">
+
+                    <div className="flex flex-wrap gap-2">
+                        {MODEL_CATEGORIES.map((model) => {
+                            const isActive = selectedModel === model;
+                            return (
+                                <button
+                                    key={model}
+                                    onClick={() => setSelectedModel(model)}
+                                    className={`rounded-lg px-4 py-2 text-sm  transition-all duration-200 ${isActive
+                                        ? "bg-zinc-100 text-zinc-950 "
+                                        : "bg-zinc-900 text-zinc-400 "
+                                        }`}
+                                >
+                                    {model}
+                                </button>
+                            );
+                        })}
+                    </div>
+
+
+                    <div className="relative w-full lg:max-w-xs">
+                        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <Search className="h-4 w-4 text-zinc-400" />
+                        </div>
+                        <input
+                            type="text"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="Search model or variant..."
+                            className="w-full rounded border   py-2 pl-10 pr-4 text-sm text-zinc-100 placeholder-zinc-500 transition  focus:outline-none focus:ring-1 focus:ring-zinc-500"
+                        />
                     </div>
                 </div>
             </section>
+
+
+            {
+                filteredGasolineCars.length > 0 && (
+                    <section className="bg-neutral-950 px-6 py-12 text-white sm:px-10 lg:px-16">
+                        <div className="mx-auto max-w-7xl">
+
+                            <div>
+                                <div className="my-8 pb-4 rounded w-60 p-2 bg-[#181717aa]">
+                                    <h2 className="text-xl  font-semibold text-[#7b7272]">Gasoline Machines </h2>
+                                </div>
+                                <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:grid-cols-3">
+                                    {filteredGasolineCars.map((car) => (
+                                        <div key={car.carId}>
+                                            <GasolineCarCard car={car} />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                )
+            }
+
+
+
+
+            {
+                filteredElectricCars.length > 0 && (
+                    <section className="bg-black px-6 py-12 text-white sm:px-10 lg:px-16">
+
+                        <div className=" w-full">
+                            <div className="my-8 pb-4 rounded w-60 p-2 bg-[#181717aa]">
+                                <h2 className="text-xl   font-semibold text-[#7b7272]">Electric Machines </h2>
+                            </div>
+
+
+
+                            <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:grid-cols-3">
+                                {filteredElectricCars.map((car) => (
+                                    <div key={car.carId}>
+                                        <ElectricCarCard car={car} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                )
+            }
+
+
+
+            <Footer />
 
         </div>
     );

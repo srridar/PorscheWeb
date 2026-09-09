@@ -1,6 +1,6 @@
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './components/home/Home';
+import NotFound from './components/common/NotFound.js';
 import Country_Search from './components/home/Country_Search';
 import EVCarHomePage from './components/CarDetails/EV_Car/EVCarHomePage.js'
 import CarSelection from './components/CarSelection/CarSelection.js';
@@ -10,72 +10,93 @@ import MacanGasHomePage from './components/car/macan/gasoline/MacanGasHomePage.j
 import MacanHomePage from './components/car/macan/electric/MacanHomePage.js';
 import Macan4sHomePage from './components/car/macan/electric/Macan4sHomePage.js';
 import MacanTurboHomePage from './components/car/macan/electric/MacanTurboHomePage.js';
-import Carrera_911_TechnicalData from './components/car/911/carrera/911_CarreraTechnicalData.js';
 import Carrera_911_HomePage from './components/car/911/carrera/911_CarreraHomePage.js';
+import NotCreatedHomePage from './components/common/NotCreatedHome.js';
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <Country_Search />
+  },
 
-  },
   {
-    path: "/india",
-    element: <Home />
-  },
-  {
-    path: "/porsche/:modelId/:variantId/:carId",
+    path: "/porsche/india/:modelId/:variantId/:carId",
     element: <EVCarHomePage />
   },
   {
-    path: "/car-selection",
+    path: "/porsche/india",
     element: <CarSelection />
   },
   {
-    path: "/porsche/panamera",
+    path: "/porsche/india/panamera",
     element: <PanameraHomePage />
   },
   {
-    path: "/porsche/taycan/electric/taycan-turbo",
+    path: "/porsche/india/taycan/electric/taycan-turbo",
     element: <TaycanTurboHomePage />
   },
   {
-    path: "/porsche/taycan/electric/taycan-turbo",
+    path: "/porsche/india/taycan/electric/taycan-turbo",
     element: <TaycanTurboHomePage />
   },
   {
-    path: "/porsche/macan/gasoline/macan_gasoline",
+    path: "/porsche/india/macan/gasoline/macan_gasoline",
     element: <MacanGasHomePage />
   },
   {
-    path: "/porsche/macan/electric/macan-electric",
+    path: "/porsche/india/macan/electric/macan-electric",
     element: <MacanHomePage />
   },
-   {
-    path: "/porsche/macan/electric/macan-4s",
+  {
+    path: "/porsche/india/macan/electric/macan-4s",
     element: <Macan4sHomePage />
   },
-    {
-    path: "/porsche/macan/electric/macan-turbo-electric",
+  {
+    path: "/porsche/india/macan/electric/macan-turbo-electric",
     element: <MacanTurboHomePage />
   },
-
   {
-     path: "/porsche/911/carrera/911-carrera",
+    path: "/porsche/india/911/carrera/911-carrera",
     element: <Carrera_911_HomePage />
+  },
+  
+  {
+    path: "/porsche/india/cayenne/electric/cayenne-electric",
+    element: <NotCreatedHomePage />
+  },
+  {
+    path: "/porsche/india/cayenne/electric/cayenne-turbo-electric",
+    element: <NotCreatedHomePage />
+  },
+  {
+    path: "/porsche/india/cayenne/gasoline/cayenne-gasoline",
+    element: <NotCreatedHomePage />
+  },
+  {
+    path: "/porsche/india/cayenne/gasoline/cayenne-black-edition",
+    element: <NotCreatedHomePage />
+  },
+  {
+    path: "/porsche/india/cayenne/gasoline/cayenne-gts",
+    element: <NotCreatedHomePage />
+  },
+   {
+    path: "/porsche/india/cayenne/coupé/cayenne-coupe",
+    element: <NotCreatedHomePage />
+  },
+  {
+    path: "/porsche/india/cayenne/coupé/cayenne-coupe-black-edition",
+    element: <NotCreatedHomePage />
+  },
+  {
+    path: "/porsche/india/cayenne/coupé/cayenne-gts-coupe",
+    element: <NotCreatedHomePage />
+  },
+  {
+    path:"*",
+    element: <NotFound />
   }
 
-
-
-
-
-  // {
-  //   path: "/coutries",
-  //   children: [
-  //     { path: "", element: }
-  //   ]
-
-  // }
 ])
 
 

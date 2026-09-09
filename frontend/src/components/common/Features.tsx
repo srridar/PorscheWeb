@@ -3,6 +3,8 @@ import { Car } from "lucide-react";
 
 import InteriorCarousel from "../CarDetails/EV_Car/EV_Car_Features/InteriorCarousel";
 import ExteriorCarousel from "../CarDetails/EV_Car/EV_Car_Features/ExteriorCarousel";
+import EvCarKeyFeatures from "./EvCarKeyFeatures";
+import GasCarKeyFeatures from "./GasCarKeyFeatures";
 
 interface Car {
   carId: string;
@@ -102,7 +104,7 @@ const EVFeatures = ({ car }: { car: Car }) => {
 
           <div className="mt-6 flex flex-col items-center gap-2 ">
             <h2 className="text-xl font-medium tracking-tight text-gray-300">
-              {car.price.formatted} {car.price.currency}
+              {car?.price.formatted} {car?.price.currency}
             </h2>
 
             <p className="mt-1 text-sm text-gray-400">
@@ -152,6 +154,10 @@ const EVFeatures = ({ car }: { car: Car }) => {
           </div>
         </div>
 
+        {
+          car.fuelType === "Gasoline" ? (<GasCarKeyFeatures carId={car.carId} />) : (<EvCarKeyFeatures carId={car.carId} />)
+        }
+
         <div className="mt-20">
           <div className="  ">
             <div className="flex justify-center gap-1 p-2 rounded-full mb-10">
@@ -176,80 +182,78 @@ const EVFeatures = ({ car }: { car: Car }) => {
           </div>
         </div>
 
-        { (rearLuggage?.value) && (frontLuggage?.value) && (
-        <div className="mt-20">
-          <div className="flex flex-col items-center justify-center gap-5 sm:flex-row sm:items-center">
-            <h3 className="mt-3 text-center text-3xl font-mono tracking-tight">
-              Space for every journey
-            </h3>
-          </div>
+        {(rearLuggage?.value) && (frontLuggage?.value) && (
+          <div className="mt-20">
+            <div className="flex flex-col items-center justify-center gap-5 sm:flex-row sm:items-center">
+              <h3 className="mt-3 text-center text-3xl font-mono tracking-tight">
+                Space for every journey
+              </h3>
+            </div>
 
-          <div className="mt-10 flex justify-center gap-20">
-            {frontLuggage && (
-              <div className="group relative w-full max-w-6xl overflow-hidden rounded-xl bg-[#434141]">
-                <div className="relative aspect-[6/5] overflow-hidden">
-                  <img
-                    src={car.images.bootSpace?.front}
-                    alt="Front luggage compartment"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
+            <div className="mt-10 flex justify-center gap-20">
+              {frontLuggage && (
+                <div className="group relative w-full max-w-6xl overflow-hidden rounded-xl bg-[#434141]">
+                  <div className="relative aspect-[6/5] overflow-hidden">
+                    <img
+                      src={car.images.bootSpace?.front}
+                      alt="Front luggage compartment"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                  <div className="absolute bottom-0 left-0 z-10 p-6 text-white sm:p-7">
-                    <p className="text-xl uppercase tracking-[0.10em] text-white/70">
-                      Front luggage compartment
-                    </p>
+                    <div className="absolute bottom-0 left-0 z-10 p-6 text-white sm:p-7">
+                      <p className="text-xl uppercase tracking-[0.10em] text-white/70">
+                        Front luggage compartment
+                      </p>
 
-                    <div className="mt-3 flex items-baseline gap-2">
-                      <span className="text-4xl font-medium tracking-tight">
-                        {frontLuggage?.value ?? "—"}
-                      </span>
+                      <div className="mt-3 flex items-baseline gap-2">
+                        <span className="text-4xl font-medium tracking-tight">
+                          {frontLuggage?.value ?? "—"}
+                        </span>
 
-                      <span className="text-sm text-white/70">
-                        {frontLuggage?.unit}
-                      </span>
+                        <span className="text-sm text-white/70">
+                          {frontLuggage?.unit}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
 
-            {rearLuggage && (
-              <div className="group relative w-full max-w-6xl overflow-hidden rounded-xl bg-[#434141]">
-                <div className="relative aspect-[6/5] overflow-hidden">
-                  <img
-                    src={car.images.bootSpace?.rear}
-                    alt="Rear luggage compartment"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
+              {rearLuggage && (
+                <div className="group relative w-full max-w-6xl overflow-hidden rounded-xl bg-[#434141]">
+                  <div className="relative aspect-[6/5] overflow-hidden">
+                    <img
+                      src={car.images.bootSpace?.rear}
+                      alt="Rear luggage compartment"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                  <div className="absolute bottom-0 left-0 z-10 p-6 text-white sm:p-7">
-                    <p className="text-xl uppercase tracking-[0.15em] text-white/90">
-                      Rear luggage compartment
-                    </p>
+                    <div className="absolute bottom-0 left-0 z-10 p-6 text-white sm:p-7">
+                      <p className="text-xl uppercase tracking-[0.15em] text-white/90">
+                        Rear luggage compartment
+                      </p>
 
-                    <div className="mt-3 flex items-baseline gap-2">
-                      <span className="text-4xl font-medium tracking-tight">
-                        {rearLuggage?.value ?? "—"}
-                      </span>
+                      <div className="mt-3 flex items-baseline gap-2">
+                        <span className="text-4xl font-medium tracking-tight">
+                          {rearLuggage?.value ?? "—"}
+                        </span>
 
-                      <span className="text-sm text-white/70">
-                        {rearLuggage?.unit}
-                      </span>
+                        <span className="text-sm text-white/70">
+                          {rearLuggage?.unit}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
-        </div>
         )
         }
-
-
 
       </div>
     </section>

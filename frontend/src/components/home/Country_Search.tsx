@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Search, ChevronRight, ChevronDown } from "lucide-react";
 import markets from "@/data/Region/regions";
+import { useNavigate } from "react-router-dom";
 
 const Country_Search = () => {
   const [search, setSearch] = useState("");
   const [openRegion, setOpenRegion] = useState<string | null>(null);
 
 
-
+  const navigate = useNavigate();
   const handleRegionToggle = (regionId: string) => {
     setOpenRegion((current) => (current === regionId ? null : regionId));
   };
@@ -76,7 +77,7 @@ const Country_Search = () => {
                   <div className={`overflow-hidden transition-all duration-300 ease-in-out ${ isOpen ? "mt-4 max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
                     <div className="flex flex-col gap-2">
                       {region.countries.map((country) => (
-                        <div key={country.name} className="flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors duration-200 hover:bg-white/5">
+                        <div key={country.name} onClick={()=>navigate(`/porsche/${country.name}`)} className="flex cursor-pointer items-center gap-3 rounded-md p-3 transition-colors duration-200 hover:bg-white/5">
                           <img src={country.logoImg} alt={country.name} className="h-5 w-5 shrink-0 rounded-full bg-white object-cover"/>
 
                           <div className="ml-1">

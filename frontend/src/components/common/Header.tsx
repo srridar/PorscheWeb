@@ -7,8 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 interface CarItem {
   name: string;
+  navigateTo?: string;
+  modelId?: string;
+  variantId?: string;
+  carId?: string;
   children?: CarItem[];
 }
+
 
 const carModels: CarItem[] = [
   {
@@ -17,17 +22,33 @@ const carModels: CarItem[] = [
       {
         name: "Carrera",
         children: [
-          { name: "911 Carrera" },
-          { name: "911 Carrera 4 GTS" },
+          {
+            name: "911 Carrera",
+            navigateTo: "/porsche/india/911/carrera/911-carrera",
+          },
+          {
+            name: "911 Carrera 4 GTS",
+            navigateTo: "/",
+          },
         ],
       },
       {
         name: "GT",
-        children: [{ name: "911 GT3" }],
+        children: [
+          {
+            name: "911 GT3",
+            navigateTo: "/",
+          },
+        ],
       },
       {
         name: "Turbo",
-        children: [{ name: "911 Turbo S" }],
+        children: [
+          {
+            name: "911 Turbo S",
+            navigateTo: "/",
+          },
+        ],
       },
     ],
   },
@@ -38,9 +59,22 @@ const carModels: CarItem[] = [
       {
         name: "Electric",
         children: [
-          { name: "Taycan 4S" },
-          { name: "Taycan 4S Black Edition" },
-          { name: "Taycan Turbo" },
+          {
+            name: "Taycan 4S",
+            modelId: "taycan",
+            variantId: "electric",
+            carId: "taycan-4s",
+          },
+          {
+            name: "Taycan 4S Black Edition",
+            modelId: "taycan",
+            variantId: "electric",
+            carId: "taycan-4s-black-edition",
+          },
+          {
+            name: "Taycan Turbo",
+            navigateTo: "/porsche/india/taycan/electric/taycan-turbo",
+          },
         ],
       },
     ],
@@ -51,7 +85,12 @@ const carModels: CarItem[] = [
     children: [
       {
         name: "Gasoline",
-        children: [{ name: "Panamera" }],
+        children: [
+          {
+            name: "Panamera",
+            navigateTo: "/porsche/india/panamera",
+          },
+        ],
       },
     ],
   },
@@ -61,14 +100,28 @@ const carModels: CarItem[] = [
     children: [
       {
         name: "Gasoline",
-        children: [{ name: "Macan" }],
+        children: [
+          {
+            name: "Macan",
+            navigateTo: "/porsche/india/macan/gasoline/macan_gasoline",
+          },
+        ],
       },
       {
         name: "Electric",
         children: [
-          { name: "Macan" },
-          { name: "Macan 4S" },
-          { name: "Macan Turbo" },
+          {
+            name: "Macan",
+            navigateTo: "/porsche/india/macan/electric/macan-electric",
+          },
+          {
+            name: "Macan 4S",
+            navigateTo: "/porsche/india/macan/electric/macan-4s",
+          },
+          {
+            name: "Macan Turbo",
+            navigateTo: "/porsche/india/macan/electric/macan-turbo-electric",
+          },
         ],
       },
     ],
@@ -80,24 +133,56 @@ const carModels: CarItem[] = [
       {
         name: "Electric",
         children: [
-          { name: "Cayenne Electric" },
-          { name: "Cayenne Turbo Electric" },
+          {
+            name: "Cayenne Electric",
+            navigateTo:
+              "/porsche/india/cayenne/electric/cayenne-electric",
+          },
+          {
+            name: "Cayenne Turbo Electric",
+            navigateTo:
+              "/porsche/india/cayenne/electric/cayenne-turbo-electric",
+          },
         ],
       },
       {
         name: "Gasoline",
         children: [
-          { name: "Cayenne" },
-          { name: "Cayenne Black Edition" },
-          { name: "Cayenne GTS" },
+          {
+            name: "Cayenne",
+            navigateTo:
+              "/porsche/india/cayenne/gasoline/cayenne-gasoline",
+          },
+          {
+            name: "Cayenne Black Edition",
+            navigateTo:
+              "/porsche/india/cayenne/gasoline/cayenne-black-edition",
+          },
+          {
+            name: "Cayenne GTS",
+            navigateTo:
+              "/porsche/india/cayenne/gasoline/cayenne-gts",
+          },
         ],
       },
       {
         name: "Coupé",
         children: [
-          { name: "Cayenne Coupé" },
-          { name: "Cayenne Coupé Black Edition" },
-          { name: "Cayenne GTS Coupé" },
+          {
+            name: "Cayenne Coupé",
+            navigateTo:
+              "/porsche/india/cayenne/coupé/cayenne-coupe",
+          },
+          {
+            name: "Cayenne Coupé Black Edition",
+            navigateTo:
+              "/porsche/india/cayenne/coupé/cayenne-coupe-black-edition",
+          },
+          {
+            name: "Cayenne GTS Coupé",
+            navigateTo:
+              "/porsche/india/cayenne/coupé/cayenne-gts-coupe",
+          },
         ],
       },
     ],
@@ -131,7 +216,7 @@ const Header = () => {
           </button>
 
 
-          <div  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <img
               src="/images/flags/porscheLogo.png"
               alt="Porsche"
@@ -140,7 +225,7 @@ const Header = () => {
           </div>
 
 
-          <button onClick={()=>navigate("/")} type="button" className="text-sm font-medium text-black transition hover:text-black">
+          <button onClick={() => navigate("/")} type="button" className="text-sm font-medium text-black transition hover:text-black">
             <img
               src="/images/flags/IndianFlag.png"
               alt="India"
@@ -229,7 +314,18 @@ const Header = () => {
 
                             <div className="space-y-2 pl-7">
                               {variant.children?.map((car) => (
-                                <button key={car.name} type="button" className="group flex w-full items-center justify-between py-1 text-left"
+                                <button key={car.name} onClick={() => {
+                                  if (car.navigateTo) {
+                                    navigate(car.navigateTo);
+                                    setMenuOpen(false);
+                                    return;
+                                  }
+
+                                  if (car.modelId && car.variantId && car.carId) {
+                                    navigate( `/porsche/india/${car.modelId}/${car.variantId}/${car.carId}`);
+                                    setMenuOpen(false);
+                                  }
+                                }} type="button" className="group flex w-full items-center justify-between py-1 text-left"
                                 >
                                   <span className="text-sm text-gray-600 "> {car.name} </span>
                                   <ChevronRight className="h-4 w-4 text-gray-300 " />
