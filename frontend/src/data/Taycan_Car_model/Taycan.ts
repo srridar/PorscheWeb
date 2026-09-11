@@ -28,6 +28,7 @@ export const Taycan = [
                             "tax": "VAT",
                             "footnote": "European specifications shown below. Market specific values to be confirmed upon homologation."
                         },
+                        "featuredVideo": "/videos/taycan4s.mp4",
                         "images": {
                             "hero": "/images/cars/taycan/taycan4s/porsche-taycan-4s.avif",
 
@@ -404,6 +405,7 @@ export const Taycan = [
                             "taxIncluded": true,
                             "tax": "VAT"
                         },
+                        "featuredVideo": "/videos/taycan4sBlackEdition.mp4",
                         "images": {
                             "hero": "/images/cars/taycan/taycan4sblack/porsche-taycan-4s.avif",
                             "exterior": {
@@ -699,6 +701,7 @@ export const Taycan = [
                             "tax": "VAT",
                             "footnote": "European specifications shown below. Market specific values to be confirmed upon homologation."
                         },
+                        "featuredVideo": "/videos/taycanTurbo.mp4",
                         "images": {
                             "hero": "/images/cars/taycan/taycanTurbo/taycan_turbo_1.webp",
                             "exterior": {
@@ -792,7 +795,71 @@ export const Taycan = [
                                     "unit": "dB(A)"
                                 }
                             },
-
+                            "capacities": {
+                                "luggageCompartment": {
+                                    "front": {
+                                        "value": 81,
+                                        "unit": "liters"
+                                    },
+                                    "rear": {
+                                        "value": 366,
+                                        "unit": "liters",
+                                        "variant": "V210-2"
+                                    }
+                                }
+                            },
+                            "charging": {
+                                "battery": {
+                                    "grossEnergyContent": {
+                                        "value": 105.0,
+                                        "unit": "kWh"
+                                    }
+                                },
+                                "acCharging": {
+                                    "chargingTime": {
+                                        "9_6kW": {
+                                            "value": 13.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "11kW": {
+                                            "value": 11.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        },
+                                        "22kW": {
+                                            "value": 6.0,
+                                            "unit": "h",
+                                            "chargeRange": "0-100%"
+                                        }
+                                    }
+                                },
+                                "dcCharging": {
+                                    "chargingTime": {
+                                        "400VInfrastructure": {
+                                            "value": 33,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        },
+                                        "maximumChargingPower": {
+                                            "value": 18,
+                                            "unit": "min",
+                                            "chargeRange": "10-80%"
+                                        }
+                                    },
+                                    "maximumChargingPower": {
+                                        "value": 320,
+                                        "unit": "kW"
+                                    },
+                                    "rechargedRangeIn10Minutes": {
+                                        "maximumChargingPower": {
+                                            "value": "266-296",
+                                            "unit": "km",
+                                            "standard": "WLTP"
+                                        }
+                                    }
+                                }
+                            },
                             "terrainFeatures": {
                                 "groundClearance": {
                                     "airSuspensionNormal": {
@@ -845,72 +912,6 @@ export const Taycan = [
                                     }
                                 }
                             },
-                            "capacities": {
-                                "luggageCompartment": {
-                                    "front": {
-                                        "value": 81,
-                                        "unit": "liters"
-                                    },
-                                    "rear": {
-                                        "value": 366,
-                                        "unit": "liters",
-                                        "variant": "V210-2"
-                                    }
-                                }
-                            },
-
-                            "charging": {
-                                "battery": {
-                                    "grossEnergyContent": {
-                                        "value": 105.0,
-                                        "unit": "kWh"
-                                    }
-                                },
-                                "acCharging": {
-                                    "chargingTime": {
-                                        "9_6kW": {
-                                            "value": 13.0,
-                                            "unit": "h",
-                                            "chargeRange": "0-100%"
-                                        },
-                                        "11kW": {
-                                            "value": 11.0,
-                                            "unit": "h",
-                                            "chargeRange": "0-100%"
-                                        },
-                                        "22kW": {
-                                            "value": 6.0,
-                                            "unit": "h",
-                                            "chargeRange": "0-100%"
-                                        }
-                                    }
-                                },
-                                "dcCharging": {
-                                    "chargingTime": {
-                                        "400VInfrastructure": {
-                                            "value": 33,
-                                            "unit": "min",
-                                            "chargeRange": "10-80%"
-                                        },
-                                        "maximumChargingPower": {
-                                            "value": 18,
-                                            "unit": "min",
-                                            "chargeRange": "10-80%"
-                                        }
-                                    },
-                                    "maximumChargingPower": {
-                                        "value": 320,
-                                        "unit": "kW"
-                                    },
-                                    "rechargedRangeIn10Minutes": {
-                                        "maximumChargingPower": {
-                                            "value": "266-296",
-                                            "unit": "km",
-                                            "standard": "WLTP"
-                                        }
-                                    }
-                                }
-                            }
 
                         },
                     }

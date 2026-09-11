@@ -8,7 +8,6 @@ interface GasCarKeyFeaturesProps {
 const GasCarKeyFeatures = ({ carId }: GasCarKeyFeaturesProps) => {
   const allCars = car_list.cars.gasoline;
 
-  console.log(carId);
 
   const car = allCars.find((car) => car.carId === carId);
 

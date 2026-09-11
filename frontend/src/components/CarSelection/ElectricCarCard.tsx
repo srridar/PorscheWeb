@@ -1,4 +1,4 @@
-
+import { useNavigate } from "react-router-dom";
 
 export interface PowerValue {
   kw: number;
@@ -33,6 +33,7 @@ export interface CarDetailsProps {
   maxTorqueWithLaunchControl: Value;
   powerUpTo: PowerValue;
   overboostPowerWithLaunchControl: PowerValue;
+  cardetailsRoute: string;
 
   topSpeed: {
     value: number;
@@ -43,6 +44,8 @@ export interface CarDetailsProps {
 const ElectricCarCard = ({ car }: { car: CarDetailsProps }) => {
   const power = car.powerUpTo;
   const torque = car.maxTorqueWithLaunchControl;
+
+  const navigate= useNavigate();
 
   return (
     <article className=" overflow-hidden rounded border border-gray-800 bg-[#221f1f] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
@@ -128,6 +131,14 @@ const ElectricCarCard = ({ car }: { car: CarDetailsProps }) => {
 
           <button
             type="button"
+            onClick={()=> {
+                   if(car.cardetailsRoute){
+                     navigate(`${car.cardetailsRoute}`)
+                   }
+                   else{
+                     navigate(`/porsche/india/${car.modelId}/${car.variantId}/${car.carId}`)
+                   }
+            }}
             className="rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#171515]"
           >
             Explore

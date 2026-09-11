@@ -65,6 +65,7 @@ export const Macan = [
                                 "/images/cars/macan/macan/porsche-macan.webp"
                             ]
                         },
+                        "featuredVideo": "/videos/macanGasoline.mp4",
                         "technical_data": {
                             "height": "1606mm",
                             "length": "4726mm",
@@ -294,6 +295,7 @@ export const Macan = [
                             },
                             "gallery": []
                         },
+                        "featuredVideo": "/videos/macanElectric.mp4",
 
                         "technical_data": {
                             "height": "1623mm",
@@ -552,6 +554,7 @@ export const Macan = [
                             },
                             "gallery": []
                         },
+                        "featuredVideo": "/videos/macanElectric4s.mp4",
                         "technical_data": {
                             "height": "1623mm",
                             "length": "4784mm",
@@ -828,6 +831,7 @@ export const Macan = [
                             },
                             "gallery": []
                         },
+                        "featuredVideo": "/videos/macanElectric.mp4",
                         "technical_data": {
                             "height": "1623mm",
                             "length": "4784mm",

@@ -9,66 +9,61 @@ interface TechnicalDataProps {
 }
 
 const MacanGasTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
-    const { height, length, width, wheelbase, capacities, charging, terrainFeatures } = technicalData;
+    const { height, length, width, wheelbase, capacities, terrainFeatures } = technicalData;
 
     const [activeId, setActiveId] = useState<string | null>(null);
 
 
     return (
         <section className=" text-white">
+            <div className="mx-auto max-w-7xl px-3 py-10">
 
-            <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16">
-
-                <div className="mb-6">
-                    <p className="mb-2 text-xl font-mono "> Technical Data </p>
-                </div>
-
-                <div className=" p-4 sm:p-6 rounded-2xl text-white">
-                    <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-4 rounded-2xl">
-                        <div className="w-full  md:w-1/2 overflow-hidden rounded-xl p-1">
+                <div className=" p-4  text-white">
+                    <div className=" grid grid-cols-1 gap-4">
+                        <div className="w-full  overflow-hidden ">
                             <img
                                 src="/images/car-layout.png"
                                 alt="Car layout"
-                                className=" h-[300px] w-full rounded-lg object-cover "
+                                className=" h-auto w-full md:w-[500px]  rounded-lg object-cover "
                             />
                         </div>
 
-                        <div className="w-full md:w-1/2 overflow-hidden rounded-xl  p-1">
+                        <div className="w-full  overflow-hidden ">
                             <img
                                 src="/images/vehicledimensions.png"
                                 alt="Vehicle dimensions"
-                                className="h-[300px] w-full rounded-lg object-cover "
+                                className="h-auto w-full md:w-[500px]   rounded-lg object-cover "
                             />
                         </div>
                     </div>
 
 
-                    <div className="grid grid-cols-1 gap-3 rounded-xl mt-8 w-full md:w-3/4 lg:w-2/3 sm:grid-cols-2">
-                        {[
-                            { level: "Height", value: height },
-                            { level: "Length", value: length },
-                            { level: "Width", value: width },
-                            { level: "Wheelbase", value: wheelbase },
-                        ].map((item, index) => (
-                            <div
-                                key={index}
-                                className="flex items-center justify-between rounded px-5 py-3.5 bg-[#222121] transition-colors"
-                            >
-                                <span className="text-sm font-medium text-gray-400"> {item.level} </span>
-                                <span className="text-sm font-semibold text-white tracking-wide">  {item.value || "—"} </span>
-                            </div>
-                        ))}
-                    </div>
+                    <div className="grid grid-cols-1 gap-3 rounded-xl mt-6 w-full">
 
+                        <div className="grid grid-cols-2 gap-3 mt-12 w-full">
+                            {[
+                                { level: "Height", value: height },
+                                { level: "Length", value: length },
+                                { level: "Width", value: width },
+                                { level: "Wheelbase", value: wheelbase },
+                            ].map((item, index) => (
+                                <div
+                                    key={index}
+                                    className="flex items-center justify-between rounded px-5 py-3.5 bg-[#222121] transition-colors"
+                                >
+                                    <span className="text-sm font-medium text-gray-400"> {item.level} </span>
+                                    <span className="text-sm font-semibold text-white tracking-wide">  {item.value || "—"} </span>
+                                </div>
+                            ))}
+                        </div>
 
-                    <div className="mt-4 md:w-2/3">
+                        <div className="mt-4 flex text-sm flex-col gap-2">
 
-                        {terrainFeatures?.clearanceToWaterSensitiveParts && (
-                            <div>
+                            {terrainFeatures?.clearanceToWaterSensitiveParts && (
 
-                                <div className=" pl-4">
+                                <div className="flex-col flex gap-2 ">
                                     {terrainFeatures.clearanceToWaterSensitiveParts.steelSuspension && (
-                                        <div className="flex items-center justify-between py-1 text-sm">
+                                        <div className="flex items-center justify-between gap-2 text-sm">
 
                                             <p className="font-medium text-gray-400">Max. clearance between ground and water-sensitive parts steel suspension</p>
 
@@ -100,13 +95,12 @@ const MacanGasTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
                                         </div>
                                     )}
                                 </div>
-                            </div>
-                        )}
+                            )}
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2">
+
 
                             {terrainFeatures?.groundClearance?.airSuspension?.normalRideHeight && (
-                                <div className=" pl-4 flex items-center py-1 justify-between">
+                                <div className="  flex items-center py-1 justify-between">
 
                                     <p className="text-sm text-gray-400">  Max. ground clearance air suspension (normal ride height) </p>
 
@@ -123,7 +117,7 @@ const MacanGasTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
 
 
                             {terrainFeatures?.loadingSillHeight?.steelSuspension && (
-                                <div className=" pl-4 flex items-center py-1 justify-between">
+                                <div className="flex items-center py-1 justify-between">
 
                                     <p className="text-sm  text-gray-400">
                                         Loading Sill Height Steel suspension ({terrainFeatures.loadingSillHeight.steelSuspension.standard} standard)
@@ -139,51 +133,52 @@ const MacanGasTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
                                     </div>
                                 </div>
                             )}
+
+
+                            {terrainFeatures?.rampBreakoverAngle && (
+
+                                <div >
+                                    {terrainFeatures.rampBreakoverAngle.steelSuspension && (
+                                        <div className="flex items-center justify-between py-1 text-sm">
+
+                                            <p className="font-medium text-gray-400">  Ramp Breakover Angle, Steel Suspension</p>
+
+                                            <div className="flex items-baseline gap-1">
+                                                <span className="font-semibold text-white">
+                                                    {terrainFeatures.rampBreakoverAngle.steelSuspension.value ?? "—"}
+                                                </span>
+                                                <span className="text-xs text-gray-400">
+                                                    {terrainFeatures.rampBreakoverAngle.steelSuspension.unit === "degrees"
+                                                        ? "°"
+                                                        : terrainFeatures.rampBreakoverAngle.steelSuspension.unit}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {terrainFeatures.rampBreakoverAngle.airSuspension?.normalRideHeight && (
+                                        <div className="flex items-center justify-between py-1 text-sm">
+
+                                            <p className="font-medium text-gray-400"> Ramp Breakover Angle, Air Suspension(normal ride height)</p>
+
+                                            <div className="flex items-baseline gap-1">
+                                                <span className="font-semibold text-white">
+                                                    {terrainFeatures.rampBreakoverAngle.airSuspension.normalRideHeight.value ?? "—"}
+                                                </span>
+                                                <span className="text-xs text-gray-400">
+                                                    {terrainFeatures.rampBreakoverAngle.airSuspension.normalRideHeight.unit === "degrees"
+                                                        ? "°"
+                                                        : terrainFeatures.rampBreakoverAngle.airSuspension.normalRideHeight.unit}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
                         </div>
 
-
-                        {terrainFeatures?.rampBreakoverAngle && (
-
-                            <div className="pl-4">
-                                {terrainFeatures.rampBreakoverAngle.steelSuspension && (
-                                    <div className="flex items-center justify-between py-1 text-sm">
-
-                                        <p className="font-medium text-gray-400">  Ramp Breakover Angle, Steel Suspension</p>
-
-                                        <div className="flex items-baseline gap-1">
-                                            <span className="font-semibold text-white">
-                                                {terrainFeatures.rampBreakoverAngle.steelSuspension.value ?? "—"}
-                                            </span>
-                                            <span className="text-xs text-gray-400">
-                                                {terrainFeatures.rampBreakoverAngle.steelSuspension.unit === "degrees"
-                                                    ? "°"
-                                                    : terrainFeatures.rampBreakoverAngle.steelSuspension.unit}
-                                            </span>
-                                        </div>
-                                    </div>
-                                )}
-
-                                {terrainFeatures.rampBreakoverAngle.airSuspension?.normalRideHeight && (
-                                    <div className="flex items-center justify-between py-1 text-sm">
-
-                                        <p className="font-medium text-gray-400"> Ramp Breakover Angle, Air Suspension(normal ride height)</p>
-
-                                        <div className="flex items-baseline gap-1">
-                                            <span className="font-semibold text-white">
-                                                {terrainFeatures.rampBreakoverAngle.airSuspension.normalRideHeight.value ?? "—"}
-                                            </span>
-                                            <span className="text-xs text-gray-400">
-                                                {terrainFeatures.rampBreakoverAngle.airSuspension.normalRideHeight.unit === "degrees"
-                                                    ? "°"
-                                                    : terrainFeatures.rampBreakoverAngle.airSuspension.normalRideHeight.unit}
-                                            </span>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-
-                        )}
                     </div>
+
                 </div>
 
                 <div className="max-w-5xl">
@@ -194,7 +189,7 @@ const MacanGasTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
                         setActiveId={setActiveId}
                     />
 
-                  
+
                     <div id="capacities" className="mt-6 ">
 
                         <button

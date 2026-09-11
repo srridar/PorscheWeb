@@ -17,10 +17,10 @@ const Footer = () => {
     });
   };
 
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-[#000000] text-white">
       <div className="mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 lg:px-12">
 
 
@@ -40,23 +40,33 @@ const Footer = () => {
           </button>
         </div>
 
-   
-        <div className=" py-8">
-          <p className="mb-4 text-xs  text-white/40"> Current Region / Language </p>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <img
-              src="/images/flags/IndianFlag.png"
-              alt="India"
-              className="h-6 w-6 shrink-0 rounded-full object-cover"
-            />
+        <div className=" flex justify-between py-8">
 
-            <span className="text-sm text-white/80">  India / English </span>
+          <div>
+            <p className="mb-4 text-xs  text-white/40"> Current Region / Language </p>
 
-            <button onClick={()=>navigate("/")} type="button" className="cursor-pointer text-sm text-white underline  hover:text-white/60">
-              Change
-            </button>
+            <div className="flex flex-wrap items-center gap-4">
+              <img
+                src="/images/flags/IndianFlag.png"
+                alt="India"
+                className="h-6 w-6 shrink-0 rounded-full object-cover"
+              />
+
+              <span className="text-sm text-white/80">  India / English </span>
+
+              <button onClick={() => navigate("/")} type="button" className="cursor-pointer text-sm text-white underline  hover:text-white/60">
+                Change
+              </button>
+            </div>
+
           </div>
+
+           <div className="flex flex-col items-start gap-2">
+               <h2 className="text-gray-600 text-sm font-semibold capitalize">contact</h2>
+               <a href="https://dealer.porsche.com/in/india/en-GB" className="capitalize text-xs hover:bg-gray-500 px-2 py-0.5 rounded-2xl"  target="_blank">Get in touch</a>
+           </div>
+
         </div>
 
 
@@ -121,9 +131,9 @@ const Footer = () => {
             </div>
           </div>
 
-    
+
           <div>
-         
+
             <div className="flex flex-wrap items-center gap-3">
               <a
                 href="https://play.google.com/store/apps/details?id=de.porsche.one"
@@ -141,7 +151,7 @@ const Footer = () => {
                 href="https://apps.apple.com/"
                 target="_blank"
                 aria-label="Download on App Store"
-          
+
               >
                 <img
                   src="/images/flags/apple_store.png"
@@ -161,7 +171,7 @@ const Footer = () => {
           </div>
 
           <div className="flex justify-center ">
-            <img src="/images/flags/text-logo.png"  alt="Porsche" className="h-auto w-40 object-contain opacity-80 sm:w-48" />
+            <img src="/images/flags/text-logo.png" alt="Porsche" className="h-auto w-40 object-contain opacity-80 sm:w-48" />
           </div>
 
         </div>

@@ -33,139 +33,141 @@ const TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
 
 
   return (
-    <section className="bg-[#131212] text-white">
+    <section className=" text-white">
 
-      <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-7xl px-3 py-10">
 
-        <div className="mb-6">
-          <p className="mb-2 text-xl font-mono "> Technical Data  </p>
-        </div>
+        <div className=" p-4 text-white">
 
-        <div className=" p-4 sm:p-6  text-white">
-
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-4 rounded-2xl">
-            <div className="w-full  md:w-1/2 overflow-hidden rounded-xl p-1">
+          <div className=" grid grid-cols-1 gap-4">
+            <div className="w-full  overflow-hidden ">
               <img
                 src="/images/car-layout.png"
                 alt="Car layout"
-                className=" h-[300px] w-full rounded-lg object-cover "
+                className=" h-auto w-full md:w-[500px]  rounded-lg object-cover "
               />
             </div>
 
-            <div className="w-full md:w-1/2 overflow-hidden rounded-xl  p-1">
+            <div className="w-full  overflow-hidden ">
               <img
                 src="/images/vehicledimensions.png"
                 alt="Vehicle dimensions"
-                className="h-[300px] w-full rounded-lg object-cover "
+                className="h-auto w-full md:w-[500px]   rounded-lg object-cover "
               />
             </div>
           </div>
 
 
-          <div className="grid grid-cols-1 gap-3 rounded-xl mt-8 w-full md:w-3/4 lg:w-2/3 sm:grid-cols-2">
-            {[
-              { level: "Height", value: height },
-              { level: "Length", value: length },
-              { level: "Width", value: width },
-              { level: "Wheelbase", value: wheelbase },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-between rounded px-5 py-3.5 bg-[#222121] transition-colors"
-              >
-                <span className="text-sm font-medium text-gray-400"> {item.level} </span>
-                <span className="text-sm font-semibold text-white tracking-wide">  {item.value || "—"} </span>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 gap-3 rounded-xl mt-6 w-full">
 
-          <div className="mt-4 md:w-2/3">
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Max. ground clearance, air suspension (normal ride height)</h3>
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.groundClearance?.airSuspension?.normalRideHeight?.value}</p>
-                <span>{terrainFeatures?.groundClearance?.airSuspension?.normalRideHeight?.unit}</span>
-              </div>
 
+            <div className="grid grid-cols-2 gap-3 mt-12 w-full">
+              {[
+                { level: "Height", value: height },
+                { level: "Length", value: length },
+                { level: "Width", value: width },
+                { level: "Wheelbase", value: wheelbase },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-between rounded px-5 py-3.5 bg-[#222121] transition-colors"
+                >
+                  <span className="text-sm font-medium text-gray-400"> {item.level} </span>
+                  <span className="text-sm font-semibold text-white tracking-wide">  {item.value || "—"} </span>
+                </div>
+              ))}
             </div>
 
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Max. ground clearance, air suspension (off-road level)</h3>
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.groundClearance?.airSuspension?.offRoadLevel?.value}</p>
-                <span>{terrainFeatures?.groundClearance?.airSuspension?.offRoadLevel?.unit}</span>
-              </div>
-            </div>
+            <div className="mt-4 flex text-sm flex-col gap-2">
 
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Max. ground clearance, air suspension (low level)</h3>
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Max. ground clearance, air suspension (normal ride height)</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.groundClearance?.airSuspension?.normalRideHeight?.value}</p>
+                  <span>{terrainFeatures?.groundClearance?.airSuspension?.normalRideHeight?.unit}</span>
+                </div>
 
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.groundClearance?.airSuspension?.lowLevel?.value}</p>
-                <span>{terrainFeatures?.groundClearance?.airSuspension?.lowLevel?.unit}</span>
               </div>
 
-            </div>
-
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Breakover angle, air suspension (standard level)</h3>
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.approachAngle?.airSuspension?.standardLevel?.value}</p>
-                <span>{terrainFeatures?.approachAngle?.airSuspension?.standardLevel?.unit}</span>
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Max. ground clearance, air suspension (off-road level)</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.groundClearance?.airSuspension?.offRoadLevel?.value}</p>
+                  <span>{terrainFeatures?.groundClearance?.airSuspension?.offRoadLevel?.unit}</span>
+                </div>
               </div>
 
-            </div>
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Max. ground clearance, air suspension (low level)</h3>
 
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Breakover angle, air suspension (low level)</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.groundClearance?.airSuspension?.lowLevel?.value}</p>
+                  <span>{terrainFeatures?.groundClearance?.airSuspension?.lowLevel?.unit}</span>
+                </div>
 
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.breakoverAngle?.airSuspension?.lowLevel?.value}</p>
-                <span>{terrainFeatures?.breakoverAngle?.airSuspension?.lowLevel?.unit}</span>
               </div>
 
-            </div>
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Breakover angle, air suspension (standard level)</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.approachAngle?.airSuspension?.standardLevel?.value}</p>
+                  <span>{terrainFeatures?.approachAngle?.airSuspension?.standardLevel?.unit}</span>
+                </div>
 
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Breakover angle, air suspension (offRoad level)</h3>
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.breakoverAngle?.airSuspension?.offRoadLevel?.value}</p>
-                <span>{terrainFeatures?.breakoverAngle?.airSuspension?.offRoadLevel?.unit}</span>
               </div>
 
-            </div>
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Breakover angle, air suspension (low level)</h3>
 
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Breakover angle, air suspension (standard level)</h3>
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.breakoverAngle?.airSuspension?.standardLevel?.value}</p>
-                <span>{terrainFeatures?.breakoverAngle?.airSuspension?.standardLevel?.unit}</span>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.breakoverAngle?.airSuspension?.lowLevel?.value}</p>
+                  <span>{terrainFeatures?.breakoverAngle?.airSuspension?.lowLevel?.unit}</span>
+                </div>
+
               </div>
 
-            </div>
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Breakover angle, air suspension (offRoad level)</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.breakoverAngle?.airSuspension?.offRoadLevel?.value}</p>
+                  <span>{terrainFeatures?.breakoverAngle?.airSuspension?.offRoadLevel?.unit}</span>
+                </div>
 
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Departure angle, air suspension (standard level)</h3>
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.departureAngle?.airSuspension?.standardLevel?.value}</p>
-                <span>{terrainFeatures?.breakoverAngle?.airSuspension?.standardLevel?.unit}</span>
-              </div>
-            </div>
-
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Overhang front</h3>
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.overhang?.front?.value}</p>
-                <span>{terrainFeatures?.overhang?.front?.unit}</span>
               </div>
 
-            </div>
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Breakover angle, air suspension (standard level)</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.breakoverAngle?.airSuspension?.standardLevel?.value}</p>
+                  <span>{terrainFeatures?.breakoverAngle?.airSuspension?.standardLevel?.unit}</span>
+                </div>
 
-            <div className="flex justify-between items-center text-sm mb-2">
-              <h3>Overhang rear</h3>
-              <div className="text-sm flex gap-1 items-center ">
-                <p>{terrainFeatures?.overhang?.rear?.value}</p>
-                <span>{terrainFeatures?.overhang?.rear?.unit}</span>
+              </div>
+
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Departure angle, air suspension (standard level)</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.departureAngle?.airSuspension?.standardLevel?.value}</p>
+                  <span>{terrainFeatures?.breakoverAngle?.airSuspension?.standardLevel?.unit}</span>
+                </div>
+              </div>
+
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Overhang front</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.overhang?.front?.value}</p>
+                  <span>{terrainFeatures?.overhang?.front?.unit}</span>
+                </div>
+
+              </div>
+
+              <div className="flex justify-between items-center text-sm mb-2">
+                <h3>Overhang rear</h3>
+                <div className="text-sm flex gap-1 items-center ">
+                  <p>{terrainFeatures?.overhang?.rear?.value}</p>
+                  <span>{terrainFeatures?.overhang?.rear?.unit}</span>
+                </div>
+
               </div>
 
             </div>
@@ -286,7 +288,7 @@ const TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
 
                   <div className="p-4  space-y-3">
 
-                    <div className={`grid ${hasJ9E ? "grid-cols-3" : "grid-cols-2"} pb-2  text-xs font-semibold text-gray-400 uppercase tracking-wider`}>
+                    <div className={`grid ${hasJ9E ? "grid-cols-3" : "grid-cols-2"} pb-2  text-xs font-semibold text-gray-400  tracking-wider`}>
                       <div>Metric</div>
                       <div>Performance Battery Plus</div>
                       {hasJ9E && <div>J9E</div>}

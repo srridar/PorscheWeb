@@ -11,7 +11,7 @@ const SoundShared: React.FC<TechnicalDataProps> = ({ technicalData, activeId, se
     const { soundLevel } = technicalData;
     return (
         <div id="sound" className="mt-6 ">
-            <div className="flex cursor-pointer border-b border-white/10 pb-4 items-center justify-between" onClick={() => setActiveId(activeId === "sound" ? null : "sound")}>
+            <div className="flex cursor-pointer  pb-4 items-center justify-between" onClick={() => setActiveId(activeId === "sound" ? null : "sound")}>
                 <p className="font-medium text-white/40">
                     sound
                 </p>

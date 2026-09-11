@@ -11,44 +11,39 @@ interface TechnicalDataProps {
 }
 
 const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
-    const { height, length, width, wheelbase, powerUnit, performance, soundLevel, charging, terrainFeatures } = technicalData;
+    const { height, length, width, wheelbase, powerUnit,  charging, terrainFeatures } = technicalData;
 
     const [activeId, setActiveId] = useState<string | null>(null);
 
 
     return (
-        <section className="relative text-white bg-[#131212]">
+        <section className=" text-white ">
 
-            <div className=" mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16">
+            <div className=" mx-auto max-w-7xl px-3 py-10">
 
-                <div className="mb-6">
-                    <p className="mb-2 text-xl font-mono "> Technical Data  </p>
-                </div>
-
-                <div className="w-full text-white p-4 md:p-6 flex flex-col gap-6">
-                    {/* Images Section */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 rounded-2xl">
-                        <div className="w-full overflow-hidden rounded-xl bg-neutral-900 p-1">
+                <div className=" text-white p-4 ">
+             
+                    <div className="grid grid-cols-1 gap-4">
+                        <div className="w-full overflow-hidden">
                             <img
                                 src="/images/car-layout.png"
                                 alt="Car layout"
-                                className="h-[200px] sm:h-[250px] w-full rounded-lg object-cover"
+                                className="h-auto w-full md:w-[500px]   rounded-lg object-cover"
                             />
                         </div>
 
-                        <div className="w-full overflow-hidden rounded-xl bg-neutral-900 p-1">
+                        <div className="w-full overflow-hidden">
                             <img
                                 src="/images/vehicledimensions.png"
                                 alt="Vehicle dimensions"
-                                className="h-[200px] sm:h-[250px] w-full rounded-lg object-cover"
+                                className=" h-auto w-full md:w-[500px]  rounded-lg object-cover"
                             />
                         </div>
                     </div>
 
-                    {/* Main Content Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-                        {/* Basic Dimensions Cards */}
-                        <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 w-full">
+                    <div className="grid grid-cols-1 gap-3 rounded-xl mt-6 w-full ">
+                    
+                        <div className="grid grid-cols-2 gap-3 w-full">
                             {[
                                 { level: "Height", value: height },
                                 { level: "Length", value: length },
@@ -69,9 +64,9 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                             ))}
                         </div>
 
-                        {/* Terrain Features Detail List */}
-                        <div className="space-y-4 text-xs sm:text-sm w-full bg-[#181818] p-4 sm:p-5 rounded-xl ">
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                       
+                        <div className="mt-4 flex text-sm flex-col gap-3">
+                            <div className="flex justify-between items-center py-2  gap-2">
                                 <h3 className="text-gray-300">
                                     Max. clearance between ground and water-sensitive parts, steel suspension (DIN)
                                 </h3>
@@ -81,7 +76,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2 gap-2">
                                 <h3 className="text-gray-300">
                                     Max. ground clearance, steel suspension (PASM DIN)
                                 </h3>
@@ -91,7 +86,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2 gap-2">
                                 <h3 className="text-gray-300">
                                     Max. ground clearance, air suspension (extra off-road level)
                                 </h3>
@@ -101,7 +96,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2 gap-2">
                                 <h3 className="text-gray-300">
                                     Max. ground clearance, air suspension (low level)
                                 </h3>
@@ -111,7 +106,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2  gap-2">
                                 <h3 className="text-gray-300">
                                     Max. clearance between ground and water-sensitive parts, steel suspension (DIN)
                                 </h3>
@@ -121,7 +116,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2  gap-2">
                                 <h3 className="text-gray-300">
                                     Max. clearance between ground and water-sensitive parts, steel suspension (EC)
                                 </h3>
@@ -131,7 +126,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2  gap-2">
                                 <h3 className="text-gray-300">
                                     Breakover angle, steel suspension (PASM DIN)
                                 </h3>
@@ -141,7 +136,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2  gap-2">
                                 <h3 className="text-gray-300">
                                     Breakover angle, air suspension (low level)
                                 </h3>
@@ -151,7 +146,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2  gap-2">
                                 <h3 className="text-gray-300">
                                     Breakover angle, air suspension (off-road level)
                                 </h3>
@@ -161,7 +156,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 border-b border-white/5 gap-4">
+                            <div className="flex justify-between items-center py-2 gap-2">
                                 <h3 className="text-gray-300">
                                     Breakover angle, air suspension (extra off-road level)
                                 </h3>
@@ -171,7 +166,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center py-2 gap-4">
+                            <div className="flex justify-between items-center py-2 gap-2">
                                 <h3 className="text-gray-300">
                                     Breakover angle (Steel suspension)
                                 </h3>
@@ -188,7 +183,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
 
                     <div id="power" className="mt-6 " >
 
-                        <div className="flex cursor-pointer items-center border-b border-white/10 pb-2 justify-between" onClick={() => setActiveId(activeId === "power" ? null : "power")}>
+                        <div className="flex cursor-pointer items-center  pb-2 justify-between" onClick={() => setActiveId(activeId === "power" ? null : "power")}>
                             <p className="text-white/40"> Power</p>
                             {activeId === "power" ? (<ChevronDown className="h-5 w-5 text-gray-400" />) : (<ChevronRight className="h-5 w-5 text-gray-400" />)}
                         </div>
@@ -200,7 +195,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
                             <div className="overflow-hidden">
 
 
-                                <div className="grid grid-cols-3 py-2">
+                                <div className="grid grid-cols-2 items-center   py-2">
                                     <div className="pr-4 text-sm sm:text-sm text-gray-100"> Torque Electric Motor </div>
                                     <div>
                                         <span className="text-sm font-semibold text-gray-500"> {powerUnit?.electricMotorTorque?.value} </span>
@@ -209,7 +204,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
 
                                 </div>
 
-                                <div className="grid grid-cols-3 py-2">
+                                <div className="grid grid-cols-2 items-center py-2">
                                     <div className="pr-4 text-sm sm:text-sm text-gray-100"> Power Electric Motor (kW)</div>
                                     <div>
                                         <span className="text-sm font-semibold text-gray-500"> {powerUnit?.electricMotorPower?.value} </span>
@@ -218,7 +213,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
 
                                 </div>
 
-                                <div className="grid grid-cols-3 py-2">
+                                <div className="grid grid-cols-2 items-center  py-2">
                                     <div className="pr-4 text-sm sm:text-sm text-gray-100"> Max. torque with Launch Control </div>
                                     <div>
                                         <span className="text-sm font-semibold text-gray-500"> {powerUnit?.maxTorqueWithLaunchControl?.value} </span>
@@ -227,7 +222,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
 
                                 </div>
 
-                                <div className="grid grid-cols-3 py-2">
+                                <div className="grid grid-cols-2 items-center  py-2">
                                     <div className="pr-4 text-sm text-gray-100 sm:text-sm"> Power up to </div>
 
                                     <div className="flex gap-1">
@@ -237,7 +232,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
 
                                 </div>
 
-                                <div className="grid grid-cols-3  py-1">
+                                <div className="grid grid-cols-2 items-center   py-1">
                                     <div className="pr-4 text-sm text-gray-100 sm:text-sm"> Overboost power with Launch Control </div>
                                     <div className="flex items-center  text-gray-500 gap-1 ">
                                         <span className="text-sm font-semibold "> {powerUnit?.overboostPowerWithLaunchControl?.kw}{" "} kW / </span>
@@ -258,7 +253,7 @@ const MacanTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => 
 
                     <div id="charging" className="mt-6 ">
 
-                        <div className="flex w-full border-b border-white/10 pb-4 cursor-pointer items-center justify-between text-left focus:outline-none"
+                        <div className="flex w-full  pb-4 cursor-pointer items-center justify-between text-left focus:outline-none"
                             onClick={() => setActiveId(activeId === "charging" ? null : "charging")}
                         >
                             <span className="text-base font-medium text-white/40">

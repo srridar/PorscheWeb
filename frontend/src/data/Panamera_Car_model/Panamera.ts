@@ -61,6 +61,7 @@ export const Panamera_Car = [
 
                             "gallery": []
                         },
+                        "featuredVideo": "/videos/panamera.mp4",
                         "technical_data": {
                             "height": "1379mm",
                             "length": "4963mm",
@@ -151,7 +152,7 @@ export const Panamera_Car = [
                                     }
                                 }
                             },
-                            
+
                             "soundLevel": {
                                 "standard": "UN-R 51",
                                 "stationaryVehicleRpm": {
@@ -167,7 +168,7 @@ export const Panamera_Car = [
                                     "unit": "dB(A)"
                                 }
                             },
-                            
+
                             "terrainFeatures": {
                                 "groundClearance": {
                                     "airSuspensionNormal": {

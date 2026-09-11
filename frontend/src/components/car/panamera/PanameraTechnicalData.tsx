@@ -14,36 +14,34 @@ const PanameraTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
 
     const { height, length, width, wheelbase, capacities, terrainFeatures } = technicalData;
     return (
-        <section className="bg-[#131212] text-white">
+        <section className=" text-white">
 
-            <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-16">
+            <div className="mx-auto max-w-7xl px-3 py-10 ">
 
-                <div className="mb-6">
-                    <p className="mb-2 text-xl font-mono "> Technical Data </p>
-                </div>
+           
 
-                <div className="p-4 sm:p-6 rounded text-white">
+                <div className="p-4  rounded text-white">
 
-                    <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-4 rounded-2xl">
-                        <div className="w-full  md:w-1/2 overflow-hidden rounded-xl p-1">
+                    <div className="flex flex-col gap-2  rounded-2xl">
+                        <div className="w-full  overflow-hidden rounded-xl p-1">
                             <img
                                 src="/images/car-layout.png"
                                 alt="Car layout"
-                                className=" h-[300px] w-full rounded-lg object-cover "
+                                className=" w-[500px] h-auto rounded-lg object-cover "
                             />
                         </div>
 
-                        <div className="w-full md:w-1/2 overflow-hidden rounded-xl  p-1">
+                        <div className="w-full  overflow-hidden rounded-xl  p-1">
                             <img
                                 src="/images/vehicledimensions.png"
                                 alt="Vehicle dimensions"
-                                className="h-[300px] w-full rounded-lg object-cover "
+                                className="h-auto w-[500px] rounded-lg object-cover "
                             />
                         </div>
                     </div>
 
 
-                    <div className="grid grid-cols-1 gap-3 rounded-xl mt-8 w-full md:w-3/4 lg:w-2/3 sm:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-3 rounded-xl mt-8 w-full  md:grid-cols-2">
                         {[
                             { level: "Height", value: height },
                             { level: "Length", value: length },
@@ -61,7 +59,7 @@ const PanameraTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
                     </div>
 
 
-                    <div className="mt-8 w-full md:w-3/4 lg:w-2/3 ">
+                    <div className="mt-8 w-full ">
                         {terrainFeatures?.groundClearance?.airSuspensionNormal && (
                             <div className="flex justify-between items-center py-2.5 text-sm">
                                 <h3 className="text-gray-300 font-medium">
@@ -144,7 +142,7 @@ const PanameraTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
                     </div>
                 </div>
 
-                <div className="max-w-5xl">
+                <div className="w-full">
 
                     <SharedTechnicalDataSection
                         technicalData={technicalData}

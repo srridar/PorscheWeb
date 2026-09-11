@@ -64,6 +64,8 @@ interface Car {
       centerConsole?: string;
     };
 
+    featuredVideo?:string;
+
     gallery?: string[];
   };
 
@@ -91,11 +93,11 @@ const EVFeatures = ({ car }: { car: Car }) => {
   const rearLuggage = car?.technical_data?.capacities?.luggageCompartment?.rear;
 
   return (
-    <section className=" px-6 py-20 text-gray-400 sm:px-10 lg:px-16">
+    <section className=" px-6 py-20 text-[#8f8282]  sm:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl ">
 
         <div className="text-center w-full ">
-          <p className="mb-7 text-5xl font-medium capitalize ">
+          <p className="mb-7 text-5xl font-semibold capitalize ">
             {car.name}
           </p>
           <span className="mb-3 bg-white  text-center px-3 text-sm font-medium border rounded-2xl lowercase text-gray-700">
@@ -103,11 +105,11 @@ const EVFeatures = ({ car }: { car: Car }) => {
           </span>
 
           <div className="mt-6 flex flex-col items-center gap-2 ">
-            <h2 className="text-xl font-medium tracking-tight text-gray-300">
-              {car?.price.formatted} {car?.price.currency}
+            <h2 className="text-xl font-medium tracking-tight ">
+              {car?.price?.formatted} {car?.price?.currency}
             </h2>
 
-            <p className="mt-1 text-sm text-gray-400">
+            <p className="mt-1 text-sm ">
               Tax included · Price increases as you add features.
             </p>
           </div>
@@ -118,11 +120,11 @@ const EVFeatures = ({ car }: { car: Car }) => {
 
             <div className="border-b  p-7 md:border-b-0 ">
 
-              <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold text-white">
+              <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold ">
                 {car.transmission}
               </span>
 
-              <p className="mt-4 text-sm leading-6 text-gray-200">
+              <p className="mt-4 text-sm leading-6 ">
                 Seamless power delivery for a smooth and responsive driving experience.
               </p>
             </div>
@@ -130,11 +132,11 @@ const EVFeatures = ({ car }: { car: Car }) => {
 
             <div className="border-b  p-7 md:border-b-0 ">
 
-              <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold text-white">
+              <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold">
                 {car.driveType}
               </span>
 
-              <p className="mt-4 text-sm leading-6 text-gray-200">
+              <p className="mt-4 text-sm leading-6 ">
                 Intelligent power distribution for enhanced traction and confident handling.
               </p>
             </div>
@@ -142,11 +144,11 @@ const EVFeatures = ({ car }: { car: Car }) => {
 
             <div className="p-7">
 
-              <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold text-white">
+              <span className="mt-3 inline-block rounded border border-white/10 px-3 py-1 text-xs font-semibold ">
                 {car.fuelType}
               </span>
 
-              <p className="mt-4 text-sm leading-6 text-gray-200">
+              <p className="mt-4 text-sm leading-6 ">
                 Electric performance with instant response, efficiency, and refinement.
               </p>
             </div>
@@ -161,7 +163,7 @@ const EVFeatures = ({ car }: { car: Car }) => {
         <div className="mt-20">
           <div className="  ">
             <div className="flex justify-center gap-1 p-2 rounded-full mb-10">
-              <h3 className="rounded-full  px-3 py-1 text-4xl text-center font-mono text-white">
+              <h3 className="rounded-full  px-3 py-1 text-4xl text-center font-mono ">
                 Experience Every Detail
               </h3>
             </div>
@@ -173,7 +175,7 @@ const EVFeatures = ({ car }: { car: Car }) => {
         <div className="mt-20">
           <div className="">
             <div className="flex justify-center gap-1 p-2 rounded-full mb-10">
-              <h3 className="rounded-full  px-3 py-1 text-4xl text-center font-mono text-white">
+              <h3 className="rounded-full  px-3 py-1 text-4xl text-center font-mono ">
                 Every Line Has a Purpose
               </h3>
             </div>
@@ -195,15 +197,15 @@ const EVFeatures = ({ car }: { car: Car }) => {
                 <div className="group relative w-full max-w-6xl overflow-hidden rounded-xl bg-[#434141]">
                   <div className="relative aspect-[6/5] overflow-hidden">
                     <img
-                      src={car.images.bootSpace?.front}
+                      src={car.images?.bootSpace?.front}
                       alt="Front luggage compartment"
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                    <div className="absolute bottom-0 left-0 z-10 p-6 text-white sm:p-7">
-                      <p className="text-xl uppercase tracking-[0.10em] text-white/70">
+                    <div className="absolute bottom-0 left-0 z-10 p-6  sm:p-7">
+                      <p className="text-xl text-semibold text-white uppercase tracking-[0.10em] ">
                         Front luggage compartment
                       </p>
 
@@ -225,15 +227,15 @@ const EVFeatures = ({ car }: { car: Car }) => {
                 <div className="group relative w-full max-w-6xl overflow-hidden rounded-xl bg-[#434141]">
                   <div className="relative aspect-[6/5] overflow-hidden">
                     <img
-                      src={car.images.bootSpace?.rear}
+                      src={car.images?.bootSpace?.rear}
                       alt="Rear luggage compartment"
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                    <div className="absolute bottom-0 left-0 z-10 p-6 text-white sm:p-7">
-                      <p className="text-xl uppercase tracking-[0.15em] text-white/90">
+                    <div className="absolute bottom-0 left-0 z-10 p-6  sm:p-7">
+                      <p className="text-xl uppercase text-semibold tracking-[0.15em] text-white">
                         Rear luggage compartment
                       </p>
 

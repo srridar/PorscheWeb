@@ -28,7 +28,7 @@ const carModels: CarItem[] = [
           },
           {
             name: "911 Carrera 4 GTS",
-            navigateTo: "/",
+            navigateTo: "/porsche/india/911/carrera/911-carrera-4-gts",
           },
         ],
       },
@@ -37,7 +37,7 @@ const carModels: CarItem[] = [
         children: [
           {
             name: "911 GT3",
-            navigateTo: "/",
+            navigateTo: "/porsche/india/911/gt/911-gt3",
           },
         ],
       },
@@ -46,7 +46,7 @@ const carModels: CarItem[] = [
         children: [
           {
             name: "911 Turbo S",
-            navigateTo: "/",
+            navigateTo: "/porsche/india/911/turbo/911-turbo-s",
           },
         ],
       },

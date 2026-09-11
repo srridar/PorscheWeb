@@ -68,6 +68,7 @@ export const car_911 = [
                                 "/images/cars/911/911carrera/911-carrera-8.avif",
                             ]
                         },
+                        "featuredVideo": "/videos/911.mp4",
 
                         "technical_data": {
                             "height": "1302mm",
@@ -251,7 +252,7 @@ export const car_911 = [
                         "fuelType": "Gasoline",
                         "driveType": "All-Wheel Drive",
                         "transmission": "Automatic",
-
+                        "featuredVideo": "/videos/911.mp4",
                         "images": {
                             "hero": "/images/cars/911/911carrera4GTS/gt4.png",
 
@@ -537,6 +538,7 @@ export const car_911 = [
                                 "/images/cars/911/911GT3/911_GT_15.png",
                             ]
                         },
+                        "featuredVideo":"/videos/911.mp4",
                         "technical_data": {
                             "height": "1,279 mm",
                             "length": "4,570 mm",
@@ -733,8 +735,8 @@ export const car_911 = [
 
                         "fuelType": "Gasoline",
                         "driveType": "All-Wheel Drive",
-                        "transmission": "Automatic"
-                        ,
+                        "transmission": "Automatic",
+                        "featuredVideo":"/videos/911.mp4",
                         "images": {
                             "hero": "/images/cars/911/911TurboS/911_Turbo_S_10.png",
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface CarDetailsProps {
   carId: string;
@@ -50,9 +51,14 @@ interface CarDetailsProps {
     kW: string;
     ps: string;
   };
+
+  cardetailsRoute: string;
 }
 
 const GasolineCarCard = ({ car }: { car: CarDetailsProps }) => {
+   
+  const navigate = useNavigate();
+
   return (
     <article className=" overflow-hidden rounded border border-gray-800 bg-[#221f1f] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
 
@@ -158,7 +164,7 @@ const GasolineCarCard = ({ car }: { car: CarDetailsProps }) => {
           )
         }
 
-        <div className={`${car.powerElectricMotor? "mt-6" :"mt-15"} flex items-end justify-between gap-4`}>
+        <div className={`${car.powerElectricMotor ? "mt-6" : "mt-15"} flex items-end justify-between gap-4`}>
           <div>
             <p className="text-xs  tracking-wider text-gray-400"> Starting from </p>
 
@@ -171,6 +177,14 @@ const GasolineCarCard = ({ car }: { car: CarDetailsProps }) => {
 
           <button
             type="button"
+            onClick={() => {
+              if (car.cardetailsRoute) {
+                navigate(`${car.cardetailsRoute}`)
+              }
+              else {
+                navigate(`/porsche/india/${car.modelId}/${car.variantId}/${car.carId}`)
+              }
+            }}
             className="rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#171515]"
           >
             Explore

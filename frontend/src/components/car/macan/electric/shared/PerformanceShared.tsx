@@ -13,7 +13,7 @@ const PerformanceShared: React.FC<TechnicalDataProps> = ({ technicalData, active
 
         <div id="performance" className="mt-6">
 
-            <div className="flex cursor-pointer items-center border-b border-white/10 pb-2 justify-between"
+            <div className="flex cursor-pointer items-center  pb-2 justify-between"
                 onClick={() => setActiveId(activeId === "performance" ? null : "performance")}
             >
                 <p className="text-base font-medium text-white/40 hover:text-white/60 transition-colors">

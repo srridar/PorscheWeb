@@ -19,7 +19,7 @@ export const car_list = {
                 "driveType": "Rear-Wheel Drive",
                 "transmission": "Automatic",
                 "image": "/images/cars/911/911carrera/911-carrera-3.avif",
-                "featuredImage":"/images/cars/911/911carrera/911-carrera-2.avif",
+                "featuredImage": "/images/cars/911/911carrera/911-carrera-2.avif",
                 "topSpeed": {
                     "value": 294,
                     "unit": "km/h"
@@ -39,6 +39,7 @@ export const car_list = {
                     "value": 450,
                     "unit": "Nm"
                 },
+                "cardeatilsRoute": "/porsche/india/911/carrera/911-carrera"
 
             },
             {
@@ -57,7 +58,7 @@ export const car_list = {
                 "driveType": "All-Wheel Drive",
                 "transmission": "Automatic",
                 "image": "/images/cars/911/911carrera4GTS/gt4.jpg",
-                "featuredImage":"/images/cars/911/911carrera4GTS/g8.jpg",
+                "featuredImage": "/images/cars/911/911carrera4GTS/g8.jpg",
                 "maxTorque": {
                     "value": 570,
                     "unit": "Nm"
@@ -102,7 +103,7 @@ export const car_list = {
                 "driveType": "Rear-Wheel Drive",
                 "transmission": "Automatic",
                 "image": "/images/cars/911/911GT3/911_GT_3.avif",
-                "featuredImage":"/images/cars/911/911GT3/911_GT_12.png",
+                "featuredImage": "/images/cars/911/911GT3/911_GT_12.png",
                 "maxTorque": {
                     "value": 450,
                     "unit": "Nm"
@@ -141,7 +142,7 @@ export const car_list = {
                 "driveType": "All-Wheel Drive",
                 "transmission": "Automatic",
                 "image": "/images/cars/911/911TurboS/911_Turbo_S_10.png",
-                "featuredImage":"/images/cars/911/911TurboS/911_Turbo_S_4.png",
+                "featuredImage": "/images/cars/911/911TurboS/911_Turbo_S_4.png",
                 "maxTorque": {
                     "value": 760,
                     "unit": "Nm"
@@ -187,7 +188,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/cayenne/cayenne/hero1.png",
-                "featuredImage":"/images/cars/cayenne/cayenne/collection.png",
+                "featuredImage": "/images/cars/cayenne/cayenne/collection.png",
                 "maxTorque": {
                     "value": 500,
                     "unit": "Nm"
@@ -206,6 +207,45 @@ export const car_list = {
                     "value": 248,
                     "unit": "km/h"
                 },
+                "cardeatilsRoute": "/porsche/india/cayenne/gasoline/cayenne-gasoline"
+            }, {
+                "carId": "cayenne-black-edition",
+                "modelId": "cayenne",
+                "variantId": "gasoline",
+                "name": "Cayenne Black Edition",
+                "year": 2027,
+                "fuelType": "Gasoline",
+                "driveType": "All-Wheel Drive",
+                "transmission": "Automatic",
+                "price": {
+                    "amount": 18303000,
+                    "currency": "INR",
+                    "formatted": "₹1,83,03,000.00",
+                    "taxIncluded": true,
+                    "tax": "VAT"
+                },
+                "image": "/images/cars/cayenne/cayenne_black_edition/hero1.png",
+                "featuredImage": "/images/cars/cayenne/cayenne_black_edition/hero.webp",
+                "topSpeed": {
+                    "value": 248,
+                    "unit": "km/h"
+                },
+
+                "maxTorque": {
+                    "value": 500,
+                    "unit": "Nm"
+                },
+                "power": {
+                    "kW": {
+                        "value": 260,
+                        "unit": "kW"
+                    },
+                    "PS": {
+                        "value": 353,
+                        "unit": "PS"
+                    }
+                },
+
             },
             {
                 "carId": "cayenne-gts",
@@ -224,7 +264,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/cayenne/cayenne_gts/hero.png",
-                "featuredImage":"/images/cars/cayenne/cayenne_gts/dynamic_View2.png",
+                "featuredImage": "/images/cars/cayenne/cayenne_gts/dynamic_View2.png",
                 "maxTorque": {
                     "value": 660,
                     "unit": "Nm"
@@ -243,6 +283,7 @@ export const car_list = {
                     "value": 275,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/cayenne/gasoline/cayenne-gts"
 
             },
             {
@@ -255,7 +296,7 @@ export const car_list = {
                 "driveType": "All-Wheel Drive",
                 "transmission": "Automatic",
                 "image": "/images/cars/cayenne/Coupé/Cayenne Coupé/hero-coupe.webp",
-                "featuredImage":"/images/cars/cayenne/Coupé/Cayenne Coupé/front.png",
+                "featuredImage": "/images/cars/cayenne/Coupé/Cayenne Coupé/front.png",
                 "price": {
                     "amount": 15737000,
                     "currency": "INR",
@@ -281,6 +322,7 @@ export const car_list = {
                     "value": 248,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/cayenne/coupé/cayenne-coupe"
             },
             {
                 "carId": "cayenne-coupe-black-edition",
@@ -304,7 +346,7 @@ export const car_list = {
                 },
 
                 "image": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/hero.png",
-                "featuredImage":"/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/side-view.png",
+                "featuredImage": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/side-view.png",
 
                 "maxTorque": {
                     "value": 500,
@@ -326,6 +368,8 @@ export const car_list = {
                     "unit": "km/h"
                 },
 
+                "cardetailsRoute": "/porsche/india/cayenne/gasoline/cayenne-black-edition"
+
             },
             {
                 "carId": "cayenne-gts-coupe",
@@ -344,7 +388,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/hero.png",
-                "featuredImage":"/images/cars/cayenne/Coupé/Cayenne GTS Coupe/side_view.png",
+                "featuredImage": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/side_view.png",
                 "maxTorque": {
                     "value": 660,
                     "unit": "Nm"
@@ -364,6 +408,8 @@ export const car_list = {
                     "value": 275,
                     "unit": "km/h"
                 },
+
+                "cardetailsRoute": "/porsche/india/cayenne/coupé/cayenne-gts-coupe"
             },
             {
                 "carId": "panamera",
@@ -386,7 +432,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/panamera/panamera_16.jpg",
-                "featuredImage":"/images/cars/panamera/porsche-panamera_1.avif",
+                "featuredImage": "/images/cars/panamera/porsche-panamera_1.avif",
                 "maxTorque": {
                     "value": 500,
                     "unit": "Nm"
@@ -405,6 +451,8 @@ export const car_list = {
                     "value": 272,
                     "unit": "km/h"
                 },
+
+                "cardetailsRoute": "/porsche/india/panamera"
 
 
             },
@@ -425,7 +473,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/macan/macan/porsche-macan.webp",
-                "featuredImage":"/images/cars/macan/macan/featured.png",
+                "featuredImage": "/images/cars/macan/macan/featured.png",
                 "maxTorque": {
                     "value": 400,
                     "unit": "Nm"
@@ -445,6 +493,7 @@ export const car_list = {
                     "value": 232,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/macan/gasoline/macan_gasoline"
 
             },
 
@@ -469,7 +518,7 @@ export const car_list = {
 
                 },
                 "image": "/images/cars/taycan/taycan4s/porsche-taycan-4s.avif",
-                "featuredImage":"/images/cars/taycan/taycan4s/Front1.png",
+                "featuredImage": "/images/cars/taycan/taycan4s/Front1.png",
 
                 "maxTorqueWithLaunchControl": {
                     "value": 710,
@@ -487,6 +536,7 @@ export const car_list = {
                     "value": 250,
                     "unit": "km/h"
                 },
+
 
             },
             {
@@ -507,7 +557,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/taycan/taycan4sblack/porsche-taycan-4s.avif",
-                "featuredImage":"/images/cars/taycan/taycan4sblack/porsche-taycan-1.webp",
+                "featuredImage": "/images/cars/taycan/taycan4sblack/porsche-taycan-1.webp",
 
                 "maxTorqueWithLaunchControl": {
                     "value": 710,
@@ -548,7 +598,7 @@ export const car_list = {
                     "footnote": "European specifications shown below. Market specific values to be confirmed upon homologation."
                 },
                 "image": "/images/cars/taycan/taycanTurbo/taycan_turbo_1.webp",
-                "featuredImage":"/images/cars/taycan/taycanTurbo/porsche-taycan-turbo16.png",
+                "featuredImage": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo16.png",
 
                 "maxTorqueWithLaunchControl": {
                     "value": 890,
@@ -567,6 +617,7 @@ export const car_list = {
                     "value": 260,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/taycan/electric/taycan-turbo"
             },
             {
                 "carId": "macan-electric",
@@ -586,7 +637,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/macan/macanElectric/macanElectric/macanElectric-3.png",
-                "featuredImage":"/images/cars/macan/macanElectric/macanElectric/macanElectric-6.png",
+                "featuredImage": "/images/cars/macan/macanElectric/macanElectric/macanElectric-6.png",
 
                 "maxTorqueWithLaunchControl": {
                     "value": 563,
@@ -604,6 +655,7 @@ export const car_list = {
                     "value": 220,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/macan/electric/macan-electric"
 
             },
             {
@@ -624,7 +676,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s.jpg",
-                "featuredImage":"/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_2.png",
+                "featuredImage": "/images/cars/macan/macanElectric/macan4SElectric/Porsche_Macan_4s_ev_2.png",
 
                 "electricMotorTorque": {
                     "value": 560,
@@ -651,6 +703,7 @@ export const car_list = {
                     "value": 240,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/macan/electric/macan-4s"
             },
             {
                 "carId": "macan-turbo-electric",
@@ -670,7 +723,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/macan/macanElectric/macanTurboElectric/Porsche_Macan_Turbo_EV_1.jpg",
-                "featuredImage":"/images/cars/macan/macanElectric/macanTurboElectric/Porsche_Macan_Turbo_EV_8.png",
+                "featuredImage": "/images/cars/macan/macanElectric/macanTurboElectric/Porsche_Macan_Turbo_EV_8.png",
 
                 "electricMotorTorque": {
                     "value": 820,
@@ -691,13 +744,12 @@ export const car_list = {
                 "overboostPowerWithLaunchControl": {
                     "kw": 470,
                     "ps": 639,
-
                 },
-
                 "topSpeed": {
                     "value": 260,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/macan/electric/macan-turbo-electric"
 
             },
             {
@@ -718,7 +770,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/cayenne/cayenne_electric/hero.png",
-                "featuredImage":"/images/cars/cayenne/cayenne_electric/side.png",
+                "featuredImage": "/images/cars/cayenne/cayenne_electric/side.png",
 
                 "maxTorqueWithLaunchControl": {
                     "value": 835,
@@ -732,11 +784,11 @@ export const car_list = {
                     "ps": 442,
                     "kw": 325
                 },
-
                 "topSpeed": {
                     "value": 230,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/cayenne/electric/cayenne-electric"
 
             },
             {
@@ -760,7 +812,7 @@ export const car_list = {
                     "tax": "VAT"
                 },
                 "image": "/images/cars/cayenne/cayenne_turbo_electric/hero.png",
-                "featuredImage":"/images/cars/cayenne/cayenne_turbo_electric/hero-2.png",
+                "featuredImage": "/images/cars/cayenne/cayenne_turbo_electric/hero-2.png",
 
                 "maxTorqueWithLaunchControl": {
                     "value": 1500,
@@ -779,6 +831,7 @@ export const car_list = {
                     "value": 260,
                     "unit": "km/h"
                 },
+                "cardetailsRoute": "/porsche/india/cayenne/electric/cayenne-turbo-electric"
             },
 
         ]

@@ -15,7 +15,7 @@ const SharedTechnicalDataSection: React.FC<TechnicalDataProps> = ({ technicalDat
         <div>
             <div id="power" className="mt-4" >
 
-                <div className="flex cursor-pointer items-center justify-between mb-4" onClick={() => setActiveId(activeId === "power" ? null : "power")}>
+                <div className="flex cursor-pointer items-center justify-between " onClick={() => setActiveId(activeId === "power" ? null : "power")}>
                     <p className="text-white/40 font-semibold"> Power</p>
                     {activeId === "power" ? (<ChevronDown className="h-5 w-5 text-gray-400" />) : (<ChevronRight className="h-5 w-5 text-gray-400" />)}
                 </div>

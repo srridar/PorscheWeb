@@ -80,7 +80,7 @@ const HeroSection = ({ car }: { car: Car }) => {
 
 
       <div className="absolute left-1/2 top-30 z-20 -translate-x-1/2">
-        <h1 className="whitespace-nowrap text-center text-gray-900 dark:text-white text-5xl font-bold italic tracking-tight  sm:text-6xl lg:text-7xl">
+        <h1 className="whitespace-nowrap text-center text-[#cbbaba] text-5xl font-bold italic tracking-tight  sm:text-6xl lg:text-7xl">
           {car.name}
         </h1>
       </div>

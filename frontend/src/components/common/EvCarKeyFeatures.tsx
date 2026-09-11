@@ -21,42 +21,52 @@ const EvCarKeyFeatures = ({ carId }: EvCarKeyFeaturesProps) => {
 
 
   return (
-    <div className="mx-auto my-24 w-full max-w-6xl px-4 text-[#aaa] sm:px-6 lg:my-40 lg:px-8">
-      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+    <div className="mx-auto  w-full max-w-6xl px-4 text-[#aaa] sm:px-6 lg:my-20 lg:px-8">
+
+      <div className="px-6 py-12 sm:px-10 lg:px-16 mb-20">
+        <h1 className="text-xl text-center font-semibold tracking-tight text-[#736868] sm:text-4xl lg:text-4xl">
+          What does its engine provide you?
+        </h1>
+      </div>
+
+
+      <div className="grid grid-cols-1 text-[#736868] items-center gap-12 lg:grid-cols-2 lg:gap-16">
+
+
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-1">
 
           <div>
-            <h2 className="text-2xl font-medium text-white sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-medium  sm:text-3xl lg:text-4xl">
               {car.powerUpTo.ps} PS / {car.powerUpTo.kw} kW
             </h2>
 
-            <p className="mt-1 text-sm text-[#888]"> Power </p>
+            <p className="mt-1 text-sm "> Power </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-medium text-white sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-medium  sm:text-3xl lg:text-4xl">
               {car.overboostPowerWithLaunchControl.ps} PS /{" "}
               {car.overboostPowerWithLaunchControl.kw} kW
             </h2>
 
-            <p className="mt-2 max-w-md text-xs leading-relaxed text-[#888] sm:text-sm">
+            <p className="mt-2 max-w-md text-xs leading-relaxed  sm:text-sm">
               Overboost Power with Launch Control up to (kW) / Overboost Power
               with Launch Control up to (PS)
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-medium text-white sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-medium  sm:text-3xl lg:text-4xl">
               {car.maxTorqueWithLaunchControl.value}{" "}
               {car.maxTorqueWithLaunchControl.unit}
             </h2>
 
-            <p className="mt-1 text-sm text-[#888]"> Maximum Torque </p>
+            <p className="mt-1 text-sm "> Maximum Torque </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-medium text-white sm:text-3xl lg:text-4xl"> {car.topSpeed.value} {car.topSpeed.unit} </h2>
+            <h2 className="text-2xl font-medium  sm:text-3xl lg:text-4xl"> {car.topSpeed.value} {car.topSpeed.unit} </h2>
             <p className="mt-1 text-sm text-[#888]"> Top Speed </p>
           </div>
 

@@ -15,7 +15,7 @@ const CapacitiesShared: React.FC<TechnicalDataProps> = ({ technicalData, activeI
             <div id="capacities" className="mt-6 ">
               
                 <div
-                    className="flex w-full border-b border-white/10 pb-6 cursor-pointer items-center justify-between text-left focus:outline-none"
+                    className="flex w-full  pb-6 cursor-pointer items-center justify-between text-left focus:outline-none"
                     onClick={() => setActiveId(activeId === "capacities" ? null : "capacities")}
                 >
                     <span className="text-base font-medium text-white/40 hover:text-white/60 transition-colors">
