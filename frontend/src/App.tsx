@@ -40,10 +40,7 @@ const appRouter = createBrowserRouter([
     path: "/porsche/india/taycan/electric/taycan-turbo",
     element: <TaycanTurboHomePage />
   },
-  {
-    path: "/porsche/india/taycan/electric/taycan-turbo",
-    element: <TaycanTurboHomePage />
-  },
+
   {
     path: "/porsche/india/macan/gasoline/macan_gasoline",
     element: <MacanGasHomePage />
