@@ -208,9 +208,9 @@ const TaycanTurboTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData 
                                     </div>
 
                                     <div className="flex items-center gap-1 text-gray-500">
-                                        <span className="text-sm font-semibold"> {powerUnit?.powerUnit?.kw} </span>
+                                        <span className="text-sm font-semibold"> {powerUnit?.powerUpTo?.kw} </span>
                                         <span className="text-sm">kW /</span>
-                                        <span className="text-sm"> {powerUnit?.powerUnit?.ps}</span>
+                                        <span className="text-sm"> {powerUnit?.powerUpTo?.ps}</span>
                                         <span className="text-sm">PS</span>
                                     </div>
                                 </div>
@@ -279,63 +279,63 @@ const TaycanTurboTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData 
 
                                         <div className="rounded-xl px-2">
 
-                                            {performance.acceleration["0To100"] && (
+                                            {performance.acceleration["zeroTo100"] && (
                                                 <div className="flex items-center justify-between py-1 text-sm">
-                                                    <p className="text-sm text-gray-500"> {performance.acceleration["0To100"].test}</p>
+                                                    <p className="text-sm text-gray-500"> {performance.acceleration["zeroTo100"].test}</p>
 
                                                     <div className="flex items-baseline gap-1">
                                                         <span className=" text-white">
-                                                            {performance.acceleration["0To100"].value ?? "—"}
+                                                            {performance.acceleration["zeroTo100"].value ?? "—"}
                                                         </span>
                                                         <span className="text-xs text-gray-400">
-                                                            {performance.acceleration["0To100"].unit}
+                                                            {performance.acceleration["zeroTo100"].unit}
                                                         </span>
                                                     </div>
                                                 </div>
                                             )}
 
 
-                                            {performance.acceleration["0To160"] && (
+                                            {performance.acceleration["zeroTo160"] && (
                                                 <div className="flex items-center justify-between py-1 text-sm">
-                                                    <p className="text-sm text-gray-500"> {performance.acceleration["0To160"].test} </p>
+                                                    <p className="text-sm text-gray-500"> {performance.acceleration["zeroTo160"].test} </p>
 
                                                     <div className="flex items-baseline gap-1">
                                                         <span className=" text-white">
-                                                            {performance.acceleration["0To160"].value ?? "—"}
+                                                            {performance.acceleration["zeroTo160"].value ?? "—"}
                                                         </span>
                                                         <span className="text-xs text-gray-400">
-                                                            {performance.acceleration["0To160"].unit}
+                                                            {performance.acceleration["zeroTo160"].unit}
                                                         </span>
                                                     </div>
                                                 </div>
                                             )}
 
 
-                                            {performance.acceleration["0To200"] && (
+                                            {performance.acceleration["zeroTo200"] && (
                                                 <div className="flex items-center justify-between py-1 text-sm">
-                                                    <p className="text-sm text-gray-500"> {performance.acceleration["0To200"].test}</p>
+                                                    <p className="text-sm text-gray-500"> {performance.acceleration["zeroTo200"].test}</p>
 
                                                     <div className="flex items-baseline gap-1">
                                                         <span className="text-white">
-                                                            {performance.acceleration["0To200"].value ?? "—"}
+                                                            {performance.acceleration["zeroTo200"].value ?? "—"}
                                                         </span>
                                                         <span className="text-xs text-gray-400">
-                                                            {performance.acceleration["0To200"].unit}
+                                                            {performance.acceleration["zeroTo200"].unit}
                                                         </span>
                                                     </div>
                                                 </div>
                                             )}
 
-                                            {performance.acceleration["80To120"] && (
+                                            {performance.acceleration["inGear80To120"] && (
                                                 <div className="flex items-center justify-between py-1 text-sm">
-                                                    <p className="text-sm text-gray-500"> {performance.acceleration["80To120"].test} </p>
+                                                    <p className="text-sm text-gray-500"> {performance.acceleration["inGear80To120"].test} </p>
 
                                                     <div className="flex items-baseline gap-1">
                                                         <span className=" text-white">
-                                                            {performance.acceleration["80To120"].value ?? "—"}
+                                                            {performance.acceleration["inGear80To120"].value ?? "—"}
                                                         </span>
                                                         <span className="text-xs text-gray-400">
-                                                            {performance.acceleration["80To120"].unit}
+                                                            {performance.acceleration["inGear80To120"].unit}
                                                         </span>
                                                     </div>
                                                 </div>

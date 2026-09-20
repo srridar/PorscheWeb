@@ -28,8 +28,6 @@ const appRouter = createBrowserRouter([
     path: "/porsche/india/cayenne/electric/cayenne-electric",
     element: <CayenneElectricHomePage />
   },
-
-
   {
     path: "/porsche/india",
     element: <CarSelection />
@@ -83,8 +81,6 @@ const appRouter = createBrowserRouter([
     element: <NotCreatedCountryPage />
 
   },
-
-
   {
     path: "/porsche/india/cayenne/electric/cayenne-electric",
     element: <CayenneElectricHomePage />

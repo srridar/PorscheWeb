@@ -1,7 +1,7 @@
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { ChevronRight, ChevronDown } from 'lucide-react';
-import SharedTechnicalDataSection from "@/components/common/SharedTechnicalDataSection";
+import TechData from "./TechData";
 
 
 interface TechnicalDataProps {
@@ -140,7 +140,7 @@ const Carrera_911_TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData
 
                 <div className="max-w-5xl">
 
-                    <SharedTechnicalDataSection
+                    <TechData
                         technicalData={technicalData}
                         activeId={activeId}
                         setActiveId={setActiveId}
@@ -166,42 +166,36 @@ const Carrera_911_TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData
                                 }`}
                         >
                             <div className="overflow-hidden space-y-3 pt-2">
-                                {/* Front Luggage Compartment */}
-                                {capacities?.luggageCompartmentVolumeFront && (
-                                    <div className="flex flex-col py-1">
-                                        <div className="flex items-center justify-between">
-                                            <p className="text-sm text-gray-100">
-                                                Front luggage compartment volume
-                                            </p>
-                                            <p className="text-sm font-semibold text-gray-500">
-                                                {capacities.luggageCompartmentVolumeFront.value ?? "—"}
-                                                <span className="ml-1 font-normal text-gray-500">
-                                                    {capacities.luggageCompartmentVolumeFront.unit}
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                )}
 
-
-                                {capacities?.openLuggageCompartmentVolumeBehindFrontSeats?.withoutRearSeats && (
-                                    <div className="flex flex-col py-1">
-                                        <div className="flex items-center justify-between">
-                                            <p className="text-sm text-gray-100">
-                                                Luggage compartment volume behind front seats
-                                            </p>
-                                            <p className="text-sm font-semibold text-gray-500">
-                                                {capacities.openLuggageCompartmentVolumeBehindFrontSeats.withoutRearSeats.value ?? "—"}
-                                                <span className="ml-1 font-normal text-gray-500">
-                                                    {capacities.openLuggageCompartmentVolumeBehindFrontSeats.withoutRearSeats.unit}
-                                                </span>
-                                            </p>
+                                {capacities?.luggageCompartment && (
+                                    <div>
+                                        <div className="flex flex-col py-1">
+                                            <div className="flex items-center justify-between">
+                                                <p className="text-sm text-gray-100">
+                                                    Front luggage compartment volume
+                                                </p>
+                                                <p className="text-sm font-semibold text-gray-500">
+                                                    {capacities.luggageCompartment.front.value ?? "—"}
+                                                    <span className="ml-1 font-normal text-gray-500">
+                                                        {capacities.luggageCompartment.front.unit}
+                                                    </span>
+                                                </p>
+                                            </div>
                                         </div>
-                                        {capacities.openLuggageCompartmentVolumeBehindFrontSeats.withoutRearSeats.transmission && (
-                                            <p className="text-xs text-gray-400 mt-0.5">
-                                                {capacities.openLuggageCompartmentVolumeBehindFrontSeats.withoutRearSeats.transmission}
-                                            </p>
-                                        )}
+                                        <div className="flex flex-col py-1">
+                                            <div className="flex items-center justify-between">
+                                                <p className="text-sm text-gray-100">
+                                                    Rear luggage compartment volume
+                                                </p>
+                                                <p className="text-sm font-semibold text-gray-500">
+                                                    {capacities.luggageCompartment.rear.value ?? "—"}
+                                                    <span className="ml-1 font-normal text-gray-500">
+                                                        {capacities.luggageCompartment.rear.unit}
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 )}
                             </div>

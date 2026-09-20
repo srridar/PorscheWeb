@@ -47,20 +47,18 @@ const TaycanTurboHomePage = () => {
                 </button>
 
       
-                <div
-                    onClick={() => setMenuOpen(false)}
+                <div onClick={() => setMenuOpen(false)}
                     className={`fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm transition-opacity duration-500 ${menuOpen
                             ? "pointer-events-auto opacity-100"
                             : "pointer-events-none opacity-0"
                         }`}
                 />
 
-                {/* Technical Data Panel */}
-                <aside
-                    className={`fixed right-0 top-0 z-[70] h-screen w-full overflow-y-auto bg-black text-white shadow-2xl transition-transform duration-500 ease-in-out sm:w-[80%] lg:w-1/2 ${menuOpen ? "translate-x-0" : "translate-x-full"
+ 
+                <aside  className={`fixed right-0 top-0 z-[70] h-screen w-full overflow-y-auto bg-black text-white shadow-2xl transition-transform duration-500 ease-in-out sm:w-[80%] lg:w-1/2 ${menuOpen ? "translate-x-0" : "translate-x-full"
                         }`}
                 >
-                    {/* Header */}
+         
                     <div className="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-white/10 bg-black/90 px-6 backdrop-blur-md sm:px-10">
                         <h2 className="text-lg font-semibold">
                             Technical Data
@@ -76,11 +74,9 @@ const TaycanTurboHomePage = () => {
                         </button>
                     </div>
 
-                    {/* Scrollable Content */}
+       
                     <div className="px-4 py-6 sm:px-8 lg:px-10">
-                        <TaycanTurboTechnicalData
-                            technicalData={car.technical_data}
-                        />
+                        <TaycanTurboTechnicalData technicalData={car.technical_data}/>
                     </div>
                 </aside>
             </div>

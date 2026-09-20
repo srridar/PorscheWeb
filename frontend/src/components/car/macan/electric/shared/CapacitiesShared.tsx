@@ -1,5 +1,4 @@
 
-import React from 'react'
 import { ChevronRight, ChevronDown } from 'lucide-react';
 
 interface TechnicalDataProps {

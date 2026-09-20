@@ -1,6 +1,4 @@
 
-
-
 import { useState } from "react";
 import { Menu, X, ChevronRight, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -196,9 +194,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const toggleModel = (modelName: string) => {
-    setExpandedModel(
-      expandedModel === modelName ? null : modelName
-    );
+    setExpandedModel(expandedModel === modelName ? null : modelName);
   };
 
   return (
@@ -262,9 +258,6 @@ const Header = () => {
           >
             Select Region
           </button>
-
-
-
         </div>
 
 

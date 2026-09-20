@@ -45,6 +45,7 @@ export const car_list = {
             {
                 "carId": "911-carrera-4-gts",
                 "modelId": "911",
+                "variantId":"carrera",
                 "name": "911 Carrera 4 GTS",
                 "price": {
                     "amount": 28214000,
@@ -84,6 +85,7 @@ export const car_list = {
                     "value": 312,
                     "unit": "km/h"
                 },
+                "cardeatilsRoute": "/porsche/india/911/carrera/911-carrera-4-gts"
 
             },
             {
@@ -122,6 +124,7 @@ export const car_list = {
                     "value": 311,
                     "unit": "km/h"
                 },
+                "cardeatilsRoute": "/porsche/india/911/gt/911-gt3"
 
             },
             {
@@ -169,6 +172,7 @@ export const car_list = {
                     "kW": 523,
                     "ps": 711
                 },
+                "cardeatilsRoute": "/porsche/india/911/turbo/911-turbo-s"
 
             },
             {

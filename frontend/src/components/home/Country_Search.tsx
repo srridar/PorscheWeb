@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Search, ChevronRight, ChevronDown } from "lucide-react";
 import markets from "@/data/Region/regions";
 import { useNavigate } from "react-router-dom";

@@ -1,4 +1,20 @@
-export const Cayenne_Car = [{
+import type { CayenneEV, CayenneGAS } from "./CayenneTypes";
+type CayenneCar = CayenneEV | CayenneGAS;
+
+interface CarVariant {
+    variantId: string;
+    name:string;
+    cars: CayenneCar[];
+}
+
+
+interface CarModel {
+    modelId: string;
+    name: string;
+    variants: CarVariant[];
+}
+
+export const Cayenne_Car: CarModel[] = [{
     "modelId": "cayenne",
     "name": "Cayenne",
     "variants": [
@@ -61,7 +77,7 @@ export const Cayenne_Car = [{
                             "/images/cars/cayenne/cayenne_electric/"
                         ]
                     },
-                    "featuredVideo":"/videos/cayenneElectric.mp4",
+                    "featuredVideo": "/videos/cayenneElectric.mp4",
                     "technical_data": {
                         "height": "1674mm",
                         "width": "1980mm",
@@ -77,8 +93,8 @@ export const Cayenne_Car = [{
                                 "ps": 408
                             },
                             "overboostPowerWithLaunchControl": {
-                                "ps": 442,
-                                "kw": 325
+                                "PS": 442,
+                                "kW": 325
                             }
                         },
                         "performance": {
@@ -92,17 +108,17 @@ export const Cayenne_Car = [{
                                     "unit": "s",
                                     "test": "80-120 km/h (50-75 mph) with Launch Control"
                                 },
-                                "0To100": {
+                                "zeroTo100": {
                                     "value": 4.8,
                                     "unit": "s",
                                     "test": "0-100 km/h with Launch Control"
                                 },
-                                "0To160": {
+                                "zeroTo160": {
                                     "value": 11.3,
                                     "unit": "s",
                                     "test": "0-160 km/h with Launch Control"
                                 },
-                                "0To200": {
+                                "zeroTo200": {
                                     "value": 18.4,
                                     "unit": "s",
                                     "test": "0-200 km/h with Launch Control"
@@ -136,7 +152,6 @@ export const Cayenne_Car = [{
                                     "unit": "kWh"
                                 }
                             },
-
                             "acCharging": {
                                 "chargingTime": {
                                     "9_6kW": {
@@ -187,8 +202,6 @@ export const Cayenne_Car = [{
                                         "unit": "km",
                                         "standard": "WLTP",
                                     }
-
-
                                 }
                             }
                         },
@@ -217,12 +230,10 @@ export const Cayenne_Car = [{
                                 "value": 210,
                                 "unit": "mm"
                             },
-
                             "breakoverAngleLowLevel": {
                                 "value": 13.4,
                                 "unit": "°"
                             },
-
                             "overhang": {
                                 "front": {
                                     "value": 955,
@@ -233,7 +244,7 @@ export const Cayenne_Car = [{
                                     "unit": "mm"
                                 }
                             },
-                            "maxGroundClearanceLowLevel": {
+                            "maxGroundClearance": {
                                 "value": 175,
                                 "unit": "mm"
                             },
@@ -297,7 +308,7 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "featuredVideo":"/videos/cayenneTurboElectric.mp4",
+                    "featuredVideo": "/videos/cayenneTurboElectric.mp4",
                     "technical_data": {
                         "height": "1674mm",
                         "width": "1980mm",
@@ -313,8 +324,8 @@ export const Cayenne_Car = [{
                                 "ps": 857
                             },
                             "overboostPowerWithLaunchControl": {
-                                "ps": 1156,
-                                "kw": 850
+                                "PS": 1156,
+                                "kW": 850
                             }
                         },
                         "performance": {
@@ -328,17 +339,17 @@ export const Cayenne_Car = [{
                                     "unit": "s",
                                     "test": "80-120 km/h (50-75 mph) with Launch Control"
                                 },
-                                "0To100": {
+                                "zeroTo100": {
                                     "value": 2.5,
                                     "unit": "s",
                                     "test": "0-100 km/h with Launch Control"
                                 },
-                                "0To160": {
+                                "zeroTo160": {
                                     "value": 4.9,
                                     "unit": "s",
                                     "test": "0-160 km/h with Launch Control"
                                 },
-                                "0To200": {
+                                "zeroTo200": {
                                     "value": 7.4,
                                     "unit": "s",
                                     "test": "0-200 km/h with Launch Control"
@@ -535,7 +546,7 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "featuredVideo":"/videos/cayenneSUV.mp4",
+                    "featuredVideo": "/videos/cayenneSUV.mp4",
                     "technical_data": {
                         "length": "4930mm",
                         "height": "1679mm",
@@ -590,7 +601,6 @@ export const Cayenne_Car = [{
                                 "unit": "km/h"
                             },
                             "acceleration": {
-
                                 "inGear": {
                                     "value": 4.0,
                                     "speedRange": "80-120 km/h",
@@ -646,7 +656,7 @@ export const Cayenne_Car = [{
                             }
                         },
                         "capacities": {
-                            "luggageCompartment": {
+                            "luggageCompartment": {  
                                 "openVolume": {
                                     "value": 772,
                                     "unit": "l",
@@ -663,7 +673,6 @@ export const Cayenne_Car = [{
                                 }
                             }
                         },
-
                     },
                 },
                 {
@@ -719,7 +728,7 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "featuredVideo":"/videos/cayenneSUVBlackEdition.mp4",
+                    "featuredVideo": "/videos/cayenneSUVBlackEdition.mp4",
                     "technical_data": {
                         "length": "4930mm",
                         "height": "1679mm",
@@ -922,7 +931,7 @@ export const Cayenne_Car = [{
 
                         "gallery": []
                     },
-                    "featuredVideo":"/videos/cayenneSUV.mp4",
+                    "featuredVideo": "/videos/cayenneSUV.mp4",
                     "technical_data": {
                         "length": "4930mm",
                         "height": "1674mm",
@@ -1016,7 +1025,7 @@ export const Cayenne_Car = [{
                                     "unit": "s",
                                     "test": "0-200 km/h with Launch Control"
                                 },
-                                "inGear80To120": {
+                                "inGear": {
                                     "test": "80-120 km/h (50-75 mph) with Launch Control",
                                     "value": 2.9,
                                     "unit": "s"
@@ -1034,17 +1043,14 @@ export const Cayenne_Car = [{
                             "maxGroundClearance": {
                                 "value": 234,
                                 "unit": "mm",
-                                "level": "extra off-road"
                             },
                             "departureAngle": {
                                 "value": 24.3,
                                 "unit": "°",
-                                "level": "extra off-road"
                             },
                             "breakoverAngle": {
                                 "value": 20.7,
                                 "unit": "°",
-                                "level": "extra off-road"
                             },
                             "overhang": {
                                 "front": {
@@ -1080,699 +1086,700 @@ export const Cayenne_Car = [{
                 }
             ]
         },
-        {
-            "variantId": "coupé",
-            "name": "Coupé",
-            "cars": [
-                {
-                    "carId": "cayenne-coupe",
-                    "modelId": "cayenne",
-                    "variantId": "coupé",
-                    "name": "Cayenne Coupé",
-                    "hero": {
-                        "title": "SUV versatility. Coupe attitude.",
-                        "description": "The Cayenne Coupé combines the versatility of an SUV with a striking coupe silhouette, dynamic performance, and unmistakable Porsche character."
-                    },
-                    "year": 2027,
-                    "fuelType": "Gasoline",
-                    "driveType": "All-Wheel Drive",
-                    "transmission": "Automatic",
-                    "price": {
-                        "amount": 15737000,
-                        "currency": "INR",
-                        "formatted": "₹1,57,37,000.00",
-                        "taxIncluded": true,
-                        "tax": "VAT"
-                    },
-                    "images": {
-                        "hero": "/images/cars/cayenne/Coupé/Cayenne Coupé/hero-coupe.webp",
+        // {
+        //     "variantId": "coupé",
+        //     "name": "Coupé",
+        //     "cars": [
+        //         {
+        //             "carId": "cayenne-coupe",
+        //             "modelId": "cayenne",
+        //             "variantId": "coupé",
+        //             "name": "Cayenne Coupé",
+        //             "hero": {
+        //                 "title": "SUV versatility. Coupe attitude.",
+        //                 "description": "The Cayenne Coupé combines the versatility of an SUV with a striking coupe silhouette, dynamic performance, and unmistakable Porsche character."
+        //             },
+        //             "year": 2027,
+        //             "fuelType": "Gasoline",
+        //             "driveType": "All-Wheel Drive",
+        //             "transmission": "Automatic",
+        //             "price": {
+        //                 "amount": 15737000,
+        //                 "currency": "INR",
+        //                 "formatted": "₹1,57,37,000.00",
+        //                 "taxIncluded": true,
+        //                 "tax": "VAT"
+        //             },
+        //             "images": {
+        //                 "hero": "/images/cars/cayenne/Coupé/Cayenne Coupé/hero-coupe.webp",
 
-                        "exterior": {
-                            "front": "/images/cars/cayenne/Coupé/Cayenne Coupé/exterior/front.png",
-                            "rear": "/images/cars/cayenne/Coupé/Cayenne Coupé/exterior/back.png",
-                            "side": "/images/cars/cayenne/Coupé/Cayenne Coupé/exterior/side.png",
-                        },
-                        "bootSpace": {
-                            "front": "/images/front-space.webp",
-                            "rear": "/images/back-space.webp",
-                        },
+        //                 "exterior": {
+        //                     "front": "/images/cars/cayenne/Coupé/Cayenne Coupé/exterior/front.png",
+        //                     "rear": "/images/cars/cayenne/Coupé/Cayenne Coupé/exterior/back.png",
+        //                     "side": "/images/cars/cayenne/Coupé/Cayenne Coupé/exterior/side.png",
 
-                        "lights": {
-                            "headlights": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/headlights.png",
-                            "taillights": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/back-light.png",
-                            "Indicators": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/front_indicator.png",
-                        },
+        //                     "lights": {
+        //                         "headlights": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/headlights.png",
+        //                         "taillights": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/back-light.png",
+        //                         "Indicators": "/images/cars/cayenne/Coupé/Cayenne Coupé/lights/front_indicator.png",
+        //                     },
 
-                        "wheels": {
-                            "frontWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé/wheels/front-wheel.png",
-                            "rearWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé/wheels/rear-wheel.png",
-                        },
+        //                     "wheels": {
+        //                         "frontWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé/wheels/front-wheel.png",
+        //                         "rearWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé/wheels/rear-wheel.png",
+        //                     },
+        //                 },
+        //                 "bootSpace": {
+        //                     "front": "/images/front-space.webp",
+        //                     "rear": "/images/back-space.webp",
+        //                 },
 
-                        "interior": {
-                            "interior": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/interior.png",
-                            "dashboard": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/dashboard.png",
-                            "frontSeats": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/front-seat.png",
-                            "rearSeats": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/back-seat.png",
-                            "centerConsole": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/console.png",
-                        },
+        //                 "interior": {
+        //                     "interior": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/interior.png",
+        //                     "dashboard": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/dashboard.png",
+        //                     "frontSeats": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/front-seat.png",
+        //                     "rearSeats": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/back-seat.png",
+        //                     "centerConsole": "/images/cars/cayenne/Coupé/Cayenne Coupé/interior/console.png",
+        //                 },
 
-                        "gallery": []
-                    },
-                    "featuredVideo":"/videos/cayenneCoupe.mp4",
-                    "technical_data": {
-                        "powerUnit": {
-                            "bore": {
-                                "value": 84.5,
-                                "unit": "mm"
-                            },
-                            "numberOfCylinders": 6,
-                            "stroke": {
-                                "value": 89.0,
-                                "unit": "mm"
-                            },
-                            "displacement": {
-                                "value": 2995,
-                                "unit": "cm³"
-                            },
-                            "maxTorque": {
-                                "value": 500,
-                                "unit": "Nm"
-                            },
-                            "power": {
-                                "kW": {
-                                    "value": 260,
-                                    "unit": "kW"
-                                },
-                                "PS": {
-                                    "value": 353,
-                                    "unit": "PS"
-                                }
-                            },
-                            "maxOutputPerLiter": {
-                                "kWPerLiter": {
-                                    "value": 87.0,
-                                    "unit": "kW/l"
-                                },
-                                "PSPerLiter": {
-                                    "value": 118.0,
-                                    "unit": "PS/l"
-                                }
-                            },
-                            "maximumEngineSpeed": {
-                                "value": 6500,
-                                "unit": "1/min"
-                            }
-                        },
-                        "performance": {
-                            "topSpeed": {
-                                "value": 248,
-                                "unit": "km/h"
-                            },
-                            "acceleration": {
-                                "inGear": {
-                                    "speedRange": "80-120 km/h",
-                                    "mphRange": "50-75 mph",
-                                    "value": 3.9,
-                                    "unit": "s"
-                                }
-                            },
-                            "sportChronoPackage": {
-                                "zeroTo100": {
-                                    "value": 5.7,
-                                    "unit": "s"
-                                },
-                                "zeroTo160": {
-                                    "value": 13.6,
-                                    "unit": "s"
-                                },
-                                "zeroTo200": {
-                                    "value": 23.7,
-                                    "unit": "s"
-                                },
-                                "inGear": {
-                                    "speedRange": "80-120 km/h",
-                                    "mphRange": "50-75 mph",
-                                    "value": 3.9,
-                                    "unit": "s"
-                                }
-                            }
-                        },
-                        "soundLevel": {
-                            "standard": "UN-R 51",
-                            "passingVehicle": {
-                                "value": 69,
-                                "unit": "dB(A)"
-                            }
-                        },
-                        "terrainFeatures": {
-                            "groundClearance": {
-                                "airSuspensionNormal": {
-                                    "value": 192,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionLow": {
-                                    "value": 182,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionOffRoad": {
-                                    "value": 207,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 237,
-                                    "unit": "mm"
-                                }
-                            },
+        //                 "gallery": []
+        //             },
+        //             "featuredVideo": "/videos/cayenneCoupe.mp4",
+        //             "technical_data": {
+        //                 "powerUnit": {
+        //                     "bore": {
+        //                         "value": 84.5,
+        //                         "unit": "mm"
+        //                     },
+        //                     "numberOfCylinders": 6,
+        //                     "stroke": {
+        //                         "value": 89.0,
+        //                         "unit": "mm"
+        //                     },
+        //                     "displacement": {
+        //                         "value": 2995,
+        //                         "unit": "cm³"
+        //                     },
+        //                     "maxTorque": {
+        //                         "value": 500,
+        //                         "unit": "Nm"
+        //                     },
+        //                     "power": {
+        //                         "kW": {
+        //                             "value": 260,
+        //                             "unit": "kW"
+        //                         },
+        //                         "PS": {
+        //                             "value": 353,
+        //                             "unit": "PS"
+        //                         }
+        //                     },
+        //                     "maxOutputPerLiter": {
+        //                         "kWPerLiter": {
+        //                             "value": 87.0,
+        //                             "unit": "kW/l"
+        //                         },
+        //                         "PSPerLiter": {
+        //                             "value": 118.0,
+        //                             "unit": "PS/l"
+        //                         }
+        //                     },
+        //                     "maximumEngineSpeed": {
+        //                         "value": 6500,
+        //                         "unit": "1/min"
+        //                     }
+        //                 },
+        //                 "performance": {
+        //                     "topSpeed": {
+        //                         "value": 248,
+        //                         "unit": "km/h"
+        //                     },
+        //                     "acceleration": {
+        //                         "inGear": {
+        //                             "speedRange": "80-120 km/h",
+        //                             "mphRange": "50-75 mph",
+        //                             "value": 3.9,
+        //                             "unit": "s"
+        //                         }
+        //                     },
+        //                     "sportChronoPackage": {
+        //                         "zeroTo100": {
+        //                             "value": 5.7,
+        //                             "unit": "s"
+        //                         },
+        //                         "zeroTo160": {
+        //                             "value": 13.6,
+        //                             "unit": "s"
+        //                         },
+        //                         "zeroTo200": {
+        //                             "value": 23.7,
+        //                             "unit": "s"
+        //                         },
+        //                         "inGear": {
+        //                             "speedRange": "80-120 km/h",
+        //                             "mphRange": "50-75 mph",
+        //                             "value": 3.9,
+        //                             "unit": "s"
+        //                         }
+        //                     }
+        //                 },
+        //                 "soundLevel": {
+        //                     "standard": "UN-R 51",
+        //                     "passingVehicle": {
+        //                         "value": 69,
+        //                         "unit": "dB(A)"
+        //                     }
+        //                 },
+        //                 "terrainFeatures": {
+        //                     "groundClearance": {
+        //                         "airSuspensionNormal": {
+        //                             "value": 192,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionLow": {
+        //                             "value": 182,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionOffRoad": {
+        //                             "value": 207,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 237,
+        //                             "unit": "mm"
+        //                         }
+        //                     },
 
-                            "departureAngle": {
-                                "steelSuspensionPASM": {
-                                    "value": 22.5,
-                                    "unit": "°"
-                                },
-                                "airSuspensionStandard": {
-                                    "value": 20.9,
-                                    "unit": "°"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 24.3,
-                                    "unit": "°"
-                                }
-                            },
-                            "overhang": {
-                                "front": {
-                                    "value": 1013,
-                                    "unit": "mm"
-                                },
-                                "rear": {
-                                    "value": 1022,
-                                    "unit": "mm"
-                                }
-                            }
-                        },
-                        "capacities": {
-                            "luggageCompartment": {
-                                "openVolume": {
-                                    "value": 592,
-                                    "unit": "l",
-                                    "description": "Up to the upper edge of the rear seats"
-                                },
-                                "largestVolume": {
-                                    "value": 1502,
-                                    "unit": "l",
-                                    "description": "Behind front seats, up to roof"
-                                },
-                                "rearVolumeV210_2": {
-                                    "value": 554,
-                                    "unit": "l"
-                                }
-                            }
-                        },
+        //                     "departureAngle": {
+        //                         "steelSuspensionPASM": {
+        //                             "value": 22.5,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionStandard": {
+        //                             "value": 20.9,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 24.3,
+        //                             "unit": "°"
+        //                         }
+        //                     },
+        //                     "overhang": {
+        //                         "front": {
+        //                             "value": 1013,
+        //                             "unit": "mm"
+        //                         },
+        //                         "rear": {
+        //                             "value": 1022,
+        //                             "unit": "mm"
+        //                         }
+        //                     }
+        //                 },
+        //                 "capacities": {
+        //                     "luggageCompartment": {
+        //                         "openVolume": {
+        //                             "value": 592,
+        //                             "unit": "l",
+        //                             "description": "Up to the upper edge of the rear seats"
+        //                         },
+        //                         "largestVolume": {
+        //                             "value": 1502,
+        //                             "unit": "l",
+        //                             "description": "Behind front seats, up to roof"
+        //                         },
+        //                         "rearVolumeV210_2": {
+        //                             "value": 554,
+        //                             "unit": "l"
+        //                         }
+        //                     }
+        //                 },
 
-                    },
-                },
-                {
-                    "carId": "cayenne-coupe-black-edition",
-                    "modelId": "cayenne",
-                    "variantId": "coupé",
-                    "name": "Cayenne Coupé Black Edition",
-                    "hero": {
-                        "title": "Dark by design.",
-                        "description": "The Cayenne Coupé Black Edition pairs its distinctive coupe profile with exclusive dark accents, refined comfort, and signature Porsche performance."
-                    },
-                    "year": 2027,
-                    "fuelType": "Gasoline",
-                    "driveType": "All-Wheel Drive",
-                    "transmission": "Automatic",
-                    "price": {
-                        "amount": 18995000,
-                        "currency": "INR",
-                        "formatted": "₹1,89,95,000.00",
-                        "taxIncluded": true,
-                        "tax": "VAT"
-                    },
-                    "featuredVideo":"/videos/cayenneCoupe.mp4",
-                    "images": {
-                        "hero": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/hero.png",
+        //             },
+        //         },
+        //         {
+        //             "carId": "cayenne-coupe-black-edition",
+        //             "modelId": "cayenne",
+        //             "variantId": "coupé",
+        //             "name": "Cayenne Coupé Black Edition",
+        //             "hero": {
+        //                 "title": "Dark by design.",
+        //                 "description": "The Cayenne Coupé Black Edition pairs its distinctive coupe profile with exclusive dark accents, refined comfort, and signature Porsche performance."
+        //             },
+        //             "year": 2027,
+        //             "fuelType": "Gasoline",
+        //             "driveType": "All-Wheel Drive",
+        //             "transmission": "Automatic",
+        //             "price": {
+        //                 "amount": 18995000,
+        //                 "currency": "INR",
+        //                 "formatted": "₹1,89,95,000.00",
+        //                 "taxIncluded": true,
+        //                 "tax": "VAT"
+        //             },
+        //             "featuredVideo": "/videos/cayenneCoupe.mp4",
+        //             "images": {
+        //                 "hero": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/hero.png",
 
-                        "exterior": {
-                            "front": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/exterior/front.png",
-                            "rear": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/exterior/back.png",
-                            "side": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/exterior/side-view.png",
-                        },
-                        "bootSpace": {
-                            "front": "/images/front-space.webp",
-                            "rear": "/images/back-space.webp",
-                        },
-                        "lights": {
-                            "headlights": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/headlight.png",
-                            "taillights": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/back-light.png",
-                            "Indicators": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/front-indicator.png",
-                        },
+        //                 "exterior": {
+        //                     "front": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/exterior/front.png",
+        //                     "rear": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/exterior/back.png",
+        //                     "side": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/exterior/side-view.png",
 
-                        "wheels": {
-                            "frontWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/wheels/front_wheel.png",
-                            "rearWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/wheels/rear_wheel.png",
-                        },
+        //                     "lights": {
+        //                         "headlights": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/headlight.png",
+        //                         "taillights": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/back-light.png",
+        //                         "Indicators": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/lights/front-indicator.png",
+        //                     },
 
-                        "interior": {
-                            "interior": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/interior.png",
-                            "dashboard": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/dashboard.png",
-                            "frontSeats": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/front_seat.png",
-                            "rearSeats": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/back_seat.png",
-                            "centerConsole": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/console.png",
-                        },
+        //                     "wheels": {
+        //                         "frontWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/wheels/front_wheel.png",
+        //                         "rearWheel": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/wheels/rear_wheel.png",
+        //                     },
+        //                 },
+        //                 "bootSpace": {
+        //                     "front": "/images/front-space.webp",
+        //                     "rear": "/images/back-space.webp",
+        //                 },
 
-                        "gallery": []
-                    },
-                    "technical_data": {
-                        "powerUnit": {
-                            "bore": {
-                                "value": 84.5,
-                                "unit": "mm"
-                            },
-                            "numberOfCylinders": 6,
-                            "stroke": {
-                                "value": 89.0,
-                                "unit": "mm"
-                            },
-                            "displacement": {
-                                "value": 2995,
-                                "unit": "cm³"
-                            },
-                            "maxTorque": {
-                                "value": 500,
-                                "unit": "Nm"
-                            },
-                            "power": {
-                                "kW": {
-                                    "value": 260,
-                                    "unit": "kW"
-                                },
-                                "PS": {
-                                    "value": 353,
-                                    "unit": "PS"
-                                }
-                            },
-                            "maxOutputPerLiter": {
-                                "kWPerLiter": {
-                                    "value": 87.0,
-                                    "unit": "kW/l"
-                                },
-                                "PSPerLiter": {
-                                    "value": 118.0,
-                                    "unit": "PS/l"
-                                }
-                            },
-                            "maximumEngineSpeed": {
-                                "value": 6500,
-                                "unit": "1/min"
-                            }
-                        },
-                        "performance": {
-                            "topSpeed": {
-                                "value": 248,
-                                "unit": "km/h"
-                            },
-                            "acceleration": {
-                                "inGear": {
-                                    "speedRange": "80-120 km/h",
-                                    "mphRange": "50-75 mph",
-                                    "value": 3.9,
-                                    "unit": "s"
-                                }
-                            },
-                            "sportChronoPackage": {
-                                "zeroTo100": {
-                                    "value": 5.7,
-                                    "unit": "s"
-                                },
-                                "zeroTo160": {
-                                    "value": 13.6,
-                                    "unit": "s"
-                                },
-                                "zeroTo200": {
-                                    "value": 23.7,
-                                    "unit": "s"
-                                },
-                                "inGear": {
-                                    "speedRange": "80-120 km/h",
-                                    "mphRange": "50-75 mph",
-                                    "value": 3.9,
-                                    "unit": "s"
-                                }
-                            }
-                        },
-                        "soundLevel": {
-                            "standard": "UN-R 51",
-                            "passingVehicle": {
-                                "value": 69,
-                                "unit": "dB(A)"
-                            }
-                        },
-                        "terrainFeatures": {
-                            "groundClearance": {
-                                "steelSuspensionPASM": {
-                                    "value": 214,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionNormal": {
-                                    "value": 192,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionLow": {
-                                    "value": 182,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionOffRoad": {
-                                    "value": 207,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 237,
-                                    "unit": "mm"
-                                }
-                            },
 
-                            "departureAngle": {
-                                "steelSuspensionPASM": {
-                                    "value": 22.5,
-                                    "unit": "°"
-                                },
-                                "airSuspensionStandard": {
-                                    "value": 20.9,
-                                    "unit": "°"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 24.3,
-                                    "unit": "°"
-                                }
-                            },
-                            "overhang": {
-                                "front": {
-                                    "value": 1013,
-                                    "unit": "mm"
-                                },
-                                "rear": {
-                                    "value": 1022,
-                                    "unit": "mm"
-                                }
-                            }
-                        },
-                        "capacities": {
-                            "luggageCompartment": {
-                                "openVolume": {
-                                    "value": 592,
-                                    "unit": "l",
-                                    "description": "Up to the upper edge of the rear seats"
-                                },
-                                "largestVolume": {
-                                    "value": 1502,
-                                    "unit": "l",
-                                    "description": "Behind front seats, up to roof"
-                                },
-                                "rearVolumeV210_2": {
-                                    "value": 554,
-                                    "unit": "l"
-                                }
-                            }
-                        },
-                        "body": {
-                            "dimensions": {
-                                "length": {
-                                    "value": 4930,
-                                    "unit": "mm"
-                                },
-                                "width": {
-                                    "value": 1983,
-                                    "unit": "mm"
-                                },
-                                "wheelbase": {
-                                    "value": 2895,
-                                    "unit": "mm"
-                                },
+        //                 "interior": {
+        //                     "interior": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/interior.png",
+        //                     "dashboard": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/dashboard.png",
+        //                     "frontSeats": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/front_seat.png",
+        //                     "rearSeats": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/back_seat.png",
+        //                     "centerConsole": "/images/cars/cayenne/Coupé/Cayenne Coupé Black Edition/interior/console.png",
+        //                 },
 
-                            },
-                            "height": {
-                                "airSuspensionStandard": {
-                                    "value": 1659,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionLow": {
-                                    "value": 1649,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionExtraLow": {
-                                    "value": 1634,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionOffRoad": {
-                                    "value": 1674,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 1704,
-                                    "unit": "mm"
-                                }
-                            }
-                        }
-                    },
-                },
-                {
-                    "carId": "cayenne-gts-coupe",
-                    "modelId": "cayenne",
-                    "variantId": "coupé",
-                    "name": "Cayenne GTS Coupé",
-                    "hero": {
-                        "title": "Sporting attitude, unleashed.",
-                        "description": "The Cayenne GTS Coupé brings sharper performance and unmistakable GTS character to a striking coupe silhouette, creating an SUV built for driving enthusiasts."
-                    },
-                    "year": 2027,
-                    "fuelType": "Gasoline",
-                    "driveType": "All-Wheel Drive",
-                    "transmission": "Automatic",
-                    "price": {
-                        "amount": 21261000,
-                        "currency": "INR",
-                        "formatted": "₹2,12,61,000.00",
-                        "taxIncluded": true,
-                        "tax": "VAT"
-                    },
-                    "featuredVideo":"/videos/cayenneCoupe.mp4",
-                    "images": {
-                        "hero": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/hero.png",
+        //                 "gallery": []
+        //             },
+        //             "technical_data": {
+        //                 "powerUnit": {
+        //                     "bore": {
+        //                         "value": 84.5,
+        //                         "unit": "mm"
+        //                     },
+        //                     "numberOfCylinders": 6,
+        //                     "stroke": {
+        //                         "value": 89.0,
+        //                         "unit": "mm"
+        //                     },
+        //                     "displacement": {
+        //                         "value": 2995,
+        //                         "unit": "cm³"
+        //                     },
+        //                     "maxTorque": {
+        //                         "value": 500,
+        //                         "unit": "Nm"
+        //                     },
+        //                     "power": {
+        //                         "kW": {
+        //                             "value": 260,
+        //                             "unit": "kW"
+        //                         },
+        //                         "PS": {
+        //                             "value": 353,
+        //                             "unit": "PS"
+        //                         }
+        //                     },
+        //                     "maxOutputPerLiter": {
+        //                         "kWPerLiter": {
+        //                             "value": 87.0,
+        //                             "unit": "kW/l"
+        //                         },
+        //                         "PSPerLiter": {
+        //                             "value": 118.0,
+        //                             "unit": "PS/l"
+        //                         }
+        //                     },
+        //                     "maximumEngineSpeed": {
+        //                         "value": 6500,
+        //                         "unit": "1/min"
+        //                     }
+        //                 },
+        //                 "performance": {
+        //                     "topSpeed": {
+        //                         "value": 248,
+        //                         "unit": "km/h"
+        //                     },
+        //                     "acceleration": {
+        //                         "inGear": {
+        //                             "speedRange": "80-120 km/h",
+        //                             "mphRange": "50-75 mph",
+        //                             "value": 3.9,
+        //                             "unit": "s"
+        //                         }
+        //                     },
+        //                     "sportChronoPackage": {
+        //                         "zeroTo100": {
+        //                             "value": 5.7,
+        //                             "unit": "s"
+        //                         },
+        //                         "zeroTo160": {
+        //                             "value": 13.6,
+        //                             "unit": "s"
+        //                         },
+        //                         "zeroTo200": {
+        //                             "value": 23.7,
+        //                             "unit": "s"
+        //                         },
+        //                         "inGear": {
+        //                             "speedRange": "80-120 km/h",
+        //                             "mphRange": "50-75 mph",
+        //                             "value": 3.9,
+        //                             "unit": "s"
+        //                         }
+        //                     }
+        //                 },
+        //                 "soundLevel": {
+        //                     "standard": "UN-R 51",
+        //                     "passingVehicle": {
+        //                         "value": 69,
+        //                         "unit": "dB(A)"
+        //                     }
+        //                 },
+        //                 "terrainFeatures": {
+        //                     "groundClearance": {
+        //                         "steelSuspensionPASM": {
+        //                             "value": 214,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionNormal": {
+        //                             "value": 192,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionLow": {
+        //                             "value": 182,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionOffRoad": {
+        //                             "value": 207,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 237,
+        //                             "unit": "mm"
+        //                         }
+        //                     },
 
-                        "exterior": {
-                            "front": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/exterior/front.png",
-                            "rear": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/exterior/rear.png",
-                            "side": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/exterior/side_view.png",
-                        },
-                        "bootSpace": {
-                            "front": "/images/front-space.webp",
-                            "rear": "/images/back-space.webp",
-                        },
+        //                     "departureAngle": {
+        //                         "steelSuspensionPASM": {
+        //                             "value": 22.5,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionStandard": {
+        //                             "value": 20.9,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 24.3,
+        //                             "unit": "°"
+        //                         }
+        //                     },
+        //                     "overhang": {
+        //                         "front": {
+        //                             "value": 1013,
+        //                             "unit": "mm"
+        //                         },
+        //                         "rear": {
+        //                             "value": 1022,
+        //                             "unit": "mm"
+        //                         }
+        //                     }
+        //                 },
+        //                 "capacities": {
+        //                     "luggageCompartment": {
+        //                         "openVolume": {
+        //                             "value": 592,
+        //                             "unit": "l",
+        //                             "description": "Up to the upper edge of the rear seats"
+        //                         },
+        //                         "largestVolume": {
+        //                             "value": 1502,
+        //                             "unit": "l",
+        //                             "description": "Behind front seats, up to roof"
+        //                         },
+        //                         "rearVolumeV210_2": {
+        //                             "value": 554,
+        //                             "unit": "l"
+        //                         }
+        //                     }
+        //                 },
+        //                 "body": {
+        //                     "dimensions": {
+        //                         "length": {
+        //                             "value": 4930,
+        //                             "unit": "mm"
+        //                         },
+        //                         "width": {
+        //                             "value": 1983,
+        //                             "unit": "mm"
+        //                         },
+        //                         "wheelbase": {
+        //                             "value": 2895,
+        //                             "unit": "mm"
+        //                         },
 
-                        "lights": {
-                            "headlights": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/Front_headLights.png",
-                            "taillights": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/tail-light.png",  // 
-                            "Indicators": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/front_indicator.png",
-                        },
+        //                     },
+        //                     "height": {
+        //                         "airSuspensionStandard": {
+        //                             "value": 1659,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionLow": {
+        //                             "value": 1649,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionExtraLow": {
+        //                             "value": 1634,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionOffRoad": {
+        //                             "value": 1674,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 1704,
+        //                             "unit": "mm"
+        //                         }
+        //                     }
+        //                 }
+        //             },
+        //         },
+        //         {
+        //             "carId": "cayenne-gts-coupe",
+        //             "modelId": "cayenne",
+        //             "variantId": "coupé",
+        //             "name": "Cayenne GTS Coupé",
+        //             "hero": {
+        //                 "title": "Sporting attitude, unleashed.",
+        //                 "description": "The Cayenne GTS Coupé brings sharper performance and unmistakable GTS character to a striking coupe silhouette, creating an SUV built for driving enthusiasts."
+        //             },
+        //             "year": 2027,
+        //             "fuelType": "Gasoline",
+        //             "driveType": "All-Wheel Drive",
+        //             "transmission": "Automatic",
+        //             "price": {
+        //                 "amount": 21261000,
+        //                 "currency": "INR",
+        //                 "formatted": "₹2,12,61,000.00",
+        //                 "taxIncluded": true,
+        //                 "tax": "VAT"
+        //             },
+        //             "featuredVideo": "/videos/cayenneCoupe.mp4",
+        //             "images": {
+        //                 "hero": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/hero.png",
 
-                        "wheels": {
-                            "frontWheel": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/wheels/front_wheel.png",
-                            "rearWheel": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/wheels/rearWheel.png",
-                        },
+        //                 "exterior": {
+        //                     "front": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/exterior/front.png",
+        //                     "rear": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/exterior/rear.png",
+        //                     "side": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/exterior/side_view.png",
+        //                     "lights": {
+        //                         "headlights": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/Front_headLights.png",
+        //                         "taillights": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/tail-light.png",  // 
+        //                         "Indicators": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/lights/front_indicator.png",
+        //                     },
 
-                        "interior": {
-                            "interior": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/interior.png",
-                            "dashboard": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/dashboard.png",
-                            "frontSeats": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/front_seat1.png",
-                            "rearSeats": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/back_seat.png",
-                            "centerConsole": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/console1.png"
-                        },
+        //                     "wheels": {
+        //                         "frontWheel": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/wheels/front_wheel.png",
+        //                         "rearWheel": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/wheels/rearWheel.png",
+        //                     },
+        //                 },
+        //                 "bootSpace": {
+        //                     "front": "/images/front-space.webp",
+        //                     "rear": "/images/back-space.webp",
+        //                 },
 
-                        "gallery": []
-                    },
-                    "technical_data": {
-                        "powerUnit": {
-                            "bore": {
-                                "value": 86.0,
-                                "unit": "mm"
-                            },
-                            "numberOfCylinders": 8,
-                            "stroke": {
-                                "value": 86.0,
-                                "unit": "mm"
-                            },
-                            "displacement": {
-                                "value": 3996,
-                                "unit": "cm³"
-                            },
-                            "maxTorque": {
-                                "value": 660,
-                                "unit": "Nm"
-                            },
-                            "power": {
-                                "kW": {
-                                    "value": 368,
-                                    "unit": "kW"
-                                },
-                                "PS": {
-                                    "value": 500,
-                                    "unit": "PS"
-                                }
-                            },
-                            "maxOutputPerLiter": {
-                                "kWPerLiter": {
-                                    "value": 92.0,
-                                    "unit": "kW/l"
-                                },
-                                "PSPerLiter": {
-                                    "value": 125.0,
-                                    "unit": "PS/l"
-                                }
-                            },
-                            "maximumEngineSpeed": {
-                                "value": 6800,
-                                "unit": "1/min"
-                            }
-                        },
-                        "performance": {
-                            "topSpeed": {
-                                "value": 275,
-                                "unit": "km/h"
-                            },
-                            "sportChronoPackage": {
-                                "zeroTo100": {
-                                    "value": 4.4,
-                                    "unit": "s"
-                                },
-                                "zeroTo160": {
-                                    "value": 10.3,
-                                    "unit": "s"
-                                },
-                                "zeroTo200": {
-                                    "value": 16.7,
-                                    "unit": "s"
-                                },
-                                "inGear": {
-                                    "speedRange": "80-120 km/h",
-                                    "mphRange": "50-75 mph",
-                                    "value": 2.9,
-                                    "unit": "s"
-                                }
-                            }
-                        },
-                        "soundLevel": {
-                            "standard": "UN-R 51",
-                            "passingVehicle": {
-                                "value": 70,
-                                "unit": "dB(A)"
-                            }
-                        },
-                        "terrainFeatures": {
-                            "groundClearance": {
-                                "airSuspensionNormal": {
-                                    "value": 189,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionLow": {
-                                    "value": 181,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionOffRoad": {
-                                    "value": 204,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 234,
-                                    "unit": "mm"
-                                }
-                            },
-                            "waterClearance": {
-                                "airSuspensionStandard": {
-                                    "value": 471,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionOffRoad": {
-                                    "value": 496,
-                                    "unit": "mm"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 525,
-                                    "unit": "mm"
-                                }
-                            },
-                            "approachAngle": {
-                                "airSuspensionStandard": {
-                                    "value": 23.3,
-                                    "unit": "°"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 26.6,
-                                    "unit": "°"
-                                }
-                            },
-                            "breakoverAngle": {
-                                "airSuspensionLow": {
-                                    "value": 16.0,
-                                    "unit": "°"
-                                },
-                                "airSuspensionStandard": {
-                                    "value": 16.7,
-                                    "unit": "°"
-                                },
-                                "airSuspensionOffRoad": {
-                                    "value": 18.0,
-                                    "unit": "°"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 20.7,
-                                    "unit": "°"
-                                }
-                            },
-                            "departureAngle": {
-                                "airSuspensionStandard": {
-                                    "value": 20.7,
-                                    "unit": "°"
-                                },
-                                "airSuspensionExtraOffRoad": {
-                                    "value": 24.1,
-                                    "unit": "°"
-                                }
-                            },
-                            "overhang": {
-                                "front": {
-                                    "value": 1013,
-                                    "unit": "mm"
-                                },
-                                "rear": {
-                                    "value": 1022,
-                                    "unit": "mm"
-                                }
-                            }
-                        },
-                        "capacities": {
-                            "luggageCompartment": {
-                                "openVolume": {
-                                    "value": 592,
-                                    "unit": "l",
-                                    "description": "Up to the upper edge of the rear seats"
-                                },
-                                "largestVolume": {
-                                    "value": 1502,
-                                    "unit": "l",
-                                    "description": "Behind front seats, up to roof"
-                                },
-                                "rearVolumeV210_2": {
-                                    "value": 554,
-                                    "unit": "l"
-                                }
-                            }
-                        },
-                    },
-                }
-            ]
-        },
+        //                 "interior": {
+        //                     "interior": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/interior.png",
+        //                     "dashboard": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/dashboard.png",
+        //                     "frontSeats": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/front_seat1.png",
+        //                     "rearSeats": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/back_seat.png",
+        //                     "centerConsole": "/images/cars/cayenne/Coupé/Cayenne GTS Coupe/interior/console1.png"
+        //                 },
+
+        //                 "gallery": []
+        //             },
+        //             "technical_data": {
+        //                 "powerUnit": {
+        //                     "bore": {
+        //                         "value": 86.0,
+        //                         "unit": "mm"
+        //                     },
+        //                     "numberOfCylinders": 8,
+        //                     "stroke": {
+        //                         "value": 86.0,
+        //                         "unit": "mm"
+        //                     },
+        //                     "displacement": {
+        //                         "value": 3996,
+        //                         "unit": "cm³"
+        //                     },
+        //                     "maxTorque": {
+        //                         "value": 660,
+        //                         "unit": "Nm"
+        //                     },
+        //                     "power": {
+        //                         "kW": {
+        //                             "value": 368,
+        //                             "unit": "kW"
+        //                         },
+        //                         "PS": {
+        //                             "value": 500,
+        //                             "unit": "PS"
+        //                         }
+        //                     },
+        //                     "maxOutputPerLiter": {
+        //                         "kWPerLiter": {
+        //                             "value": 92.0,
+        //                             "unit": "kW/l"
+        //                         },
+        //                         "PSPerLiter": {
+        //                             "value": 125.0,
+        //                             "unit": "PS/l"
+        //                         }
+        //                     },
+        //                     "maximumEngineSpeed": {
+        //                         "value": 6800,
+        //                         "unit": "1/min"
+        //                     }
+        //                 },
+        //                 "performance": {
+        //                     "topSpeed": {
+        //                         "value": 275,
+        //                         "unit": "km/h"
+        //                     },
+        //                     "sportChronoPackage": {
+        //                         "zeroTo100": {
+        //                             "value": 4.4,
+        //                             "unit": "s"
+        //                         },
+        //                         "zeroTo160": {
+        //                             "value": 10.3,
+        //                             "unit": "s"
+        //                         },
+        //                         "zeroTo200": {
+        //                             "value": 16.7,
+        //                             "unit": "s"
+        //                         },
+        //                         "inGear": {
+        //                             "speedRange": "80-120 km/h",
+        //                             "mphRange": "50-75 mph",
+        //                             "value": 2.9,
+        //                             "unit": "s"
+        //                         }
+        //                     }
+        //                 },
+        //                 "soundLevel": {
+        //                     "standard": "UN-R 51",
+        //                     "passingVehicle": {
+        //                         "value": 70,
+        //                         "unit": "dB(A)"
+        //                     }
+        //                 },
+        //                 "terrainFeatures": {
+        //                     "groundClearance": {
+        //                         "airSuspensionNormal": {
+        //                             "value": 189,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionLow": {
+        //                             "value": 181,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionOffRoad": {
+        //                             "value": 204,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 234,
+        //                             "unit": "mm"
+        //                         }
+        //                     },
+        //                     "waterClearance": {
+        //                         "airSuspensionStandard": {
+        //                             "value": 471,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionOffRoad": {
+        //                             "value": 496,
+        //                             "unit": "mm"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 525,
+        //                             "unit": "mm"
+        //                         }
+        //                     },
+        //                     "approachAngle": {
+        //                         "airSuspensionStandard": {
+        //                             "value": 23.3,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 26.6,
+        //                             "unit": "°"
+        //                         }
+        //                     },
+        //                     "breakoverAngle": {
+        //                         "airSuspensionLow": {
+        //                             "value": 16.0,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionStandard": {
+        //                             "value": 16.7,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionOffRoad": {
+        //                             "value": 18.0,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 20.7,
+        //                             "unit": "°"
+        //                         }
+        //                     },
+        //                     "departureAngle": {
+        //                         "airSuspensionStandard": {
+        //                             "value": 20.7,
+        //                             "unit": "°"
+        //                         },
+        //                         "airSuspensionExtraOffRoad": {
+        //                             "value": 24.1,
+        //                             "unit": "°"
+        //                         }
+        //                     },
+        //                     "overhang": {
+        //                         "front": {
+        //                             "value": 1013,
+        //                             "unit": "mm"
+        //                         },
+        //                         "rear": {
+        //                             "value": 1022,
+        //                             "unit": "mm"
+        //                         }
+        //                     }
+        //                 },
+        //                 "capacities": {
+        //                     "luggageCompartment": {
+        //                         "openVolume": {
+        //                             "value": 592,
+        //                             "unit": "l",
+        //                             "description": "Up to the upper edge of the rear seats"
+        //                         },
+        //                         "largestVolume": {
+        //                             "value": 1502,
+        //                             "unit": "l",
+        //                             "description": "Behind front seats, up to roof"
+        //                         },
+        //                         "rearVolumeV210_2": {
+        //                             "value": 554,
+        //                             "unit": "l"
+        //                         }
+        //                     }
+        //                 },
+        //             },
+        //         }
+        //     ]
+        // },
 
     ]
 

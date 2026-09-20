@@ -25,8 +25,6 @@ const GasCarKeyFeatures = ({ carId }: GasCarKeyFeaturesProps) => {
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-1">
-
-  
           <div>
             <h2 className="text-2xl font-medium text-white sm:text-3xl lg:text-4xl">
               {car.power.PS.value} PS / {car.power.kW.value} kW
@@ -40,14 +38,12 @@ const GasCarKeyFeatures = ({ carId }: GasCarKeyFeaturesProps) => {
             <h2 className="text-2xl font-medium text-white sm:text-3xl lg:text-4xl">
               {car.maxTorque.value} {car.maxTorque.unit}
             </h2>
-
             <p className="mt-1 text-sm text-[#888]"> Maximum Torque(Nm) </p>
           </div>
 
 
           <div>
             <h2 className="text-2xl font-medium text-white sm:text-3xl lg:text-4xl"> {car.topSpeed.value} {car.topSpeed.unit} </h2>
-
             <p className="mt-1 text-sm text-[#888]"> Top Speed </p>
           </div>
 

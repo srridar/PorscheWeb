@@ -11,15 +11,13 @@ import { X } from 'lucide-react';
 import { useState } from 'react';
 
 
-interface EVCarHomeProps {
-    modelId?: string;
-    variantId?: string;
-    carId?: string;
-}
-
 const EVCarHomePage = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const { modelId, variantId, carId } = useParams<EVCarHomeProps>();
+    const { modelId, variantId, carId } = useParams<{
+        modelId: string;
+        variantId: string;
+        carId: string;
+    }>();
 
     const Taycan_EV = Taycan.flatMap((model) =>
         model.variants.flatMap((variant) =>
@@ -69,9 +67,7 @@ const EVCarHomePage = () => {
                 />
 
 
-                <aside className={`fixed right-0 top-0 z-[70] h-screen w-full overflow-y-auto bg-black text-white shadow-2xl transition-transform duration-500 ease-in-out sm:w-[80%] lg:w-1/2 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
-                >
-
+                <aside className={`fixed right-0 top-0 z-[70] h-screen w-full overflow-y-auto bg-black text-white shadow-2xl transition-transform duration-500 ease-in-out sm:w-[80%] lg:w-1/2 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
                     <div className="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-white/10 bg-black/90 px-6 backdrop-blur-md sm:px-10">
                         <h2 className="text-lg font-semibold">
                             Technical Data

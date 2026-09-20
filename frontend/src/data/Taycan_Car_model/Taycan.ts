@@ -1,4 +1,6 @@
-export const Taycan = [
+import type { CarData } from './taycanType'
+
+export const Taycan: CarData[] = [
     {
         "modelId": "taycan",
         "name": "Taycan",
@@ -26,7 +28,6 @@ export const Taycan = [
                             "formatted": "₹2,00,70,000.00",
                             "taxIncluded": true,
                             "tax": "VAT",
-                            "footnote": "European specifications shown below. Market specific values to be confirmed upon homologation."
                         },
                         "featuredVideo": "/videos/taycan4s.mp4",
                         "images": {
@@ -102,7 +103,6 @@ export const Taycan = [
                                     }
                                 }
                             },
-
                             "performance": {
                                 "topSpeed": {
                                     "value": 250,
@@ -154,7 +154,6 @@ export const Taycan = [
                                     }
                                 }
                             },
-
                             "soundLevel": {
                                 "standard": "UN-R 51",
                                 "typeApproved": true,
@@ -163,7 +162,6 @@ export const Taycan = [
                                     "unit": "dB(A)"
                                 }
                             },
-
                             "terrainFeatures": {
                                 "groundClearance": {
                                     "airSuspension": {
@@ -224,7 +222,6 @@ export const Taycan = [
                                     }
                                 }
                             },
-
                             "capacities": {
                                 "luggageCompartment": {
                                     "front": {
@@ -238,7 +235,6 @@ export const Taycan = [
                                     }
                                 }
                             },
-
                             "charging": {
                                 "battery": {
                                     "performanceBatteryPlus": {
@@ -381,7 +377,6 @@ export const Taycan = [
                                     }
                                 }
                             },
-
                         },
 
                     },
@@ -417,7 +412,6 @@ export const Taycan = [
                                     "taillights": "/images/cars/taycan/taycan4sblack/Taillights.png",
                                     "Indicators": "/images/cars/taycan/taycan4sblack/Indicator.png",
                                 },
-
                                 "wheels": {
                                     "frontWheel": "/images/cars/taycan/taycan4sblack/FrontWheel.png",
                                     "rearWheel": "/images/cars/taycan/taycan4sblack/RearWheel.png",
@@ -438,13 +432,11 @@ export const Taycan = [
 
                             "gallery": []
                         },
-
                         "technical_data": {
                             "height": "1379mm",
                             "length": "4963mm",
                             "wheelbase": "2900mm",
                             "width": "1966mm",
-
                             "powerUnit": {
                                 "maxTorqueWithLaunchControl": {
                                     "performanceBatteryPlus": {
@@ -506,9 +498,6 @@ export const Taycan = [
                                     }
                                 }
                             },
-
-
-
                             "soundLevel": {
                                 "standard": "UN-R 51",
                                 "typeApproved": true,
@@ -517,7 +506,6 @@ export const Taycan = [
                                     "unit": "dB(A)"
                                 }
                             },
-
                             "terrainFeatures": {
                                 "maxGroundClearance": {
                                     "standardLevel": {
@@ -563,15 +551,17 @@ export const Taycan = [
                                     }
                                 },
 
-                                "overhangFront": {
-                                    "value": 997,
-                                    "unit": "mm"
-                                },
-
-                                "overhangRear": {
-                                    "value": 1066,
-                                    "unit": "mm"
+                                "overhang": {
+                                    "front": {
+                                        "value": 997,
+                                        "unit": "mm"
+                                    },
+                                    "rear": {
+                                        "value": 1066,
+                                        "unit": "mm"
+                                    }
                                 }
+
                             },
 
                             "capacities": {
@@ -699,31 +689,29 @@ export const Taycan = [
                             "formatted": "₹2,74,27,000.00",
                             "taxIncluded": true,
                             "tax": "VAT",
-                            "footnote": "European specifications shown below. Market specific values to be confirmed upon homologation."
                         },
                         "featuredVideo": "/videos/taycanTurbo.mp4",
                         "images": {
                             "hero": "/images/cars/taycan/taycanTurbo/taycan_turbo_1.webp",
                             "exterior": {
-                                "front": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo3.png",
+                                "front": "/images/cars/taycan/taycanTurbo/porsche-tayacan-turbo3.png",
                                 "rear": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo18.png",
                                 "side": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo9.png",
+                                "lights": {
+                                    "headlights": "/images/cars/taycan/taycanTurbo/porsche_taycan_turbo1.png",
+                                    "taillights": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo19.png",
+                                    "Indicators": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo9.png",
+                                },
+
+                                "wheels": {
+                                    "frontWheel": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo21.png",
+                                    "rearWheel": "/images/cars/taycan/taycanTurbo/porsche_taycan_turbo20.png",
+                                },
                             },
 
                             "bootSpace": {
                                 "front": "/images/front-space.webp",
                                 "rear": "/images/back-space.webp",
-                            },
-
-                            "lights": {
-                                "headlights": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo1.png",
-                                "taillights": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo19.png",
-                                "Indicators": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo9.png",
-                            },
-
-                            "wheels": {
-                                "frontWheel": "/images/cars/taycan/taycanTurbo/porsche-taycan-turbo21.png",
-                                "rearWheel": "/images/cars/taycan/taycanTurbo/porsche_taycan_turbo20.png",
                             },
 
                             "interior": {
@@ -750,7 +738,7 @@ export const Taycan = [
                                     "value": 890,
                                     "unit": "Nm"
                                 },
-                                "powerUnit": {
+                                "powerUpTo": {
                                     "kw": 520,
                                     "ps": 707
                                 },
@@ -765,22 +753,22 @@ export const Taycan = [
                                     "unit": "km/h"
                                 },
                                 "acceleration": {
-                                    "0To100": {
+                                    "zeroTo100": {
                                         "value": 2.7,
                                         "unit": "s",
                                         "test": "0 - 100 km/h with Launch Control"
                                     },
-                                    "0To160": {
+                                    "zeroTo160": {
                                         "value": 5.5,
                                         "unit": "s",
                                         "test": "0 - 160 km/h with Launch Control"
                                     },
-                                    "0To200": {
+                                    "zeroTo200": {
                                         "value": 8.2,
                                         "unit": "s",
                                         "test": "0 - 200 km/h with Launch Control"
                                     },
-                                    "80To120": {
+                                    "inGear80To120": {
                                         "value": 1.5,
                                         "unit": "s",
                                         "test": "80 - 120 km/h (50 - 75 mph) with Launch Control"
@@ -815,7 +803,7 @@ export const Taycan = [
                                         "unit": "kWh"
                                     }
                                 },
-                                "acCharging": {
+                                "ac": {
                                     "chargingTime": {
                                         "9_6kW": {
                                             "value": 13.0,
@@ -834,7 +822,7 @@ export const Taycan = [
                                         }
                                     }
                                 },
-                                "dcCharging": {
+                                "dc": {
                                     "chargingTime": {
                                         "400VInfrastructure": {
                                             "value": 33,
@@ -860,6 +848,7 @@ export const Taycan = [
                                     }
                                 }
                             },
+                            
                             "terrainFeatures": {
                                 "groundClearance": {
                                     "airSuspensionNormal": {

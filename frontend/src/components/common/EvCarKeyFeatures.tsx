@@ -8,7 +8,6 @@ interface EvCarKeyFeaturesProps {
 const EvCarKeyFeatures = ({ carId }: EvCarKeyFeaturesProps) => {
   const allCars = car_list.cars.electric;
 
-
   const car = allCars.find((car) => car.carId === carId);
 
   if (!car) {
@@ -18,7 +17,6 @@ const EvCarKeyFeatures = ({ carId }: EvCarKeyFeaturesProps) => {
       </div>
     )
   }
-
 
   return (
     <div className="mx-auto  w-full max-w-6xl px-4 text-[#aaa] sm:px-6 lg:my-20 lg:px-8">
@@ -31,16 +29,12 @@ const EvCarKeyFeatures = ({ carId }: EvCarKeyFeaturesProps) => {
 
 
       <div className="grid grid-cols-1 text-[#736868] items-center gap-12 lg:grid-cols-2 lg:gap-16">
-
-
-
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-1">
 
           <div>
             <h2 className="text-2xl font-medium  sm:text-3xl lg:text-4xl">
               {car.powerUpTo.ps} PS / {car.powerUpTo.kw} kW
             </h2>
-
             <p className="mt-1 text-sm "> Power </p>
           </div>
 

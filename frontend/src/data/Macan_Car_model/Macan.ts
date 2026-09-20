@@ -1,4 +1,19 @@
-export const Macan = [
+import type { MacanCar } from "./macanType";
+
+interface CarVariant {
+    variantId: string;
+    name: string;
+    cars: MacanCar[];
+}
+
+interface CarModel {
+    modelId: string;
+    name: string;
+    variants: CarVariant[];
+}
+
+
+export const Macan: CarModel[] = [
     {
         "modelId": "macan",
         "name": "Macan",
@@ -121,11 +136,9 @@ export const Macan = [
                                 },
                                 "acceleration": {
                                     "zeroTo100": {
-
                                         "value": 6.4,
                                         "unit": "s",
                                         "test": "0 - 100 km/h",
-
                                     },
                                     "zeroTo160": {
                                         "value": 16.3,
@@ -150,7 +163,8 @@ export const Macan = [
                                         "mphRange": "50-75 mph",
                                         "value": 4.5,
                                         "unit": "s",
-                                    }
+                                    },
+                                      
                                 }
                             },
                             "soundLevel": {
@@ -296,7 +310,6 @@ export const Macan = [
                             "gallery": []
                         },
                         "featuredVideo": "/videos/macanElectric.mp4",
-
                         "technical_data": {
                             "height": "1623mm",
                             "length": "4784mm",
@@ -312,8 +325,14 @@ export const Macan = [
                                     "ps": 340,
                                 },
                                 "overboostPowerWithLaunchControl": {
-                                    "kw": 265,
-                                    "ps": 360,
+                                    "kW": {
+                                        "value": 265,
+                                        "unit": "kW"
+                                    },
+                                    "PS": {
+                                        "value": 360,
+                                        "unit": "PS"
+                                    }
                                 }
                             },
                             "performance": {
@@ -423,7 +442,6 @@ export const Macan = [
                                 },
                                 "standard": "UN-R 51"
                             },
-
                             "terrainFeatures": {
                                 "groundClearance": {
                                     "steelSuspension": {
@@ -574,13 +592,20 @@ export const Macan = [
                                     "unit": "Nm"
                                 },
                                 "powerUpTo": {
-                                    "kW": 330,
-                                    "PS": 449,
+                                    "kw": 330,
+                                    "ps": 449,
                                 },
                                 "overboostPowerWithLaunchControl": {
-                                    "kW": 380,
-                                    "PS": 516,
-                                }
+                                    "kW": {
+                                        "value": 380,
+                                        "unit": "kW"
+                                    },
+                                    "PS": {
+                                        "value": 516,
+                                        "unit": "PS"
+                                    }
+                                },
+
                             },
                             "performance": {
                                 "topSpeed": {
@@ -665,7 +690,7 @@ export const Macan = [
                                             "standard": "WLTP"
                                         },
                                         "maximumChargingPower": {
-                                            "value": "214-250",
+                                            "value": 214 - 250,
                                             "unit": "km",
                                             "standard": "WLTP"
                                         }
@@ -804,6 +829,16 @@ export const Macan = [
                                 "front": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_7.png",
                                 "rear": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_12.png",
                                 "side": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_8.png",
+                                "lights": {
+                                    "headlights": "/images/cars/macan/macanTurboElectric/HeadLight.png",
+                                    "taillights": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_11.png",
+                                    "Indicators": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_6.png",
+                                },
+
+                                "wheels": {
+                                    "frontWheel": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_9.png",
+                                    "rearWheel": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_19.png",
+                                },
                             },
 
                             "bootSpace": {
@@ -811,16 +846,7 @@ export const Macan = [
                                 "rear": "/images/back-space.webp",
                             },
 
-                            "lights": {
-                                "headlights": "/images/cars/macan/macanTurboElectric/HeadLight.png",
-                                "taillights": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_11.png",
-                                "Indicators": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_6.png",
-                            },
 
-                            "wheels": {
-                                "frontWheel": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_9.png",
-                                "rearWheel": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_19.png",
-                            },
 
                             "interior": {
                                 "interior": "/images/cars/macan/macanTurboElectric/Porsche_Macan_Turbo_EV_15.png",
@@ -876,7 +902,7 @@ export const Macan = [
                                     "value": 260,
                                     "unit": "km/h"
                                 },
-                                "launchControl": {
+                                "acceleration": {
                                     "zeroTo100": {
                                         "value": 3.3,
                                         "unit": "s"
@@ -889,9 +915,7 @@ export const Macan = [
                                         "value": 11.7,
                                         "unit": "s"
                                     },
-                                    "inGear": {
-                                        "speedRange": "80-120 km/h",
-                                        "mphRange": "50-75 mph",
+                                    "80To120": {
                                         "value": 2.0,
                                         "unit": "s"
                                     }
@@ -952,7 +976,7 @@ export const Macan = [
                                             "standard": "WLTP"
                                         },
                                         "maximumChargingPower": {
-                                            "value": "216-241",
+                                            "value": 216 - 241,
                                             "unit": "km",
                                             "standard": "WLTP"
                                         }

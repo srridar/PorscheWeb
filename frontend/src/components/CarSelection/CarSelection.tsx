@@ -8,7 +8,6 @@ import ElectricCarCard from "./ElectricCarCard";
 import Footer from "../common/Footer";
 
 
-
 const CarSelection = () => {
 
     const FILTER_TYPES = ["All", "Electric", "Gasoline"] as const;
@@ -37,7 +36,6 @@ const CarSelection = () => {
                 || car.modelId?.toLowerCase().includes(query) || car.variantId?.toLowerCase().includes(query);
 
             return matchType && matchModel && matchSearch;
-
 
         })
 
@@ -162,8 +160,6 @@ const CarSelection = () => {
                     </div>
                 </div>
             </section>
-
-
             {
                 filteredGasolineCars.length > 0 && (
                     <section className="bg-neutral-950 px-6 py-12 text-white sm:px-10 lg:px-16">
@@ -187,20 +183,13 @@ const CarSelection = () => {
 
                 )
             }
-
-
-
-
             {
                 filteredElectricCars.length > 0 && (
                     <section className="bg-black px-6 py-12 text-white sm:px-10 lg:px-16">
-
                         <div className=" w-full">
                             <div className="my-8 pb-4 rounded w-60 p-2 bg-[#181717aa]">
-                                <h2 className="text-xl   font-semibold text-[#7b7272]">Electric Machines </h2>
+                                <h2 className="text-xl font-semibold text-[#7b7272]">Electric Machines </h2>
                             </div>
-
-
 
                             <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:grid-cols-3">
                                 {filteredElectricCars.map((car) => (
@@ -211,11 +200,8 @@ const CarSelection = () => {
                             </div>
                         </div>
                     </section>
-
                 )
             }
-
-
 
             <Footer />
 

@@ -1,55 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import type { CarDetailsProps } from "@/types";
 
-export interface PowerValue {
-  kw: number;
-  ps: number;
-}
-
-export interface Value {
-  value: number;
-  unit: string;
-}
-
-export interface CarDetailsProps {
-  carId: string;
-  modelId: string;
-  variantId: string;
-  name: string;
-  year: number;
-
-  fuelType: string;
-  driveType: string;
-  transmission: string;
-
-  price: {
-    amount?: number;
-    currency: string;
-    formatted: string;
-    taxIncluded: boolean;
-    tax: string;
-  };
-
-  image: string;
-  maxTorqueWithLaunchControl: Value;
-  powerUpTo: PowerValue;
-  overboostPowerWithLaunchControl: PowerValue;
-  cardetailsRoute: string;
-
-  topSpeed: {
-    value: number;
-    unit: string;
-  };
-}
 
 const ElectricCarCard = ({ car }: { car: CarDetailsProps }) => {
   const power = car.powerUpTo;
   const torque = car.maxTorqueWithLaunchControl;
 
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
   return (
     <article className=" overflow-hidden rounded border border-gray-800 bg-[#221f1f] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-
 
       <div className="relative aspect-[16/9] overflow-hidden ">
         <img
@@ -131,13 +91,13 @@ const ElectricCarCard = ({ car }: { car: CarDetailsProps }) => {
 
           <button
             type="button"
-            onClick={()=> {
-                   if(car.cardetailsRoute){
-                     navigate(`${car.cardetailsRoute}`)
-                   }
-                   else{
-                     navigate(`/porsche/india/${car.modelId}/${car.variantId}/${car.carId}`)
-                   }
+            onClick={() => {
+              if (car.cardeatilsRoute) {
+                navigate(`${car.cardeatilsRoute}`)
+              }
+              else {
+                navigate(`/porsche/india/${car.modelId}/${car.variantId}/${car.carId}`)
+              }
             }}
             className="rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#171515]"
           >

@@ -1,4 +1,9 @@
-export const Panamera_Car = [
+import type { CarVariant } from "./panameraType";
+
+
+
+
+export const Panamera_Car: CarVariant[] = [
     {
         "modelId": "panamera",
         "name": "Panamera",
@@ -55,7 +60,6 @@ export const Panamera_Car = [
                                 "dashboard": "/images/cars/panamera/dashboard.png",
                                 "frontSeats": "/images/cars/panamera/front-seat.png",
                                 "rearSeats": "/images/cars/panamera/panamera_12.png",
-                                "steeringWheel": "/images/cars/panamera/panamera_16.png",
                                 "centerConsole": "/images/cars/panamera/panamera_17.png",
                             },
 
@@ -220,7 +224,6 @@ export const Panamera_Car = [
 
                     }
                 ]
-
             }
         ]
     },

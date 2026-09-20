@@ -26,10 +26,7 @@ const TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
   ];
 
   const [activeId, setActiveId] = useState<string | null>(null);
-
-  const hasJ9E = acOptions.some(
-    (option) => option?.data?.j9e
-  );
+  const hasJ9E = acOptions.some((option) => option?.data?.j9e);
 
 
   return (
@@ -193,47 +190,54 @@ const TechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) => {
                 <div className="grid grid-cols-3 text-gray-100 py-2">
                   <div className=""></div>
                   <div className="text-sm font-semibold "> Performance Battery Plus </div>
-                  <div className="text-sm font-semibold "> J9E </div>
+                  {powerUnit?.maxTorqueWithLaunchControl?.j9e && <div className="text-sm font-semibold "> J9E </div>}
                 </div>
 
-                <div className="grid grid-cols-3 py-2">
-                  <div className="pr-4 text-sm sm:text-sm text-gray-100"> Max. torque with Launch Control </div>
+                <div className="grid grid-cols-3 py-2 gap-4">
+                  <div className="pr-5 text-sm sm:text-sm text-gray-100"> Max. torque with Launch Control </div>
 
                   <div>
                     <span className="text-sm font-semibold text-gray-500"> {powerUnit?.maxTorqueWithLaunchControl?.performanceBatteryPlus?.value} </span>
                     <span className="ml-2 text-sm text-gray-500"> {powerUnit?.maxTorqueWithLaunchControl?.performanceBatteryPlus?.unit} </span>
                   </div>
 
-                  <div>
-                    <span className="text-sm font-semibold text-gray-500"> {powerUnit?.maxTorqueWithLaunchControl?.j9e?.value} </span>
-                    <span className="ml-2 text-sm text-gray-500"> {powerUnit?.maxTorqueWithLaunchControl?.j9e?.unit} </span>
-                  </div>
+                  {powerUnit?.maxTorqueWithLaunchControl?.j9e &&
+                    <div>
+                      <span className="text-sm font-semibold text-gray-500"> {powerUnit?.maxTorqueWithLaunchControl?.j9e?.value} </span>
+                      <span className="ml-2 text-sm text-gray-500"> {powerUnit?.maxTorqueWithLaunchControl?.j9e?.unit} </span>
+                    </div>
+                  }
 
                 </div>
 
-                <div className="grid grid-cols-3 py-2">
+                <div className="grid grid-cols-3 gap-4 py-2">
                   <div className="pr-4 text-sm text-gray-100 sm:text-sm"> Power up to </div>
 
                   <div className="flex gap-1">
                     <span className="text-sm text-gray-500"> {powerUnit?.powerUpTo?.performanceBatteryPlus?.kw} kW / </span>
                     <span className="text-sm text-gray-500"> {powerUnit?.powerUpTo?.performanceBatteryPlus?.ps} PS </span>
                   </div>
-                  <div className="flex gap-1 ">
-                    <span className="text-sm  text-gray-500"> {powerUnit?.powerUpTo?.j9e?.kw} kW /</span>
-                    <span className="text-sm text-gray-500"> {powerUnit?.powerUpTo?.j9e?.ps} PS </span>
-                  </div>
+
+                  {powerUnit?.maxTorqueWithLaunchControl?.j9e &&
+                    <div className="flex gap-1 ">
+                      <span className="text-sm  text-gray-500"> {powerUnit?.powerUpTo?.j9e?.kw} kW /</span>
+                      <span className="text-sm text-gray-500"> {powerUnit?.powerUpTo?.j9e?.ps} PS </span>
+                    </div>
+                  }
                 </div>
 
-                <div className="grid grid-cols-3  py-1">
+                <div className="grid grid-cols-3 gap-4 py-1">
                   <div className="pr-4 text-sm text-gray-100 sm:text-sm"> Overboost power with Launch Control </div>
                   <div className="flex items-center  text-gray-500 gap-1 ">
                     <span className="text-sm font-semibold "> {powerUnit?.overboostPowerWithLaunchControl?.performanceBatteryPlus?.kw}{" "} kW / </span>
                     <span className=" text-sm "> {powerUnit?.overboostPowerWithLaunchControl?.performanceBatteryPlus?.ps}{" "} PS</span>
                   </div>
-                  <div className="flex items-center text-gray-500 gap-1">
-                    <span className="text-sm  "> {powerUnit?.overboostPowerWithLaunchControl?.j9e?.kw} kW / </span>
-                    <span className="text-sm "> {powerUnit?.overboostPowerWithLaunchControl?.j9e?.ps} PS </span>
-                  </div>
+                  {powerUnit?.maxTorqueWithLaunchControl?.j9e &&
+                    <div className="flex items-center text-gray-500 gap-1">
+                      <span className="text-sm  "> {powerUnit?.overboostPowerWithLaunchControl?.j9e?.kw} kW / </span>
+                      <span className="text-sm "> {powerUnit?.overboostPowerWithLaunchControl?.j9e?.ps} PS </span>
+                    </div>
+                  }
                 </div>
 
               </div>

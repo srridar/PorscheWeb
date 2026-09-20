@@ -18,8 +18,6 @@ const PanameraTechnicalData: React.FC<TechnicalDataProps> = ({ technicalData }) 
 
             <div className="mx-auto max-w-7xl px-3 py-10 ">
 
-           
-
                 <div className="p-4  rounded text-white">
 
                     <div className="flex flex-col gap-2  rounded-2xl">
